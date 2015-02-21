@@ -18,7 +18,7 @@
 	//Fix Widows
 	function fixType(){
 		var widows = 'p';
-		var hyphens = 'p';
+		var hyphens = 'p:not(.tx-center)';
 
 		// Fix widows
 		$(widows).each(function(){
@@ -85,160 +85,40 @@
 		}
 	}
 
+// Share
 
-
-
-////////////////////////////////////////////////
-	//Render Logo
-	var $window = $(window),
-		radius = 4,
-		editColor = 'rgb(254, 1, 57)',
-		type = /(canvas|webgl)/.test(url.type) ? url.type : 'svg',
-		svglocation = "svg";
-
-	function checksize() {
-		/*
-		if ($(window).width() > 0) {
-			svglocation = ".assets .XS svg";
-		}
-		if ($(window).width() > 610) {
-			svglocation = ".assets .S svg";
-		}
-		if ($(window).width() > 910) {
-			svglocation = ".assets .M svg";
-		}
-		if ($(window).width() > 1110) {
-			svglocation = ".assets .L svg";
-		}
-		if ($(window).width() > 1410) { stuff
-			svglocation = ".assets .XLvar  svg";
-		}
-		*/
-		render();
+function setShareLinks(){
+	if (iphone()) {
+		$(".fa-twitter").attr('href', "twitter://post?message=" + encodeURIComponent(document.URL));
+	}else{
+		$(".fa-twitter").attr('href', "https://twitter.com/home?status=" + encodeURIComponent(document.URL));
+		$(".fa-facebook").attr('href', "https://www.facebook.com/sharer/sharer.php?s=100&p[url]=" + encodeURIComponent(document.URL));
 	}
+}
+setShareLinks();
 
-	function render() {
-		var two = new Two({
-			autostart: true
-		}).appendTo(document.getElementById('displayspace'));
+$(".social > a").click(function(){
+	var width = 400;
+	var height = 300;
+	var leftPosition, topPosition;
+	leftPosition = (window.screen.width / 2) - ((width / 2) + 10);
+	topPosition = (window.screen.height / 2) - ((height / 2) + 50);
 
-		var letter = two.interpret(document.querySelector(svglocation));
-		letter.stroke = 'rgb(254, 1, 57)';
-		letter.fill = 'rgba(254, 1, 57,.3)';
+	window.open(this.href, 'newwindow', 'width='+ width +', height='+ height +', resizable=yes, left=' + ((window.screen.width / 2) - ((width / 2) + 10)) + ', top=' + ((window.screen.height / 2) - ((height / 2) + 50)) + ', screenX=' + ((window.screen.width / 2) - ((width / 2) + 10)) + ', screenY=300');
+	return false;
+});
 
-		_.each(letter.children, function (polygon) {
-			_.each(polygon.vertices, function (anchor) {
+//Side Nav
+$('.hamburger-wrap').click(function(){
+	$("body, .sideNav, .permNav").toggleClass('active');
+});
 
-				var p = two.makeCircle(0, 0, 3);
-				var l = two.makeRectangle(0, 0, 3, 3);
-				var r = two.makeRectangle(0, 0, 3, 3);
+//Audio
+var click = new Audio('click.mp3');
+var swipe = new Audio('swipe.mp3');
 
-				p.translation.copy(anchor);
-				if (p.translation != l.translation) {
-					l.translation.copy(anchor.controls.left).addSelf(anchor);
-				};
-
-				if (p.translation != r.translation) {
-					r.translation.copy(anchor.controls.right).addSelf(anchor);
-				};
-
-				p.noStroke().fill = l.noStroke().fill = r.noStroke().fill = editColor;
-
-				var ll = new Two.Polygon([
-					new Two.Anchor().copy(p.translation),
-					new Two.Anchor().copy(l.translation)
-				]);
-				var rl = new Two.Polygon([
-					new Two.Anchor().copy(p.translation),
-					new Two.Anchor().copy(r.translation)
-				]);
-				rl.noFill().stroke = ll.noFill().stroke = editColor;
-
-				letter.add(rl, ll, p, l, r);
-				p.translation.bind(Two.Events.change, function () {
-					anchor.copy(this);
-					l.translation.copy(anchor.controls.left).addSelf(this);
-					r.translation.copy(anchor.controls.right).addSelf(this);
-					ll.vertices[0].copy(this);
-					rl.vertices[0].copy(this);
-					ll.vertices[1].copy(l.translation);
-					rl.vertices[1].copy(r.translation);
-				});
-				l.translation.bind(Two.Events.change, function () {
-					anchor.controls.left.copy(this).subSelf(anchor);
-					ll.vertices[1].copy(this);
-				});
-				r.translation.bind(Two.Events.change, function () {
-					anchor.controls.right.copy(this).subSelf(anchor);
-					rl.vertices[1].copy(this);
-				});
-
-			// Update the renderer in order to generate the actual elements.
-			two.update();
-
-			// Add Interactivity
-			addInteractivity(p);
-			addInteractivity(l);
-			addInteractivity(r);
-
-			});
-		});
-	}
-
-	function addInteractivity(shape) {
-
-		var offset = shape.parent.translation;
-
-		var drag = function (e) {
-			e.preventDefault();
-			var x = e.clientX - offset.x;
-			var y = e.clientY - offset.y;
-			shape.translation.set(x, y);
-		};
-		var touchDrag = function (e) {
-			e.preventDefault();
-			var touch = e.originalEvent.changedTouches[0];
-			drag({
-				preventDefault: _.identity,
-				clientX: touch.pageX,
-				clientY: touch.pageY
-			});
-			return false;
-		};
-		var dragEnd = function (e) {
-			e.preventDefault();
-			$window
-				.unbind('mousemove', drag)
-				.unbind('mouseup', dragEnd);
-		};
-		var touchEnd = function (e) {
-			e.preventDefault();
-			$(window)
-				.unbind('touchmove', touchDrag)
-				.unbind('touchend', touchEnd);
-			return false;
-		};
-
-		$(shape._renderer.elem)
-			.css({
-				cursor: 'pointer'
-			})
-			.bind('mousedown', function (e) {
-				e.preventDefault();
-				$window
-					.bind('mousemove', drag)
-					.bind('mouseup', dragEnd);
-			})
-			.bind('touchstart', function (e) {
-				e.preventDefault();
-				$(window)
-					.bind('touchmove', touchDrag)
-					.bind('touchend', touchEnd);
-				return false;
-			})
-		;
-	}
-	checksize();
+$('.audClick').click(function(){ click.play(); });
+$('.audSwipe').click(function(){ swipe.play(); });
 
 ////////////////////////////////////////////////
 ////////////////                 ///////////////
@@ -250,7 +130,6 @@
 	//ON RESIZE
 	var updateLayout = _.debounce(function(e) {
 		forwidth();
-		if ($('.tag').length > 0) {checkTags()};
 		fixType();
 	}, 500);
 	window.addEventListener("resize", updateLayout, false);

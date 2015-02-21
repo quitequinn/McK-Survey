@@ -1,0 +1,73 @@
+#main{
+	overflow: hidden;
+	z-index: 1;
+	position: relative;
+	margin-left: 0;
+	transition: all $fast;
+	box-shadow: 0 0 1em rgb(0,0,0);
+	img{
+		max-width: 300px;
+	}
+	section{
+		.winH{
+			@include m(min, $bp-small){
+				padding-bottom: 40px;
+			}
+		}
+	}
+}
+.active #main{
+	margin-left: 250px;
+	transition: all $fast;
+}
+[data-w=".5"] {
+width: 50px;
+}
+[data-w="1"] {
+width: 100px;
+}
+[data-w="1.5"] {
+width: 150px;
+}
+[data-w="2"] {
+width: 200px;
+}
+[data-w="2.5"] {
+width: 250px;
+}
+[data-w="3"] {
+width: 300px;
+}
+[data-w="4"] {
+width: 400px;
+}
+[data-w="5"] {
+width: 500px;
+}
+[data-w="6"] {
+width: 600px;
+}
+
+@mixin color-scheme($c1, $c2: rgba(0,0,0,.75)){
+	background: $c1;
+	color: $c2;
+}
+
+.intro{
+	@include color-scheme($color-intro);
+}
+.clean{
+	@include color-scheme($color-clean);
+}
+.economy{
+	@include color-scheme($color-economy);
+}
+.innovation{
+	@include color-scheme($color-innovation);
+}
+.future{
+	@include color-scheme($color-future);
+}
+.appendix{
+	@include color-scheme($color-appendix);
+}

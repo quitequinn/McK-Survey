@@ -32,7 +32,7 @@ var minify = require('gulp-minify-css');
 
 // SVGs
 var svgmin = require('gulp-svgmin');
-var svgstore = require('gulp-svgstore');
+// var svgstore = require('gulp-svgstore');
 
 // Docs
 var markdown = require('gulp-markdown');
@@ -123,13 +123,13 @@ gulp.task('build:scripts', ['clean:dist'], function() {
 			}
 		}))
 		.pipe(jsTasks())
-		.pipe(notify("Generated Scripts"));
 });
 
 // Process, lint, and minify Sass files
 gulp.task('build:styles', ['clean:dist'], function() {
 	return gulp.src(paths.styles.input)
 		.pipe(plumber())
+		.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
 		.pipe(sass({
 			style: 'expanded',
 			lineNumbers: true,
@@ -148,34 +148,38 @@ gulp.task('build:styles', ['clean:dist'], function() {
 		.pipe(minify())
 		.pipe(header(banner.min, { package : package }))
 		.pipe(gulp.dest(paths.styles.output))
-		.pipe(notify("Generated SASS Files"));
+		.pipe(notify({
+           title: 'Gulp',
+           subtitle: 'success',
+           message: 'Sass task',
+           sound: "Pop"
+       }));
 });
 
 // Generate SVG sprites
 gulp.task('build:svgs', ['clean:dist'], function () {
-	return gulp.src(paths.svgs.input)
-		.pipe(plumber())
-		.pipe(tap(function (file, t) {
-			if ( file.isDirectory() ) {
-				var name = file.relative + '.svg';
-				return gulp.src(file.path + '/*.svg')
-					.pipe(svgmin())
-					.pipe(svgstore({
-						fileName: name,
-						prefix: 'icon-',
-						inlineSvg: true
-					}))
-					.pipe(gulp.dest(paths.svgs.output));
-			}
-		}))
-		.pipe(svgmin())
-		.pipe(svgstore({
-			fileName: 'icons.svg',
-			prefix: 'icon-',
-			inlineSvg: true
-		}))
-		.pipe(gulp.dest(paths.svgs.output))
-		.pipe(notify("Generate SVG Sprites"));
+	// return gulp.src(paths.svgs.input)
+	// 	.pipe(plumber())
+	// 	.pipe(tap(function (file, t) {
+	// 		if ( file.isDirectory() ) {
+	// 			var name = file.relative + '.svg';
+	// 			return gulp.src(file.path + '/*.svg')
+	// 				.pipe(svgmin())
+	// 				.pipe(svgstore({
+	// 					fileName: name,
+	// 					prefix: 'icon-',
+	// 					inlineSvg: true
+	// 				}))
+	// 				.pipe(gulp.dest(paths.svgs.output));
+	// 		}
+	// 	}))
+	// 	.pipe(svgmin())
+	// 	.pipe(svgstore({
+	// 		fileName: 'icons.svg',
+	// 		prefix: 'icon-',
+	// 		inlineSvg: true
+	// 	}))
+	// .pipe(gulp.dest(paths.svgs.output))
 });
 
 // Copy static files into output folder
@@ -183,7 +187,6 @@ gulp.task('copy:static', ['clean:dist'], function() {
 	return gulp.src(paths.static)
 		.pipe(plumber())
 		.pipe(gulp.dest(paths.output))
-		.pipe(notify("Copied Static Files"));
 });
 
 // Lint scripts
@@ -204,40 +207,37 @@ gulp.task('clean:dist', function () {
 	]);
 });
 
-// Run unit tests
-gulp.task('test:scripts', function() {
-	return gulp.src([paths.test.input].concat([paths.test.spec]))
-		.pipe(plumber())
-		.pipe(karma({ configFile: paths.test.karma }))
-		.on('error', function(err) { throw err; })
-		.pipe(notify("Finished Unit Tests"));
-});
+// // Run unit tests
+// gulp.task('test:scripts', function() {
+// 	return gulp.src([paths.test.input].concat([paths.test.spec]))
+// 		.pipe(plumber())
+// 		.pipe(karma({ configFile: paths.test.karma }))
+// 		.on('error', function(err) { throw err; })
+// });
 
-// Generate documentation
-gulp.task('build:docs', ['compile', 'clean:docs'], function() {
-	return gulp.src(paths.docs.input)
-		.pipe(plumber())
-		.pipe(fileinclude({
-			prefix: '@@',
-			basepath: '@file'
-		}))
-		.pipe(tap(function (file, t) {
-			if ( /\.md|\.markdown/.test(file.path) ) {
-				return t.through(markdown);
-			}
-		}))
-		.pipe(header(fs.readFileSync(paths.docs.templates + '/_header.html', 'utf8')))
-		.pipe(footer(fs.readFileSync(paths.docs.templates + '/_footer.html', 'utf8')))
-		.pipe(gulp.dest(paths.docs.output))
-		.pipe(notify("Generate Documentation"));
-});
+// // Generate documentation
+// gulp.task('build:docs', ['compile', 'clean:docs'], function() {
+// 	return gulp.src(paths.docs.input)
+// 		.pipe(plumber())
+// 		.pipe(fileinclude({
+// 			prefix: '@@',
+// 			basepath: '@file'
+// 		}))
+// 		.pipe(tap(function (file, t) {
+// 			if ( /\.md|\.markdown/.test(file.path) ) {
+// 				return t.through(markdown);
+// 			}
+// 		}))
+// 		.pipe(header(fs.readFileSync(paths.docs.templates + '/_header.html', 'utf8')))
+// 		.pipe(footer(fs.readFileSync(paths.docs.templates + '/_footer.html', 'utf8')))
+// 		.pipe(gulp.dest(paths.docs.output))
+// });
 
 // Copy distribution files to docs
 gulp.task('copy:dist', ['compile', 'clean:docs'], function() {
 	return gulp.src(paths.output + '/**')
 		.pipe(plumber())
 		.pipe(gulp.dest(paths.docs.output + '/dist'))
-		.pipe(notify("Copied Distribution"));
 });
 
 // Copy documentation assets to docs
@@ -245,7 +245,6 @@ gulp.task('copy:assets', ['clean:docs'], function() {
 	return gulp.src(paths.docs.assets)
 		.pipe(plumber())
 		.pipe(gulp.dest(paths.docs.output + '/assets'))
-		.pipe(notify("Copied Documentation"));
 });
 
 // Remove prexisting content from docs folder
@@ -284,10 +283,10 @@ gulp.task('compile', [
 
 // Generate documentation
 gulp.task('docs', [
-	'clean:docs',
-	'build:docs',
-	'copy:dist',
-	'copy:assets'
+	// 'clean:docs',
+	// 'build:docs',
+	// 'copy:dist',
+	// 'copy:assets'
 ]);
 
 // Generate documentation

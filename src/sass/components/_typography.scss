@@ -34,12 +34,13 @@ a {
 	color: $color-primary;
 	text-decoration: none;
 	word-wrap: break-word;
+	opacity: 0.75;
 }
 
 a:hover,
 a:focus {
 	color: darken( $color-primary, 15% );
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 a img {
@@ -93,6 +94,7 @@ dt {
 	list-style: none;
 }
 
+
 /**
  * Display lists on a single line.
  */
@@ -112,48 +114,216 @@ dt {
 
 
 /**
+ * Small Caps
+ */
+ @mixin smallcaps($font-size) {
+	text-transform: uppercase;
+	letter-spacing: .15em;
+	font-size: $font-size;
+}
+
+
+/**
+ * Type-size-calc
+ */
+$line-height: 1.4;
+
+@mixin type-size-calc($font-size) {
+	font-size: $font-size*1.25;
+	line-height: $font-size*1.25*$line-height;
+}
+@mixin type-size-calc-xlarge($font-size) {
+	font-size: $font-size*1;
+	line-height: $font-size*1*$line-height;
+}
+@mixin type-size-calc-large($font-size) {
+	font-size: $font-size*0.8;
+	line-height: $font-size*0.8*$line-height;
+}
+@mixin type-size-calc-medium($font-size) {
+	font-size: $font-size*0.65;
+	line-height: $font-size*0.65*$line-height;
+}
+@mixin type-size-calc-small($font-size) {
+	font-size: $font-size*0.55;
+	line-height: $font-size*0.55*$line-height;
+}
+@mixin type-size-calc-xsmall($font-size) {
+	font-size: $font-size*0.5;
+	line-height: $font-size*0.5*$line-height;
+}
+
+/**
  * Heading styling for h1 through h6 elements.
  * Heading class lets you use one heading type for semantics, but style it as another heading type.
  */
 
 h1, h2, h3, h4, h5, h6 {
-	line-height: 1.2;
+	line-height: 1.3;
 	font-weight: normal;
 	margin-bottom: 1em;
 	padding-top: 1em;
 	word-wrap: break-word;
 }
 
-h1,
-.h1 {
-	font-size: calc-em(24px);
+h1, .h1, .h1 p {
+	$size: 140px;
+	text-transform: uppercase;
+	font-family: $font-secondary;
+	text-align: center;
+	@include type-size-calc($size);
 	padding-top: .5em;
+	@include m( max, $bp-xlarge) {
+		@include type-size-calc-xlarge($size);
+	}
+	@include m( max, $bp-large) {
+		@include type-size-calc-large($size);
+	}
+	@include m( max, $bp-medium) {
+		@include type-size-calc-medium($size);
+	}
+	@include m( max, $bp-small) {
+		@include type-size-calc-small($size);
+	}
+	@include m( max, $bp-xsmall) {
+		@include type-size-calc-xsmall($size);
+	}
+	@include m( max, $bp-xsmall) {
+		@include type-size-calc-xsmall($size);
+	}
 
-	@media (min-width: $bp-medium) {
-		font-size: calc-em(28px);
+h1, .h1, .h1 p {
+	$size: 140px;
+	text-transform: uppercase;
+	font-family: $font-secondary;
+	text-align: center;
+	@include type-size-calc($size);
+	padding-top: .5em;
+	@include m( max, $bp-xlarge) {
+		@include type-size-calc-xlarge($size);
+	}
+	@include m( max, $bp-large) {
+		@include type-size-calc-large($size);
+	}
+	@include m( max, $bp-medium) {
+		@include type-size-calc-medium($size);
+	}
+	@include m( max, $bp-small) {
+		@include type-size-calc-small($size);
+	}
+	@include m( max, $bp-xsmall) {
+		@include type-size-calc-xsmall($size);
+	}
+	@include m( max, $bp-xsmall) {
+		@include type-size-calc-xsmall($size);
 	}
 }
 
-h2,
-.h2 {
-	font-size: calc-em(21px);
+h2, .h2, .h2 p {
+	$size: 100px;
+	font-family: $font-secondary;
+	@include type-size-calc($size);
+	@include m( max, $bp-xlarge) {
+		@include type-size-calc-xlarge($size);
+	}
+	@include m( max, $bp-large) {
+		@include type-size-calc-large($size);
+	}
+	@include m( max, $bp-medium) {
+		@include type-size-calc-medium($size);
+	}
+	@include m( max, $bp-small) {
+		@include type-size-calc-small($size);
+	}
+	@include m( max, $bp-xsmall) {
+		@include type-size-calc-xsmall($size);
+	}
 }
 
-h3,
-.h3 {
-	font-size: calc-em(19px);
-}
+h3, .h3, .h3 p {
+	$size: 40px;
 
-h4, h5, h6,
-.h4, .h5, .h6 {
-	font-size: calc-em(16px);
+	@include type-size-calc($size);
+	@include m( max, $bp-xlarge) {
+		@include type-size-calc-xlarge($size);
+	}
+	@include m( max, $bp-large) {
+		@include type-size-calc-large($size);
+	}
+	@include m( max, $bp-medium) {
+		@include type-size-calc-medium($size);
+	}
+	@include m( max, $bp-small) {
+		@include type-size-calc-small($size);
+	}
+	@include m( max, $bp-xsmall) {
+		@include type-size-calc-xsmall($size);
+	}
+}
+.h3 .h3_rant p {
+	$size: 50px;
+
+	@include type-size-calc($size);
+	@include m( max, $bp-xlarge) {
+		@include type-size-calc-xlarge($size);
+	}
+	@include m( max, $bp-large) {
+		@include type-size-calc-large($size);
+	}
+	@include m( max, $bp-medium) {
+		@include type-size-calc-medium($size);
+	}
+	@include m( max, $bp-small) {
+		@include type-size-calc-small($size);
+	}
+	@include m( max, $bp-xsmall) {
+		@include type-size-calc-xsmall($size);
+	}
 }
 
 h4,
-.h4 {
-	text-transform: uppercase;
+.h4, .h4 p {
+	$size: 30px;
+	@include type-size-calc-large($size);
+}
+h5, .h5 {
+	$size: 20px;
+
+	@include type-size-calc($size);
+	@include m( max, $bp-xlarge) {
+		@include type-size-calc-xlarge($size);
+	}
+	@include m( max, $bp-large) {
+		@include type-size-calc-large($size);
+	}
 }
 
+h6, .h6 {
+	@include smallcaps(12px);
+	font-weight: 700;
+}
+
+p,
+.p {
+	$size: 20px;
+	font-weight: 300;
+	@include type-size-calc($size);
+	@include m( max, $bp-xlarge) {
+		@include type-size-calc-xlarge($size);
+	}
+	@include m( max, $bp-large) {
+		@include type-size-calc-large($size);
+	}
+	@include m( max, $bp-medium) {
+		@include type-size-calc-medium($size);
+	}
+	@include m( max, $bp-small) {
+		@include type-size-calc-small($size);
+	}
+	@include m( max, $bp-xsmall) {
+		@include type-size-calc-xsmall($size);
+	}
+}
 
 /**
  * Lines, Quotes and Emphasis
@@ -173,7 +343,24 @@ strong {
 em {
 	font-style: italic;
 }
-
+.thin{
+	font-weight: 200;
+}
+.light{
+	font-weight: 300;
+}
+.regular{
+	font-weight: 400;
+}
+.bold{
+	font-weight: 700;
+}
+.black{
+	font-weight: 900;
+}
+.tx-center{
+	text-align: center;
+}
 sub,
 sup {
 	position: relative;

@@ -1,8 +1,39 @@
-	</main><!-- #content -->
-
-	<footer id="colophon" class="site-footer container section" role="contentinfo">
-
-	</footer><!-- #colophon -->
+	<footer class="site-footer section">
+		<a href="#" class="mcKnight">M</a>
+		<div id="footerNav">
+			<a href="#!/" class="audSwipe homeLink"></a>
+			<a href="#!/clean" class="audSwipe chapterLink"></a>
+			<a href="#!/clean/1" class="audSwipe pageLink"></a>
+			<a href="#!/clean/2" class="audSwipe pageLink"></a>
+			<a href="#!/clean/3" class="audSwipe pageLink"></a>
+			<a href="#!/clean/4" class="audSwipe pageLink"></a>
+			<a href="#!/clean/5" class="audSwipe pageLink"></a>
+			<a href="#!/economy" class="audSwipe chapterLink"></a>
+			<a href="#!/economy/1" class="audSwipe pageLink"></a>
+			<a href="#!/economy/2" class="audSwipe pageLink"></a>
+			<a href="#!/economy/3" class="audSwipe pageLink"></a>
+			<a href="#!/economy/4" class="audSwipe pageLink"></a>
+			<a href="#!/economy/5" class="audSwipe pageLink"></a>
+			<a href="#!/innovation" class="audSwipe chapterLink"></a>
+			<a href="#!/innovation/1" class="audSwipe pageLink"></a>
+			<a href="#!/innovation/2" class="audSwipe pageLink"></a>
+			<a href="#!/innovation/3" class="audSwipe pageLink"></a>
+			<a href="#!/innovation/4" class="audSwipe pageLink"></a>
+			<a href="#!/innovation/5" class="audSwipe pageLink"></a>
+			<a href="#!/future" class="audSwipe chapterLink"></a>
+			<a href="#!/future/1" class="audSwipe pageLink"></a>
+			<a href="#!/future/2" class="audSwipe pageLink"></a>
+			<a href="#!/future/3" class="audSwipe pageLink"></a>
+			<a href="#!/future/4" class="audSwipe pageLink"></a>
+			<a href="#!/future/5" class="audSwipe pageLink"></a>
+			<a href="#!/appendix" class="audSwipe chapterLink"></a>
+		</div>
+		<div class="social">
+			<a href="#" class="fa fa-facebook"></a>
+			<a href="#" class="fa fa-twitter"></a>
+		</div>
+	</footer>
+</main><!-- #content -->
 </div><!-- #page -->
 
 <!-- JAVASCRIPT -->
@@ -17,7 +48,8 @@
 <script src="vendor/jQuery-widowFix/js/jquery.widowFix-1.3.2.min.js"></script>
 <script src="vendor/hypher/jquery.hypher.js"></script>
 <script src="vendor/hypher/en-us.js"></script>
-<script src="vendor/twoJS/two.min.js"></script>
+<script src="vendor/elementQueries/ResizeSensor.js"></script>
+<script src="vendor/elementQueries/ElementQueries.js"></script>
 
 <!-- In the footer for better performance -->
 <script src="dist/js/main.js"></script>

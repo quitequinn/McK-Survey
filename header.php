@@ -28,7 +28,8 @@
 
  	<!-- CSS -->
 	<!-- CDN Dependencies -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="//cloud.typography.com/7970954/616486/css/fonts.css" />
 	<!-- Local Dependencies -->
     <link rel="stylesheet" href="dist/css/main.css" type="text/css"/>
 
@@ -52,12 +53,10 @@
 	<![endif]-->
 	<div class="jsdump" style="display:none;"></div>
 
-	<nav><!-- Skip Nav Link -->
-		<a class="screen-reader screen-reader-focusable" href="#main">Skip to content</a>
-	</nav>
-
-	<header id="masthead" class="site-header" role="banner">
-
-	</header><!-- #masthead -->
+	<? include("sideNav.php") ?>
 
 	<main id="main" class="site-content">
+
+		<div class="permNav">
+			<span class="hamburger-wrap audClick"><div class="hamburger"></div></span> <span class="h6">2015 Future Economy Minnesota</span>
+		</div>

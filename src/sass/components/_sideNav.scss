@@ -1,0 +1,93 @@
+.sideNav{
+	$width: 250px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: $color-black;
+	z-index: 0;
+	width: $width;
+	.menu{
+		max-width: $width;
+		color: $color-white;
+		padding: 28px 1em 28px 2em;
+		width: 100%;
+		a, a:visited{
+			color: $color-white;
+	  		transition: all $fast;
+		}
+		a:hover{
+			color: rgba($color-white, .5);
+	  		transition: all $fast;
+		}
+	}
+	.menu-footer{
+		width: 100%;
+		position: absolute;
+  		bottom: -.7em;
+  		opacity: .5;
+	}
+	.margin-bottom{
+		margin-bottom: 60px;
+	}
+	.margin-bottom-half{
+		margin-bottom: 30px;
+	}
+
+}
+.permNav{
+	position: absolute;
+	top: 0;
+	margin: 25px 30px;
+	width: 100%;
+	z-index: 2;
+	.hamburger-wrap{
+		@include pointer;
+	  	width: 55px;
+	  	padding: 10px;
+	  	height: 45px;
+	  	display: block;
+	  	position: relative;
+	}
+	.hamburger, .hamburger:before, .hamburger:after {
+		@include pointer;
+		height: 5px;
+		width: 35px;
+		position: absolute;
+		display: block;
+		content: '';
+		transition: all $fast;
+		background: $color-black;
+  		border-radius: 10px;
+	}
+	.hamburger {
+		margin-top: 10px;
+		transition: all $fast;
+		&:before {
+			transition: all $fast;
+			top: -10px;
+		}
+		&:after {
+			bottom: -10px;
+			transition: all $fast;
+		}
+	}
+	&.active .hamburger{
+		background-color: transparent;
+		margin-top: 21px;
+		transition: all $fast;
+		&:before {
+			transform: rotate(45deg);
+			transition: all $fast;
+		}
+		&:after {
+			transform: translateY(-10px) rotate(-45deg);
+			bottom: 0px;
+			transition: all $fast;
+		}
+	}
+	span:last-of-type{
+		padding-left: 70px;
+		display: block;
+		margin-top: -31px;
+	}
+}

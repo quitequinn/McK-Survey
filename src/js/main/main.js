@@ -9,7 +9,7 @@
 	//Fix Widows
 	function fixType(){
 		var widows = 'p';
-		var hyphens = 'p';
+		var hyphens = 'p:not(.tx-center)';
 
 		// Fix widows
 		$(widows).each(function(){
@@ -76,6 +76,40 @@
 		}
 	}
 
+// Share
+
+function setShareLinks(){
+	if (iphone()) {
+		$(".fa-twitter").attr('href', "twitter://post?message=" + encodeURIComponent(document.URL));
+	}else{
+		$(".fa-twitter").attr('href', "https://twitter.com/home?status=" + encodeURIComponent(document.URL));
+		$(".fa-facebook").attr('href', "https://www.facebook.com/sharer/sharer.php?s=100&p[url]=" + encodeURIComponent(document.URL));
+	}
+}
+setShareLinks();
+
+$(".social > a").click(function(){
+	var width = 400;
+	var height = 300;
+	var leftPosition, topPosition;
+	leftPosition = (window.screen.width / 2) - ((width / 2) + 10);
+	topPosition = (window.screen.height / 2) - ((height / 2) + 50);
+
+	window.open(this.href, 'newwindow', 'width='+ width +', height='+ height +', resizable=yes, left=' + ((window.screen.width / 2) - ((width / 2) + 10)) + ', top=' + ((window.screen.height / 2) - ((height / 2) + 50)) + ', screenX=' + ((window.screen.width / 2) - ((width / 2) + 10)) + ', screenY=300');
+	return false;
+});
+
+//Side Nav
+$('.hamburger-wrap').click(function(){
+	$("body, .sideNav, .permNav").toggleClass('active');
+});
+
+//Audio
+var click = new Audio('click.mp3');
+var swipe = new Audio('swipe.mp3');
+
+$('.audClick').click(function(){ click.play(); });
+$('.audSwipe').click(function(){ swipe.play(); });
 
 ////////////////////////////////////////////////
 ////////////////                 ///////////////

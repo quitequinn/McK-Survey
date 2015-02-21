@@ -1,5 +1,12 @@
+// Colors
+@import "colors/variables";
+@import "colors/skins";
+// Config
 @import "config";
+// Mixins
 @import "mixins";
+@import "utils/helper_mixins";
+// Components
 @import "components/reset";
 @import "components/grid";
 @import "components/typography";
@@ -7,6 +14,12 @@
 @import "components/buttons";
 @import "components/forms";
 @import "components/svg";
+// Modules
+@import "components/global";
+@import "components/sideNav";
+@import "components/page";
+@import "components/TBC";
+@import "components/footer";
 // @import "components/iconfonts";
 // Import add-ons here...
 @import "components/overrides";
