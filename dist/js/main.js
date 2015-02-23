@@ -90,6 +90,7 @@
 function setShareLinks(){
 	if (iphone()) {
 		$(".fa-twitter").attr('href', "twitter://post?message=" + encodeURIComponent(document.URL));
+		$(".fa-facebook").attr('href', "https://www.facebook.com/sharer/sharer.php?s=100&p[url]=" + encodeURIComponent(document.URL));
 	}else{
 		$(".fa-twitter").attr('href', "https://twitter.com/home?status=" + encodeURIComponent(document.URL));
 		$(".fa-facebook").attr('href', "https://www.facebook.com/sharer/sharer.php?s=100&p[url]=" + encodeURIComponent(document.URL));
@@ -114,11 +115,105 @@ $('.hamburger-wrap').click(function(){
 });
 
 //Audio
-var click = new Audio('click.mp3');
-var swipe = new Audio('swipe.mp3');
+$('.audClick:not(view-on)').click(function(){
+	var click = new Audio('click.mp3');
+	click.play();
+});
+$('.audSwipe:not(view-on)').click(function(){
+	var swipe = new Audio('swipe.mp3');
+	swipe.play();
+});
 
-$('.audClick').click(function(){ click.play(); });
-$('.audSwipe').click(function(){ swipe.play(); });
+
+
+////////////////////////////////////////////////
+//////////////////             /////////////////
+//////////////////    PATHS    /////////////////
+//////////////////             /////////////////
+////////////////////////////////////////////////
+
+
+///App ROUTES via PATH.js
+function path(path){
+	var url = path.replace(/[_]/g, '/');
+
+	Path.map("#!/" + url).enter(function(){
+		$('.view-on').removeClass('view-on');
+		$("footer a").attr("onclick","");
+	}).to(function(){
+		$('#'+path).addClass('view-on').parent().addClass('view-on');
+		$("main")
+			.attr("cur-slide", path)
+			.attr("cur-chapter", path.replace(/([_])\w+/g, ''))
+			.attr("cur-page", path.replace(/\w+([_])/g, ''));
+		$('footer a[href$="#!/'+url+'"]').addClass('view-on').attr("onclick","return false");
+		setCarrots();
+	});
+}
+$(".page").each(function(){
+	path($(this).attr("id"));
+});
+
+// HOME AND ROOT
+Path.map("#!/").enter(function(){
+	$('.view-on').removeClass('view-on');
+	$("footer a").attr("onclick","");
+}).to(function(){
+	$('#home').addClass('view-on').parent().addClass('view-on');
+	$("main")
+		.attr("cur-slide", "intro")
+		.attr("cur-chapter", "intro")
+		.attr("cur-page", 'intro');
+	$('footer a[href$="#!/"]').addClass('view-on').attr("onclick","return false");
+	setCarrots();
+});
+Path.root("#!/");
+
+
+Path.listen();
+
+//Set Arrow Routs
+
+function setCarrots(){
+	if ( $(".page.view-on").next(".page") == 'appendix') {
+		var prevpage = "#!/";
+	} else {
+		var next = $(".page.view-on").next(".page");
+		if( next.length == 0){
+			var nextpage = "#!/" + $(".page.view-on").parent().next().children().first(".page").attr("id").replace(/[_]/g, '/');
+ 		} else {
+			var nextpage = "#!/" + $(".page.view-on").next(".page").attr("id").replace(/[_]/g, '/');
+		}
+	}
+	if ( $(".page.view-on").attr("id") == 'home') {
+		var prevpage = "#!/";
+	} else {
+		var prev = $(".page.view-on").prev(".page");
+		if( prev.length == 0){
+			var prevpage = "#!/" + $(".page.view-on").parent().prev().children().next(".page:last-of-type").attr("id").replace(/[_]/g, '/');
+ 		} else {
+			var prevpage = "#!/" + $(".page.view-on").prev(".page").attr("id").replace(/[_]/g, '/');
+		}
+	}
+	$(".pageNav .fa-chevron-circle-right").attr("href", nextpage);
+	$(".pageNav .fa-chevron-circle-left").attr("href", prevpage);
+}
+setCarrots();
+
+// Arrow Keys
+document.onkeydown = checkKey;
+function checkKey(e) {
+    e = e || window.event;
+    if (e.keyCode == '37') {
+		$(".pageNav .fa-chevron-circle-left").get(0).click();
+		setCarrots();
+    }
+    else if (e.keyCode == '39') {
+        $(".pageNav .fa-chevron-circle-right").get(0).click();
+		setCarrots();
+    }
+
+}
 
 ////////////////////////////////////////////////
 ////////////////                 ///////////////
@@ -145,6 +240,7 @@ $('.audSwipe').click(function(){ swipe.play(); });
 
 $(window).load(function() {
 
+    $(".loader").css("display", "none")
 
 }); // `~*# The end.
 

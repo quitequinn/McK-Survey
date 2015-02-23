@@ -1,18 +1,173 @@
+@mixin tocW($sections, $more: 0){
+	margin-left: (($sections*(48.5/5))+50%);
+	width: $more+10%;
+}
+
 #main{
 	overflow: hidden;
 	z-index: 1;
 	position: relative;
 	margin-left: 0;
 	transition: all $fast;
-	box-shadow: 0 0 1em rgb(0,0,0);
 	img{
 		max-width: 300px;
 	}
 	section{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		left: -100%;
+		transition: all $fast;
+		box-shadow: -.5em -1em 1em .5em rgb(0,0,0);
+		&.view-on{
+			z-index: 2;
+			left: 0;
+			transition: all $fast;
+			.spine{
+				width: 0;
+		  		display: none;
+			}
+		}
 		.winH{
 			@include m(min, $bp-small){
 				padding-bottom: 40px;
 			}
+		}
+		.page{
+			left: -100%;
+			position: absolute;
+			transition: all $fast;
+			width: 100%;
+			&.view-on{
+				left: 0;
+				transition: all $fast;
+			}
+		}
+		.spine{
+			cursor: pointer;
+			color: rgba(0,0,0,.5);
+		}
+	}
+	&[cur-slide="intro"]{
+		.page{
+			display: none;
+		}
+		section{
+			left: 0;
+		}
+		section:nth-of-type(1){
+			width: 91%;
+			z-index: 6;
+			.page{
+				display: inherit;
+			}
+		}
+		section:nth-of-type(2){
+			width: 92.5%;
+			z-index: 5;
+		}
+		section:nth-of-type(3){
+			width: 94%;
+			z-index: 4;
+		}
+		section:nth-of-type(4){
+			width: 95.5%;
+			z-index: 3;
+		}
+		section:nth-of-type(5){
+			width: 97%;
+			z-index: 2;
+		}
+		section:nth-of-type(6){
+			width: 98.5%;
+			z-index: 1;
+		}
+		section:hover{
+			&:nth-of-type(2){
+				width: 93.5%;
+			}
+			&:nth-of-type(3){
+				width: 95%;
+			}
+			&:nth-of-type(4){
+				width: 96.5%;
+			}
+			&:nth-of-type(5){
+				width: 98%;
+			}
+			&:nth-of-type(6){
+				width: 99.5%;
+			}
+		}
+	}
+	&[cur-slide="toc"]{
+
+		.page{
+			display: none;
+		}
+		section{
+			left: 0;
+			&:nth-of-type(1){
+				width: 50%;
+				z-index: 6;
+				.page{
+					display: inherit;
+				}
+			}
+			&:nth-of-type(2){
+				@include tocW(0);
+				z-index: 5;
+			}
+			&:nth-of-type(3){
+				@include tocW(1);
+				z-index: 4;
+			}
+			&:nth-of-type(4){
+				@include tocW(2);
+				z-index: 3;
+			}
+			&:nth-of-type(5){
+				@include tocW(3);
+				z-index: 2;
+			}
+			&:nth-of-type(6){
+				@include tocW(4);
+				z-index: 1;
+			}
+			&:hover{
+				.spine{
+					color: rgba(0,0,0,1);
+				}
+				&:nth-of-type(2){
+					@include tocW(0, 4);
+					z-index: 5;
+				}
+				&:nth-of-type(3){
+					@include tocW(1, 4);
+					z-index: 4;
+				}
+				&:nth-of-type(4){
+					@include tocW(2, 4);
+					z-index: 3;
+				}
+				&:nth-of-type(5){
+					@include tocW(3, 4);
+					z-index: 2;
+				}
+				&:nth-of-type(6){
+					@include tocW(4, 1.5);
+					z-index: 1;
+				}
+			}
+		}
+	}
+	&[cur-chapter="clean"], &[cur-chapter="economy"], &[cur-chapter="innovation"], &[cur-chapter="future"] {
+		section{
+			max-width: 95%;
+		}
+		.pageNav{
+			display: block;
 		}
 	}
 }
@@ -20,6 +175,37 @@
 	margin-left: 250px;
 	transition: all $fast;
 }
+.rotate{
+  transform: rotate(90deg);
+}
+.appendix-label{
+	padding-top: 10%;
+}
+.profile-link{
+	border-radius: 50%;
+  	width: 12em;
+  	height: 12em;
+  	margin: 2em auto;
+  	background-size: cover!important;
+  	text-align: center;
+  	h6{
+		color: $color-white;
+  	}
+}
+.pageNav{
+	display: none;
+  	top: 50%;
+	margin-top: -30px;
+	width: 4.5%;
+	right: 0;
+	text-align: center;
+	position: absolute;
+}
+
+
+
+
+
 [data-w=".5"] {
 width: 50px;
 }
@@ -55,19 +241,44 @@ width: 600px;
 
 .intro{
 	@include color-scheme($color-intro);
+	.page{
+		@include color-scheme($color-intro);
+	}
 }
 .clean{
 	@include color-scheme($color-clean);
+	.page{
+		@include color-scheme($color-clean);
+	}
 }
 .economy{
 	@include color-scheme($color-economy);
+	.page{
+		@include color-scheme($color-economy);
+	}
 }
 .innovation{
 	@include color-scheme($color-innovation);
+	.page{
+		@include color-scheme($color-innovation);
+	}
 }
 .future{
 	@include color-scheme($color-future);
+	.page{
+		@include color-scheme($color-future);
+	}
 }
 .appendix{
 	@include color-scheme($color-appendix);
+	.page{
+		@include color-scheme($color-appendix);
+	}
+}
+
+
+//UNIQUE PAGES
+
+#home{
+	width: 95%;
 }

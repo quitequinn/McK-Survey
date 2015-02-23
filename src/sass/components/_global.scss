@@ -1,5 +1,29 @@
+a, a:link, a:visited{
+ color: $color-black;
+}
 body{
-	background: $color-black;
+	background: $color-gray-light;
+}
+
+@keyframes spin {
+	100% {
+		transform:rotate(360deg);
+	}
+}
+.loader{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 99;
+	background: $color-intro;
+	width: 100%;
+	img{
+		animation: spin 4s linear infinite;
+		margin: 0 auto;
+		display: block;
+	}
 }
 .social{
   	font-size: 19px;
@@ -14,7 +38,6 @@ body{
 		margin-right: 10px;
 	}
 }
-
 .centerWrap{
 	display: table;
 	.center{

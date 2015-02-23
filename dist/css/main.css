@@ -945,11 +945,16 @@ dt {
   font-weight: bold;
 }
 
+/* line 87, ../components/_typography.scss */
+b {
+  font-weight: 700;
+}
+
 /**
  * Removes list styling.
  * For semantic reasons, should only be used on unordered lists.
  */
-/* line 92, ../components/_typography.scss */
+/* line 95, ../components/_typography.scss */
 .list-unstyled {
   margin-left: 0;
   list-style: none;
@@ -958,7 +963,7 @@ dt {
 /**
  * Display lists on a single line.
  */
-/* line 102, ../components/_typography.scss */
+/* line 105, ../components/_typography.scss */
 .list-inline {
   list-style: none;
   margin-left: -0.5em;
@@ -966,7 +971,7 @@ dt {
   padding: 0;
 }
 
-/* line 109, ../components/_typography.scss */
+/* line 112, ../components/_typography.scss */
 .list-inline > li {
   display: inline;
   margin-left: 0.5em;
@@ -983,7 +988,7 @@ dt {
  * Heading styling for h1 through h6 elements.
  * Heading class lets you use one heading type for semantics, but style it as another heading type.
  */
-/* line 161, ../components/_typography.scss */
+/* line 159, ../components/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.3;
   font-weight: normal;
@@ -992,313 +997,316 @@ h1, h2, h3, h4, h5, h6 {
   word-wrap: break-word;
 }
 
-/* line 169, ../components/_typography.scss */
+/* line 167, ../components/_typography.scss */
 h1, .h1, .h1 p {
   text-transform: uppercase;
   font-family: "Obsidian A", "Obsidian B", Times, serif;
   text-align: center;
-  font-size: 175px;
-  line-height: 245.0px;
+  font-size: 54px;
   padding-top: .5em;
 }
-@media (max-width: 1200px) {
-  /* line 169, ../components/_typography.scss */
+@media (min-width: 400px) {
+  /* line 167, ../components/_typography.scss */
   h1, .h1, .h1 p {
-    font-size: 140px;
-    line-height: 196px;
+    font-size: 65px;
   }
 }
-/* line 14, ../utils/_helper_mixins.scss */
-h1 #main[min-width="$amount"], .h1 #main[min-width="$amount"], .h1 p #main[min-width="$amount"] {
-  font-size: 140px;
-  line-height: 196px;
+/* line 18, ../utils/_helper_mixins.scss */
+#main[min-width~="400px"] h1, #main[min-width~="400px"] .h1, #main[min-width~="400px"] .h1 p {
+  font-size: 65px;
 }
-@media (max-width: 1000px) {
-  /* line 169, ../components/_typography.scss */
+@media (min-width: 600px) {
+  /* line 167, ../components/_typography.scss */
   h1, .h1, .h1 p {
-    font-size: 112px;
-    line-height: 156.8px;
+    font-size: 80px;
   }
 }
-/* line 14, ../utils/_helper_mixins.scss */
-h1 #main[min-width="$amount"], .h1 #main[min-width="$amount"], .h1 p #main[min-width="$amount"] {
-  font-size: 112px;
-  line-height: 156.8px;
+/* line 18, ../utils/_helper_mixins.scss */
+#main[min-width~="600px"] h1, #main[min-width~="600px"] .h1, #main[min-width~="600px"] .h1 p {
+  font-size: 80px;
 }
-@media (max-width: 800px) {
-  /* line 169, ../components/_typography.scss */
+@media (min-width: 800px) {
+  /* line 167, ../components/_typography.scss */
   h1, .h1, .h1 p {
-    font-size: 91px;
-    line-height: 127.4px;
+    font-size: 104px;
   }
 }
-/* line 14, ../utils/_helper_mixins.scss */
-h1 #main[min-width="$amount"], .h1 #main[min-width="$amount"], .h1 p #main[min-width="$amount"] {
-  font-size: 91px;
-  line-height: 127.4px;
+/* line 18, ../utils/_helper_mixins.scss */
+#main[min-width~="800px"] h1, #main[min-width~="800px"] .h1, #main[min-width~="800px"] .h1 p {
+  font-size: 104px;
 }
-@media (max-width: 600px) {
-  /* line 169, ../components/_typography.scss */
+@media (min-width: 1000px) {
+  /* line 167, ../components/_typography.scss */
   h1, .h1, .h1 p {
-    font-size: 77px;
-    line-height: 107.8px;
+    font-size: 128px;
   }
 }
-/* line 14, ../utils/_helper_mixins.scss */
-h1 #main[min-width="$amount"], .h1 #main[min-width="$amount"], .h1 p #main[min-width="$amount"] {
-  font-size: 77px;
-  line-height: 107.8px;
+/* line 18, ../utils/_helper_mixins.scss */
+#main[min-width~="1000px"] h1, #main[min-width~="1000px"] .h1, #main[min-width~="1000px"] .h1 p {
+  font-size: 128px;
 }
-@media (max-width: 400px) {
-  /* line 169, ../components/_typography.scss */
+@media (min-width: 1200px) {
+  /* line 167, ../components/_typography.scss */
   h1, .h1, .h1 p {
-    font-size: 70px;
-    line-height: 98px;
+    font-size: 160px;
   }
 }
-/* line 14, ../utils/_helper_mixins.scss */
-h1 #main[min-width="$amount"], .h1 #main[min-width="$amount"], .h1 p #main[min-width="$amount"] {
-  font-size: 70px;
-  line-height: 98px;
+/* line 18, ../utils/_helper_mixins.scss */
+#main[min-width~="1200px"] h1, #main[min-width~="1200px"] .h1, #main[min-width~="1200px"] .h1 p {
+  font-size: 160px;
 }
 
-/* line 193, ../components/_typography.scss */
+/* line 192, ../components/_typography.scss */
 h2, .h2, .h2 p {
   font-family: "Obsidian A", "Obsidian B", Times, serif;
-  font-size: 125px;
-  line-height: 175px;
+  font-size: 45px;
+  line-height: 0.95;
 }
-@media (max-width: 1200px) {
-  /* line 193, ../components/_typography.scss */
+@media (min-width: 400px) {
+  /* line 192, ../components/_typography.scss */
   h2, .h2, .h2 p {
-    font-size: 100px;
-    line-height: 140px;
+    font-size: 50px;
   }
 }
-/* line 14, ../utils/_helper_mixins.scss */
-h2 #main[min-width="$amount"], .h2 #main[min-width="$amount"], .h2 p #main[min-width="$amount"] {
-  font-size: 100px;
-  line-height: 140px;
+/* line 18, ../utils/_helper_mixins.scss */
+#main[min-width~="400px"] h2, #main[min-width~="400px"] .h2, #main[min-width~="400px"] .h2 p {
+  font-size: 50px;
 }
-@media (max-width: 1000px) {
-  /* line 193, ../components/_typography.scss */
-  h2, .h2, .h2 p {
-    font-size: 80px;
-    line-height: 112px;
-  }
-}
-/* line 14, ../utils/_helper_mixins.scss */
-h2 #main[min-width="$amount"], .h2 #main[min-width="$amount"], .h2 p #main[min-width="$amount"] {
-  font-size: 80px;
-  line-height: 112px;
-}
-@media (max-width: 800px) {
-  /* line 193, ../components/_typography.scss */
-  h2, .h2, .h2 p {
-    font-size: 65px;
-    line-height: 91px;
-  }
-}
-/* line 14, ../utils/_helper_mixins.scss */
-h2 #main[min-width="$amount"], .h2 #main[min-width="$amount"], .h2 p #main[min-width="$amount"] {
-  font-size: 65px;
-  line-height: 91px;
-}
-@media (max-width: 600px) {
-  /* line 193, ../components/_typography.scss */
+@media (min-width: 600px) {
+  /* line 192, ../components/_typography.scss */
   h2, .h2, .h2 p {
     font-size: 55.0px;
-    line-height: 77px;
   }
 }
-/* line 14, ../utils/_helper_mixins.scss */
-h2 #main[min-width="$amount"], .h2 #main[min-width="$amount"], .h2 p #main[min-width="$amount"] {
+/* line 18, ../utils/_helper_mixins.scss */
+#main[min-width~="600px"] h2, #main[min-width~="600px"] .h2, #main[min-width~="600px"] .h2 p {
   font-size: 55.0px;
-  line-height: 77px;
 }
-@media (max-width: 400px) {
-  /* line 193, ../components/_typography.scss */
+@media (min-width: 800px) {
+  /* line 192, ../components/_typography.scss */
   h2, .h2, .h2 p {
-    font-size: 50px;
-    line-height: 70px;
+    font-size: 65px;
   }
 }
-/* line 14, ../utils/_helper_mixins.scss */
-h2 #main[min-width="$amount"], .h2 #main[min-width="$amount"], .h2 p #main[min-width="$amount"] {
-  font-size: 50px;
-  line-height: 70px;
+/* line 18, ../utils/_helper_mixins.scss */
+#main[min-width~="800px"] h2, #main[min-width~="800px"] .h2, #main[min-width~="800px"] .h2 p {
+  font-size: 65px;
+}
+@media (min-width: 1000px) {
+  /* line 192, ../components/_typography.scss */
+  h2, .h2, .h2 p {
+    font-size: 80px;
+  }
+}
+/* line 18, ../utils/_helper_mixins.scss */
+#main[min-width~="1000px"] h2, #main[min-width~="1000px"] .h2, #main[min-width~="1000px"] .h2 p {
+  font-size: 80px;
+}
+@media (min-width: 1200px) {
+  /* line 192, ../components/_typography.scss */
+  h2, .h2, .h2 p {
+    font-size: 100px;
+  }
+}
+/* line 18, ../utils/_helper_mixins.scss */
+#main[min-width~="1200px"] h2, #main[min-width~="1200px"] .h2, #main[min-width~="1200px"] .h2 p {
+  font-size: 100px;
 }
 
-/* line 214, ../components/_typography.scss */
+/* line 215, ../components/_typography.scss */
 h3, .h3, .h3 p {
-  font-size: 50px;
-  line-height: 70px;
+  font-size: 18px;
 }
-@media (max-width: 1200px) {
-  /* line 214, ../components/_typography.scss */
-  h3, .h3, .h3 p {
-    font-size: 40px;
-    line-height: 56px;
-  }
-}
-/* line 14, ../utils/_helper_mixins.scss */
-h3 #main[min-width="$amount"], .h3 #main[min-width="$amount"], .h3 p #main[min-width="$amount"] {
-  font-size: 40px;
-  line-height: 56px;
-}
-@media (max-width: 1000px) {
-  /* line 214, ../components/_typography.scss */
-  h3, .h3, .h3 p {
-    font-size: 32px;
-    line-height: 44.8px;
-  }
-}
-/* line 14, ../utils/_helper_mixins.scss */
-h3 #main[min-width="$amount"], .h3 #main[min-width="$amount"], .h3 p #main[min-width="$amount"] {
-  font-size: 32px;
-  line-height: 44.8px;
-}
-@media (max-width: 800px) {
-  /* line 214, ../components/_typography.scss */
-  h3, .h3, .h3 p {
-    font-size: 26px;
-    line-height: 36.4px;
-  }
-}
-/* line 14, ../utils/_helper_mixins.scss */
-h3 #main[min-width="$amount"], .h3 #main[min-width="$amount"], .h3 p #main[min-width="$amount"] {
-  font-size: 26px;
-  line-height: 36.4px;
-}
-@media (max-width: 600px) {
-  /* line 214, ../components/_typography.scss */
-  h3, .h3, .h3 p {
-    font-size: 22px;
-    line-height: 30.8px;
-  }
-}
-/* line 14, ../utils/_helper_mixins.scss */
-h3 #main[min-width="$amount"], .h3 #main[min-width="$amount"], .h3 p #main[min-width="$amount"] {
-  font-size: 22px;
-  line-height: 30.8px;
-}
-@media (max-width: 400px) {
-  /* line 214, ../components/_typography.scss */
+@media (min-width: 400px) {
+  /* line 215, ../components/_typography.scss */
   h3, .h3, .h3 p {
     font-size: 20px;
-    line-height: 28px;
   }
 }
-/* line 14, ../utils/_helper_mixins.scss */
-h3 #main[min-width="$amount"], .h3 #main[min-width="$amount"], .h3 p #main[min-width="$amount"] {
+/* line 18, ../utils/_helper_mixins.scss */
+#main[min-width~="400px"] h3, #main[min-width~="400px"] .h3, #main[min-width~="400px"] .h3 p {
   font-size: 20px;
-  line-height: 28px;
+}
+@media (min-width: 600px) {
+  /* line 215, ../components/_typography.scss */
+  h3, .h3, .h3 p {
+    font-size: 22px;
+  }
+}
+/* line 18, ../utils/_helper_mixins.scss */
+#main[min-width~="600px"] h3, #main[min-width~="600px"] .h3, #main[min-width~="600px"] .h3 p {
+  font-size: 22px;
+}
+@media (min-width: 800px) {
+  /* line 215, ../components/_typography.scss */
+  h3, .h3, .h3 p {
+    font-size: 26px;
+  }
+}
+/* line 18, ../utils/_helper_mixins.scss */
+#main[min-width~="800px"] h3, #main[min-width~="800px"] .h3, #main[min-width~="800px"] .h3 p {
+  font-size: 26px;
+}
+@media (min-width: 1000px) {
+  /* line 215, ../components/_typography.scss */
+  h3, .h3, .h3 p {
+    font-size: 32px;
+  }
+}
+/* line 18, ../utils/_helper_mixins.scss */
+#main[min-width~="1000px"] h3, #main[min-width~="1000px"] .h3, #main[min-width~="1000px"] .h3 p {
+  font-size: 32px;
+}
+@media (min-width: 1200px) {
+  /* line 215, ../components/_typography.scss */
+  h3, .h3, .h3 p {
+    font-size: 40px;
+  }
+}
+/* line 18, ../utils/_helper_mixins.scss */
+#main[min-width~="1200px"] h3, #main[min-width~="1200px"] .h3, #main[min-width~="1200px"] .h3 p {
+  font-size: 40px;
 }
 
-/* line 234, ../components/_typography.scss */
+/* line 235, ../components/_typography.scss */
 .h3 .h3_rant p {
-  font-size: 62.5px;
-  line-height: 87.5px;
+  font-size: 22.5px;
 }
-@media (max-width: 1200px) {
-  /* line 234, ../components/_typography.scss */
-  .h3 .h3_rant p {
-    font-size: 50px;
-    line-height: 70px;
-  }
-}
-/* line 14, ../utils/_helper_mixins.scss */
-.h3 .h3_rant p #main[min-width="$amount"] {
-  font-size: 50px;
-  line-height: 70px;
-}
-@media (max-width: 1000px) {
-  /* line 234, ../components/_typography.scss */
-  .h3 .h3_rant p {
-    font-size: 40px;
-    line-height: 56px;
-  }
-}
-/* line 14, ../utils/_helper_mixins.scss */
-.h3 .h3_rant p #main[min-width="$amount"] {
-  font-size: 40px;
-  line-height: 56px;
-}
-@media (max-width: 800px) {
-  /* line 234, ../components/_typography.scss */
-  .h3 .h3_rant p {
-    font-size: 32.5px;
-    line-height: 45.5px;
-  }
-}
-/* line 14, ../utils/_helper_mixins.scss */
-.h3 .h3_rant p #main[min-width="$amount"] {
-  font-size: 32.5px;
-  line-height: 45.5px;
-}
-@media (max-width: 600px) {
-  /* line 234, ../components/_typography.scss */
-  .h3 .h3_rant p {
-    font-size: 27.5px;
-    line-height: 38.5px;
-  }
-}
-/* line 14, ../utils/_helper_mixins.scss */
-.h3 .h3_rant p #main[min-width="$amount"] {
-  font-size: 27.5px;
-  line-height: 38.5px;
-}
-@media (max-width: 400px) {
-  /* line 234, ../components/_typography.scss */
+@media (min-width: 400px) {
+  /* line 235, ../components/_typography.scss */
   .h3 .h3_rant p {
     font-size: 25px;
-    line-height: 35px;
   }
 }
-/* line 14, ../utils/_helper_mixins.scss */
-.h3 .h3_rant p #main[min-width="$amount"] {
+/* line 18, ../utils/_helper_mixins.scss */
+#main[min-width~="400px"] .h3 .h3_rant p {
   font-size: 25px;
-  line-height: 35px;
+}
+@media (min-width: 600px) {
+  /* line 235, ../components/_typography.scss */
+  .h3 .h3_rant p {
+    font-size: 27.5px;
+  }
+}
+/* line 18, ../utils/_helper_mixins.scss */
+#main[min-width~="600px"] .h3 .h3_rant p {
+  font-size: 27.5px;
+}
+@media (min-width: 800px) {
+  /* line 235, ../components/_typography.scss */
+  .h3 .h3_rant p {
+    font-size: 32.5px;
+  }
+}
+/* line 18, ../utils/_helper_mixins.scss */
+#main[min-width~="800px"] .h3 .h3_rant p {
+  font-size: 32.5px;
+}
+@media (min-width: 1000px) {
+  /* line 235, ../components/_typography.scss */
+  .h3 .h3_rant p {
+    font-size: 40px;
+  }
+}
+/* line 18, ../utils/_helper_mixins.scss */
+#main[min-width~="1000px"] .h3 .h3_rant p {
+  font-size: 40px;
+}
+@media (min-width: 1200px) {
+  /* line 235, ../components/_typography.scss */
+  .h3 .h3_rant p {
+    font-size: 50px;
+  }
+}
+/* line 18, ../utils/_helper_mixins.scss */
+#main[min-width~="1200px"] .h3 .h3_rant p {
+  font-size: 50px;
 }
 
-/* line 255, ../components/_typography.scss */
+/* line 256, ../components/_typography.scss */
 h4,
 .h4, .h4 p {
   font-size: 24px;
-  line-height: 33.6px;
 }
 
-/* line 260, ../components/_typography.scss */
+/* line 262, ../components/_typography.scss */
 h5, .h5 {
-  font-size: 25px;
-  line-height: 35px;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  font-size: 15px;
 }
-@media (max-width: 1200px) {
-  /* line 260, ../components/_typography.scss */
+@media (min-width: 400px) {
+  /* line 262, ../components/_typography.scss */
   h5, .h5 {
-    font-size: 20px;
-    line-height: 28px;
-  }
-}
-/* line 14, ../utils/_helper_mixins.scss */
-h5 #main[min-width="$amount"], .h5 #main[min-width="$amount"] {
-  font-size: 20px;
-  line-height: 28px;
-}
-@media (max-width: 1000px) {
-  /* line 260, ../components/_typography.scss */
-  h5, .h5 {
+    text-transform: uppercase;
+    letter-spacing: .15em;
     font-size: 16px;
-    line-height: 22.4px;
   }
 }
-/* line 14, ../utils/_helper_mixins.scss */
-h5 #main[min-width="$amount"], .h5 #main[min-width="$amount"] {
+/* line 18, ../utils/_helper_mixins.scss */
+#main[min-width~="400px"] h5, #main[min-width~="400px"] .h5 {
+  text-transform: uppercase;
+  letter-spacing: .15em;
   font-size: 16px;
-  line-height: 22.4px;
+}
+@media (min-width: 600px) {
+  /* line 262, ../components/_typography.scss */
+  h5, .h5 {
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    font-size: 17px;
+  }
+}
+/* line 18, ../utils/_helper_mixins.scss */
+#main[min-width~="600px"] h5, #main[min-width~="600px"] .h5 {
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  font-size: 17px;
+}
+@media (min-width: 800px) {
+  /* line 262, ../components/_typography.scss */
+  h5, .h5 {
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    font-size: 18px;
+  }
+}
+/* line 18, ../utils/_helper_mixins.scss */
+#main[min-width~="800px"] h5, #main[min-width~="800px"] .h5 {
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  font-size: 18px;
+}
+@media (min-width: 1000px) {
+  /* line 262, ../components/_typography.scss */
+  h5, .h5 {
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    font-size: 19px;
+  }
+}
+/* line 18, ../utils/_helper_mixins.scss */
+#main[min-width~="1000px"] h5, #main[min-width~="1000px"] .h5 {
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  font-size: 19px;
+}
+@media (min-width: 1200px) {
+  /* line 262, ../components/_typography.scss */
+  h5, .h5 {
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    font-size: 20px;
+  }
+}
+/* line 18, ../utils/_helper_mixins.scss */
+#main[min-width~="1200px"] h5, #main[min-width~="1200px"] .h5 {
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  font-size: 20px;
 }
 
-/* line 272, ../components/_typography.scss */
+/* line 283, ../components/_typography.scss */
 h6, .h6 {
   text-transform: uppercase;
   letter-spacing: .15em;
@@ -1306,136 +1314,89 @@ h6, .h6 {
   font-weight: 700;
 }
 
-/* line 277, ../components/_typography.scss */
+/* line 288, ../components/_typography.scss */
 p,
 .p {
   font-weight: 300;
-  font-size: 25px;
-  line-height: 35px;
+  font-size: 13px;
 }
-@media (max-width: 1200px) {
-  /* line 277, ../components/_typography.scss */
-  p,
-  .p {
-    font-size: 20px;
-    line-height: 28px;
-  }
-}
-/* line 14, ../utils/_helper_mixins.scss */
-p #main[min-width="$amount"],
-.p #main[min-width="$amount"] {
-  font-size: 20px;
-  line-height: 28px;
-}
-@media (max-width: 1000px) {
-  /* line 277, ../components/_typography.scss */
+@media (min-width: 1000px) {
+  /* line 288, ../components/_typography.scss */
   p,
   .p {
     font-size: 16px;
-    line-height: 22.4px;
   }
 }
-/* line 14, ../utils/_helper_mixins.scss */
-p #main[min-width="$amount"],
-.p #main[min-width="$amount"] {
+/* line 18, ../utils/_helper_mixins.scss */
+#main[min-width~="1000px"] p, #main[min-width~="1000px"]
+.p {
   font-size: 16px;
-  line-height: 22.4px;
 }
-@media (max-width: 800px) {
-  /* line 277, ../components/_typography.scss */
+@media (min-width: 1200px) {
+  /* line 288, ../components/_typography.scss */
   p,
   .p {
-    font-size: 13px;
-    line-height: 18.2px;
+    font-size: 20px;
   }
 }
-/* line 14, ../utils/_helper_mixins.scss */
-p #main[min-width="$amount"],
-.p #main[min-width="$amount"] {
-  font-size: 13px;
-  line-height: 18.2px;
-}
-@media (max-width: 600px) {
-  /* line 277, ../components/_typography.scss */
-  p,
-  .p {
-    font-size: 11px;
-    line-height: 15.4px;
-  }
-}
-/* line 14, ../utils/_helper_mixins.scss */
-p #main[min-width="$amount"],
-.p #main[min-width="$amount"] {
-  font-size: 11px;
-  line-height: 15.4px;
-}
-@media (max-width: 400px) {
-  /* line 277, ../components/_typography.scss */
-  p,
-  .p {
-    font-size: 10px;
-    line-height: 14px;
-  }
-}
-/* line 14, ../utils/_helper_mixins.scss */
-p #main[min-width="$amount"],
-.p #main[min-width="$amount"] {
-  font-size: 10px;
-  line-height: 14px;
+/* line 18, ../utils/_helper_mixins.scss */
+#main[min-width~="1200px"] p, #main[min-width~="1200px"]
+.p {
+  font-size: 20px;
 }
 
 /**
  * Lines, Quotes and Emphasis
  */
-/* line 303, ../components/_typography.scss */
+/* line 306, ../components/_typography.scss */
 hr {
   margin: 2em auto;
   border: 0;
-  border-top: 0.0725em solid #e5e5e5;
+  border-top: 0.0725em solid #BDBDBD;
   border-bottom: 0 solid #ffffff;
 }
 
-/* line 310, ../components/_typography.scss */
+/* line 313, ../components/_typography.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 314, ../components/_typography.scss */
+/* line 317, ../components/_typography.scss */
 em {
   font-style: italic;
 }
 
-/* line 317, ../components/_typography.scss */
+/* line 320, ../components/_typography.scss */
 .thin {
   font-weight: 200;
 }
 
-/* line 320, ../components/_typography.scss */
+/* line 323, ../components/_typography.scss */
 .light {
   font-weight: 300;
 }
 
-/* line 323, ../components/_typography.scss */
+/* line 326, ../components/_typography.scss */
 .regular {
   font-weight: 400;
 }
 
-/* line 326, ../components/_typography.scss */
+/* line 329, ../components/_typography.scss */
 .bold {
   font-weight: 700;
 }
 
-/* line 329, ../components/_typography.scss */
+/* line 332, ../components/_typography.scss */
 .black {
   font-weight: 900;
 }
 
-/* line 332, ../components/_typography.scss */
+/* line 335, ../components/_typography.scss */
 .tx-center {
   text-align: center;
 }
 
-/* line 335, ../components/_typography.scss */
+/* line 338, ../components/_typography.scss */
 sub,
 sup {
   position: relative;
@@ -1446,12 +1407,12 @@ sup {
   margin-left: 0.25em;
 }
 
-/* line 345, ../components/_typography.scss */
+/* line 348, ../components/_typography.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 349, ../components/_typography.scss */
+/* line 352, ../components/_typography.scss */
 sub {
   bottom: -0.25em;
 }
@@ -1459,7 +1420,7 @@ sub {
 /**
  * Highlighting colors
  */
-/* line 356, ../components/_typography.scss */
+/* line 359, ../components/_typography.scss */
 ::-moz-selection {
   color: #ffffff;
   background: #0088cc;
@@ -1472,20 +1433,20 @@ sub {
 /**
  * Blockquotes
  */
-/* line 365, ../components/_typography.scss */
+/* line 368, ../components/_typography.scss */
 blockquote {
-  border-left: 0.25em solid #e5e5e5;
+  border-left: 0.25em solid #BDBDBD;
   margin-bottom: 1.5625em;
   padding-left: 1.5625em;
   padding-right: 1.5625em;
 }
 
-/* line 372, ../components/_typography.scss */
+/* line 375, ../components/_typography.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 376, ../components/_typography.scss */
+/* line 379, ../components/_typography.scss */
 blockquote:before,
 blockquote:after,
 q:before,
@@ -1509,7 +1470,7 @@ pre {
 /* line 13, ../components/_code.scss */
 code {
   color: #dd1144;
-  background-color: #f7f7f7;
+  background-color: #cfcfcf;
   padding: 0.25em;
 }
 
@@ -1518,7 +1479,7 @@ pre {
   display: block;
   margin-bottom: 1.5625em;
   line-height: 1.5;
-  background-color: #f4f4f4;
+  background-color: #cccccc;
   padding: 0.8125em;
   -moz-tab-size: 4;
   -o-tab-size: 4;
@@ -1791,33 +1752,70 @@ select:focus {
  * Hide fallback text if browser supports SVG
  */
 /* line 1, ../components/_global.scss */
-body {
-  background: #272727;
+a, a:link, a:visited {
+  color: #272727;
 }
 
 /* line 4, ../components/_global.scss */
+body {
+  background: #BDBDBD;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/* line 13, ../components/_global.scss */
+.loader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 99;
+  background: #f3f3f3;
+  width: 100%;
+}
+/* line 22, ../components/_global.scss */
+.loader img {
+  -webkit-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+  margin: 0 auto;
+  display: block;
+}
+
+/* line 28, ../components/_global.scss */
 .social {
   font-size: 19px;
   line-height: 1.4;
 }
-/* line 7, ../components/_global.scss */
+/* line 31, ../components/_global.scss */
 .social a {
   color: #ffffff;
 }
-/* line 10, ../components/_global.scss */
+/* line 34, ../components/_global.scss */
 .social a:hover {
   color: rgba(255, 255, 255, 0.5);
 }
-/* line 13, ../components/_global.scss */
+/* line 37, ../components/_global.scss */
 .social a:first-of-type {
   margin-right: 10px;
 }
 
-/* line 18, ../components/_global.scss */
+/* line 41, ../components/_global.scss */
 .centerWrap {
   display: table;
 }
-/* line 20, ../components/_global.scss */
+/* line 43, ../components/_global.scss */
 .centerWrap .center {
   display: table-cell;
   margin-right: auto;
@@ -1825,14 +1823,14 @@ body {
   vertical-align: middle;
 }
 
-/* line 28, ../components/_global.scss */
+/* line 51, ../components/_global.scss */
 .chevron {
   font-size: 2em;
   padding: .1em;
   color: #272727;
   display: block;
 }
-/* line 33, ../components/_global.scss */
+/* line 56, ../components/_global.scss */
 .chevron:hover {
   color: #272727;
   opacity: 0.5;
@@ -1851,7 +1849,7 @@ body {
 .sideNav .menu {
   max-width: 250px;
   color: #ffffff;
-  padding: 28px 1em 28px 2em;
+  padding: 28px 1em 28px 1.5em;
   width: 100%;
 }
 /* line 14, ../components/_sideNav.scss */
@@ -1888,7 +1886,7 @@ body {
   top: 0;
   margin: 25px 30px;
   width: 100%;
-  z-index: 2;
+  z-index: 99;
 }
 /* line 43, ../components/_sideNav.scss */
 .permNav .hamburger-wrap {
@@ -1969,7 +1967,7 @@ body {
   margin-top: -31px;
 }
 
-/* line 1, ../components/_page.scss */
+/* line 6, ../components/_page.scss */
 #main {
   overflow: hidden;
   z-index: 1;
@@ -1977,110 +1975,375 @@ body {
   margin-left: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  -webkit-box-shadow: 0 0 1em black;
-  box-shadow: 0 0 1em black;
 }
-/* line 8, ../components/_page.scss */
+/* line 12, ../components/_page.scss */
 #main img {
   max-width: 300px;
 }
+/* line 15, ../components/_page.scss */
+#main section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  left: -100%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-box-shadow: -0.5em -1em 1em 0.5em black;
+  box-shadow: -0.5em -1em 1em 0.5em black;
+}
+/* line 23, ../components/_page.scss */
+#main section.view-on {
+  z-index: 2;
+  left: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+/* line 27, ../components/_page.scss */
+#main section.view-on .spine {
+  width: 0;
+  display: none;
+}
 @media (min-width: 600px) {
-  /* line 12, ../components/_page.scss */
+  /* line 32, ../components/_page.scss */
   #main section .winH {
     padding-bottom: 40px;
   }
 }
 /* line 18, ../utils/_helper_mixins.scss */
-#main section .winH #main[min-width="$amount"] {
+#main[min-width~="600px"] #main section .winH {
   padding-bottom: 40px;
 }
+/* line 37, ../components/_page.scss */
+#main section .page {
+  left: -100%;
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 100%;
+}
+/* line 42, ../components/_page.scss */
+#main section .page.view-on {
+  left: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+/* line 47, ../components/_page.scss */
+#main section .spine {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.5);
+}
+/* line 53, ../components/_page.scss */
+#main[cur-slide="intro"] .page {
+  display: none;
+}
+/* line 56, ../components/_page.scss */
+#main[cur-slide="intro"] section {
+  left: 0;
+}
+/* line 59, ../components/_page.scss */
+#main[cur-slide="intro"] section:nth-of-type(1) {
+  width: 91%;
+  z-index: 6;
+}
+/* line 62, ../components/_page.scss */
+#main[cur-slide="intro"] section:nth-of-type(1) .page {
+  display: inherit;
+}
+/* line 66, ../components/_page.scss */
+#main[cur-slide="intro"] section:nth-of-type(2) {
+  width: 92.5%;
+  z-index: 5;
+}
+/* line 70, ../components/_page.scss */
+#main[cur-slide="intro"] section:nth-of-type(3) {
+  width: 94%;
+  z-index: 4;
+}
+/* line 74, ../components/_page.scss */
+#main[cur-slide="intro"] section:nth-of-type(4) {
+  width: 95.5%;
+  z-index: 3;
+}
+/* line 78, ../components/_page.scss */
+#main[cur-slide="intro"] section:nth-of-type(5) {
+  width: 97%;
+  z-index: 2;
+}
+/* line 82, ../components/_page.scss */
+#main[cur-slide="intro"] section:nth-of-type(6) {
+  width: 98.5%;
+  z-index: 1;
+}
+/* line 87, ../components/_page.scss */
+#main[cur-slide="intro"] section:hover:nth-of-type(2) {
+  width: 93.5%;
+}
+/* line 90, ../components/_page.scss */
+#main[cur-slide="intro"] section:hover:nth-of-type(3) {
+  width: 95%;
+}
+/* line 93, ../components/_page.scss */
+#main[cur-slide="intro"] section:hover:nth-of-type(4) {
+  width: 96.5%;
+}
+/* line 96, ../components/_page.scss */
+#main[cur-slide="intro"] section:hover:nth-of-type(5) {
+  width: 98%;
+}
+/* line 99, ../components/_page.scss */
+#main[cur-slide="intro"] section:hover:nth-of-type(6) {
+  width: 99.5%;
+}
+/* line 106, ../components/_page.scss */
+#main[cur-slide="toc"] .page {
+  display: none;
+}
+/* line 109, ../components/_page.scss */
+#main[cur-slide="toc"] section {
+  left: 0;
+}
+/* line 111, ../components/_page.scss */
+#main[cur-slide="toc"] section:nth-of-type(1) {
+  width: 50%;
+  z-index: 6;
+}
+/* line 114, ../components/_page.scss */
+#main[cur-slide="toc"] section:nth-of-type(1) .page {
+  display: inherit;
+}
+/* line 118, ../components/_page.scss */
+#main[cur-slide="toc"] section:nth-of-type(2) {
+  margin-left: 50%;
+  width: 10%;
+  z-index: 5;
+}
+/* line 122, ../components/_page.scss */
+#main[cur-slide="toc"] section:nth-of-type(3) {
+  margin-left: 59.7%;
+  width: 10%;
+  z-index: 4;
+}
+/* line 126, ../components/_page.scss */
+#main[cur-slide="toc"] section:nth-of-type(4) {
+  margin-left: 69.4%;
+  width: 10%;
+  z-index: 3;
+}
+/* line 130, ../components/_page.scss */
+#main[cur-slide="toc"] section:nth-of-type(5) {
+  margin-left: 79.1%;
+  width: 10%;
+  z-index: 2;
+}
+/* line 134, ../components/_page.scss */
+#main[cur-slide="toc"] section:nth-of-type(6) {
+  margin-left: 88.8%;
+  width: 10%;
+  z-index: 1;
+}
+/* line 139, ../components/_page.scss */
+#main[cur-slide="toc"] section:hover .spine {
+  color: black;
+}
+/* line 142, ../components/_page.scss */
+#main[cur-slide="toc"] section:hover:nth-of-type(2) {
+  margin-left: 50%;
+  width: 14%;
+  z-index: 5;
+}
+/* line 146, ../components/_page.scss */
+#main[cur-slide="toc"] section:hover:nth-of-type(3) {
+  margin-left: 59.7%;
+  width: 14%;
+  z-index: 4;
+}
+/* line 150, ../components/_page.scss */
+#main[cur-slide="toc"] section:hover:nth-of-type(4) {
+  margin-left: 69.4%;
+  width: 14%;
+  z-index: 3;
+}
+/* line 154, ../components/_page.scss */
+#main[cur-slide="toc"] section:hover:nth-of-type(5) {
+  margin-left: 79.1%;
+  width: 14%;
+  z-index: 2;
+}
+/* line 158, ../components/_page.scss */
+#main[cur-slide="toc"] section:hover:nth-of-type(6) {
+  margin-left: 88.8%;
+  width: 11.5%;
+  z-index: 1;
+}
+/* line 166, ../components/_page.scss */
+#main[cur-chapter="clean"] section, #main[cur-chapter="economy"] section, #main[cur-chapter="innovation"] section, #main[cur-chapter="future"] section {
+  max-width: 95%;
+}
+/* line 169, ../components/_page.scss */
+#main[cur-chapter="clean"] .pageNav, #main[cur-chapter="economy"] .pageNav, #main[cur-chapter="innovation"] .pageNav, #main[cur-chapter="future"] .pageNav {
+  display: block;
+}
 
-/* line 19, ../components/_page.scss */
+/* line 174, ../components/_page.scss */
 .active #main {
   margin-left: 250px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-/* line 23, ../components/_page.scss */
+/* line 178, ../components/_page.scss */
+.rotate {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+/* line 181, ../components/_page.scss */
+.appendix-label {
+  padding-top: 10%;
+}
+
+/* line 184, ../components/_page.scss */
+.profile-link {
+  border-radius: 50%;
+  width: 12em;
+  height: 12em;
+  margin: 2em auto;
+  -webkit-background-size: cover !important;
+  background-size: cover !important;
+  text-align: center;
+}
+/* line 191, ../components/_page.scss */
+.profile-link h6 {
+  color: #ffffff;
+}
+
+/* line 195, ../components/_page.scss */
+.pageNav {
+  display: none;
+  top: 50%;
+  margin-top: -30px;
+  width: 4.5%;
+  right: 0;
+  text-align: center;
+  position: absolute;
+}
+
+/* line 209, ../components/_page.scss */
 [data-w=".5"] {
   width: 50px;
 }
 
-/* line 26, ../components/_page.scss */
+/* line 212, ../components/_page.scss */
 [data-w="1"] {
   width: 100px;
 }
 
-/* line 29, ../components/_page.scss */
+/* line 215, ../components/_page.scss */
 [data-w="1.5"] {
   width: 150px;
 }
 
-/* line 32, ../components/_page.scss */
+/* line 218, ../components/_page.scss */
 [data-w="2"] {
   width: 200px;
 }
 
-/* line 35, ../components/_page.scss */
+/* line 221, ../components/_page.scss */
 [data-w="2.5"] {
   width: 250px;
 }
 
-/* line 38, ../components/_page.scss */
+/* line 224, ../components/_page.scss */
 [data-w="3"] {
   width: 300px;
 }
 
-/* line 41, ../components/_page.scss */
+/* line 227, ../components/_page.scss */
 [data-w="4"] {
   width: 400px;
 }
 
-/* line 44, ../components/_page.scss */
+/* line 230, ../components/_page.scss */
 [data-w="5"] {
   width: 500px;
 }
 
-/* line 47, ../components/_page.scss */
+/* line 233, ../components/_page.scss */
 [data-w="6"] {
   width: 600px;
 }
 
-/* line 56, ../components/_page.scss */
+/* line 242, ../components/_page.scss */
 .intro {
   background: #f3f3f3;
   color: rgba(0, 0, 0, 0.75);
 }
+/* line 244, ../components/_page.scss */
+.intro .page {
+  background: #f3f3f3;
+  color: rgba(0, 0, 0, 0.75);
+}
 
-/* line 59, ../components/_page.scss */
+/* line 248, ../components/_page.scss */
 .clean {
   background: #E8CfA2;
   color: rgba(0, 0, 0, 0.75);
 }
+/* line 250, ../components/_page.scss */
+.clean .page {
+  background: #E8CfA2;
+  color: rgba(0, 0, 0, 0.75);
+}
 
-/* line 62, ../components/_page.scss */
+/* line 254, ../components/_page.scss */
 .economy {
   background: #D9D7B1;
   color: rgba(0, 0, 0, 0.75);
 }
+/* line 256, ../components/_page.scss */
+.economy .page {
+  background: #D9D7B1;
+  color: rgba(0, 0, 0, 0.75);
+}
 
-/* line 65, ../components/_page.scss */
+/* line 260, ../components/_page.scss */
 .innovation {
   background: #B1C0AD;
   color: rgba(0, 0, 0, 0.75);
 }
+/* line 262, ../components/_page.scss */
+.innovation .page {
+  background: #B1C0AD;
+  color: rgba(0, 0, 0, 0.75);
+}
 
-/* line 68, ../components/_page.scss */
+/* line 266, ../components/_page.scss */
 .future {
   background: #DD8361;
   color: rgba(0, 0, 0, 0.75);
 }
+/* line 268, ../components/_page.scss */
+.future .page {
+  background: #DD8361;
+  color: rgba(0, 0, 0, 0.75);
+}
 
-/* line 71, ../components/_page.scss */
+/* line 272, ../components/_page.scss */
 .appendix {
   background: #908F74;
   color: rgba(0, 0, 0, 0.75);
+}
+/* line 274, ../components/_page.scss */
+.appendix .page {
+  background: #908F74;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+/* line 282, ../components/_page.scss */
+#home {
+  width: 95%;
 }
 
 /* line 2, ../components/_footer.scss */
@@ -2092,6 +2355,7 @@ footer {
   left: 0;
   right: 0;
   color: #ffffff;
+  z-index: 99;
 }
 /* line 12, ../components/_footer.scss */
 footer ul li {
@@ -2165,17 +2429,34 @@ footer #footerNav .homeLink:before {
   line-height: 0;
   top: -3px;
   position: relative;
+  z-index: 2;
 }
-/* line 68, ../components/_footer.scss */
+/* line 69, ../components/_footer.scss */
 footer #footerNav .homeLink:hover:before {
   font-size: 24px;
   top: -2px;
 }
-/* line 74, ../components/_footer.scss */
+/* line 75, ../components/_footer.scss */
+footer #footerNav .homeLink.view-on:before {
+  font-size: 24px;
+  top: -2px;
+  color: #272727;
+}
+/* line 80, ../components/_footer.scss */
+footer #footerNav .homeLink.view-on:after {
+  content: "";
+  width: 30px;
+  height: 50px;
+  position: absolute;
+  background: #f3f3f3;
+  margin-left: -15px;
+  margin-top: -22px;
+}
+/* line 91, ../components/_footer.scss */
 footer #footerNav .chapterLink {
   width: 30px;
 }
-/* line 76, ../components/_footer.scss */
+/* line 93, ../components/_footer.scss */
 footer #footerNav .chapterLink:before {
   width: 14px;
   height: 14px;
@@ -2183,11 +2464,11 @@ footer #footerNav .chapterLink:before {
   margin: 3px auto;
   border: 2px solid #ffffff;
 }
-/* line 84, ../components/_footer.scss */
-footer #footerNav .chapterLink:hover:before {
+/* line 101, ../components/_footer.scss */
+footer #footerNav .chapterLink:hover:before, footer #footerNav .chapterLink.view-on:before {
   border: 4px solid #ffffff;
 }
-/* line 90, ../components/_footer.scss */
+/* line 107, ../components/_footer.scss */
 footer #footerNav .pageLink:before {
   width: 2px;
   height: 20px;
@@ -2195,88 +2476,88 @@ footer #footerNav .pageLink:before {
   margin: 0 1px;
 }
 @media (min-width: 600px) {
-  /* line 90, ../components/_footer.scss */
+  /* line 107, ../components/_footer.scss */
   footer #footerNav .pageLink:before {
     margin: 0 2px;
   }
 }
 /* line 18, ../utils/_helper_mixins.scss */
-footer #footerNav .pageLink:before #main[min-width="$amount"] {
+#main[min-width~="600px"] footer #footerNav .pageLink:before {
   margin: 0 2px;
 }
 @media (min-width: 800px) {
-  /* line 90, ../components/_footer.scss */
+  /* line 107, ../components/_footer.scss */
   footer #footerNav .pageLink:before {
     margin: 0 4px;
   }
 }
 /* line 18, ../utils/_helper_mixins.scss */
-footer #footerNav .pageLink:before #main[min-width="$amount"] {
+#main[min-width~="800px"] footer #footerNav .pageLink:before {
   margin: 0 4px;
 }
 @media (min-width: 1000px) {
-  /* line 90, ../components/_footer.scss */
+  /* line 107, ../components/_footer.scss */
   footer #footerNav .pageLink:before {
     margin: 0 6px;
   }
 }
 /* line 18, ../utils/_helper_mixins.scss */
-footer #footerNav .pageLink:before #main[min-width="$amount"] {
+#main[min-width~="1000px"] footer #footerNav .pageLink:before {
   margin: 0 6px;
 }
 @media (min-width: 1200px) {
-  /* line 90, ../components/_footer.scss */
+  /* line 107, ../components/_footer.scss */
   footer #footerNav .pageLink:before {
     margin: 0 8px;
   }
 }
 /* line 18, ../utils/_helper_mixins.scss */
-footer #footerNav .pageLink:before #main[min-width="$amount"] {
+#main[min-width~="1200px"] footer #footerNav .pageLink:before {
   margin: 0 8px;
 }
-/* line 108, ../components/_footer.scss */
-footer #footerNav .pageLink.active:before, footer #footerNav .pageLink:hover:before {
+/* line 125, ../components/_footer.scss */
+footer #footerNav .pageLink.view-on:before, footer #footerNav .pageLink:hover:before {
   height: 16px;
   margin: 2px 1px;
 }
 @media (min-width: 600px) {
-  /* line 108, ../components/_footer.scss */
-  footer #footerNav .pageLink.active:before, footer #footerNav .pageLink:hover:before {
+  /* line 125, ../components/_footer.scss */
+  footer #footerNav .pageLink.view-on:before, footer #footerNav .pageLink:hover:before {
     margin: 2px 2px;
   }
 }
 /* line 18, ../utils/_helper_mixins.scss */
-footer #footerNav .pageLink.active:before #main[min-width="$amount"], footer #footerNav .pageLink:hover:before #main[min-width="$amount"] {
+#main[min-width~="600px"] footer #footerNav .pageLink.view-on:before, #main[min-width~="600px"] footer #footerNav .pageLink:hover:before {
   margin: 2px 2px;
 }
 @media (min-width: 800px) {
-  /* line 108, ../components/_footer.scss */
-  footer #footerNav .pageLink.active:before, footer #footerNav .pageLink:hover:before {
+  /* line 125, ../components/_footer.scss */
+  footer #footerNav .pageLink.view-on:before, footer #footerNav .pageLink:hover:before {
     margin: 2px 4px;
   }
 }
 /* line 18, ../utils/_helper_mixins.scss */
-footer #footerNav .pageLink.active:before #main[min-width="$amount"], footer #footerNav .pageLink:hover:before #main[min-width="$amount"] {
+#main[min-width~="800px"] footer #footerNav .pageLink.view-on:before, #main[min-width~="800px"] footer #footerNav .pageLink:hover:before {
   margin: 2px 4px;
 }
 @media (min-width: 1000px) {
-  /* line 108, ../components/_footer.scss */
-  footer #footerNav .pageLink.active:before, footer #footerNav .pageLink:hover:before {
+  /* line 125, ../components/_footer.scss */
+  footer #footerNav .pageLink.view-on:before, footer #footerNav .pageLink:hover:before {
     margin: 2px 6px;
   }
 }
 /* line 18, ../utils/_helper_mixins.scss */
-footer #footerNav .pageLink.active:before #main[min-width="$amount"], footer #footerNav .pageLink:hover:before #main[min-width="$amount"] {
+#main[min-width~="1000px"] footer #footerNav .pageLink.view-on:before, #main[min-width~="1000px"] footer #footerNav .pageLink:hover:before {
   margin: 2px 6px;
 }
 @media (min-width: 1200px) {
-  /* line 108, ../components/_footer.scss */
-  footer #footerNav .pageLink.active:before, footer #footerNav .pageLink:hover:before {
+  /* line 125, ../components/_footer.scss */
+  footer #footerNav .pageLink.view-on:before, footer #footerNav .pageLink:hover:before {
     margin: 2px 8px;
   }
 }
 /* line 18, ../utils/_helper_mixins.scss */
-footer #footerNav .pageLink.active:before #main[min-width="$amount"], footer #footerNav .pageLink:hover:before #main[min-width="$amount"] {
+#main[min-width~="1200px"] footer #footerNav .pageLink.view-on:before, #main[min-width~="1200px"] footer #footerNav .pageLink:hover:before {
   margin: 2px 8px;
 }
 

@@ -8,16 +8,27 @@
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 /* Media Query Mixin */
-    @mixin m($updown, $amount) {
-       @if $updown == 'max' {
-          @media (max-width: $amount)  { @content; }
-          #main[min-width="$amount"]{ @content; }
-       }
-       @if $updown == 'min' {
-          @media (min-width: $amount)  { @content; }
-          #main[min-width="$amount"]{ @content; }
-       }
-    }
+@mixin m($updown: min, $amount: 600px, $elem: #main) {
+  @if $updown == "max" {
+    @media (max-width: $amount) { @content; }
+    #{$elem}[max-width~="#{$amount}"] & { @content; }
+  }
+  @if $updown == "min" {
+    @media (min-width: $amount) { @content; }
+    #{$elem}[min-width~="#{$amount}"] & { @content; }
+  }
+}
+
+@mixin media($updown, $amount) {
+   @if $updown == 'max' {
+      @media (max-width: $amount)  { @content; }
+      #main[min-width="$amount"]{ @content; }
+   }
+   @if $updown == 'min' {
+      @media (min-width: $amount)  { @content; }
+      #main[min-width="$amount"]{ @content; }
+   }
+}
 
 /* Responsive breaks */
 @mixin respond-to($media) {
@@ -329,4 +340,9 @@
 		background-size: 2px 2px;
 		background-position: 0 .92em;
 	}
+}
+@mixin link($color){
+  a, a:link, a{
+    color: $color;
+  }
 }

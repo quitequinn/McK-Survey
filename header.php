@@ -23,8 +23,14 @@
 	<!-- https://github.com/audreyr/favicon-cheat-sheet -->
 
  	<!-- JAVASCRIPT -->
+ 	<!-- CDN Dependencies -->
+	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
 	<!-- Local Dependencies -->
 	<script src="dist/js/detects.js"></script>
+	<script src="vendor/elementQueries/ResizeSensor.js"></script>
+	<script src="vendor/elementQueries/ElementQueries.js"></script>
 
  	<!-- CSS -->
 	<!-- CDN Dependencies -->
@@ -52,11 +58,15 @@
 		</section>
 	<![endif]-->
 	<div class="jsdump" style="display:none;"></div>
+	<? include("loader.php") ?>
 
 	<? include("sideNav.php") ?>
 
-	<main id="main" class="site-content">
-
+	<main id="main" class="winH site-content">
+		<div class="pageNav">
+			<a href="#" class="audSwipe chevron fa fa-chevron-circle-right"></a>
+			<a href="#" class="audSwipe chevron fa fa-chevron-circle-left"></a>
+		</div>
 		<div class="permNav">
 			<span class="hamburger-wrap audClick"><div class="hamburger"></div></span> <span class="h6">2015 Future Economy Minnesota</span>
 		</div>

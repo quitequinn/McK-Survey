@@ -84,6 +84,9 @@ dl {
 dt {
 	font-weight: bold;
 }
+b {
+	font-weight: 700;
+}
 
 /**
  * Removes list styling.
@@ -128,29 +131,24 @@ dt {
  */
 $line-height: 1.4;
 
-@mixin type-size-calc($font-size) {
-	font-size: $font-size*1.25;
-	line-height: $font-size*1.25*$line-height;
-}
 @mixin type-size-calc-xlarge($font-size) {
 	font-size: $font-size*1;
-	line-height: $font-size*1*$line-height;
 }
 @mixin type-size-calc-large($font-size) {
 	font-size: $font-size*0.8;
-	line-height: $font-size*0.8*$line-height;
 }
 @mixin type-size-calc-medium($font-size) {
 	font-size: $font-size*0.65;
-	line-height: $font-size*0.65*$line-height;
 }
 @mixin type-size-calc-small($font-size) {
 	font-size: $font-size*0.55;
-	line-height: $font-size*0.55*$line-height;
 }
 @mixin type-size-calc-xsmall($font-size) {
 	font-size: $font-size*0.5;
-	line-height: $font-size*0.5*$line-height;
+}
+
+@mixin type-size-calc($font-size) {
+	font-size: $font-size*0.45;
 }
 
 /**
@@ -167,55 +165,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, .h1, .h1 p {
-	$size: 140px;
+	$size: 160px;
 	text-transform: uppercase;
 	font-family: $font-secondary;
 	text-align: center;
-	@include type-size-calc($size);
+	@include type-size-calc(120px);
 	padding-top: .5em;
-	@include m( max, $bp-xlarge) {
-		@include type-size-calc-xlarge($size);
-	}
-	@include m( max, $bp-large) {
-		@include type-size-calc-large($size);
-	}
-	@include m( max, $bp-medium) {
-		@include type-size-calc-medium($size);
-	}
-	@include m( max, $bp-small) {
-		@include type-size-calc-small($size);
-	}
-	@include m( max, $bp-xsmall) {
-		@include type-size-calc-xsmall($size);
-	}
-	@include m( max, $bp-xsmall) {
-		@include type-size-calc-xsmall($size);
-	}
 
-h1, .h1, .h1 p {
-	$size: 140px;
-	text-transform: uppercase;
-	font-family: $font-secondary;
-	text-align: center;
-	@include type-size-calc($size);
-	padding-top: .5em;
-	@include m( max, $bp-xlarge) {
-		@include type-size-calc-xlarge($size);
+	@include m( min, $bp-xsmall) {
+		@include type-size-calc-xsmall(130px);
 	}
-	@include m( max, $bp-large) {
-		@include type-size-calc-large($size);
+	@include m( min, $bp-small) {
+		@include type-size-calc-xsmall($size);
 	}
-	@include m( max, $bp-medium) {
+	@include m( min, $bp-medium) {
 		@include type-size-calc-medium($size);
 	}
-	@include m( max, $bp-small) {
-		@include type-size-calc-small($size);
+	@include m( min, $bp-large) {
+		@include type-size-calc-large($size);
 	}
-	@include m( max, $bp-xsmall) {
-		@include type-size-calc-xsmall($size);
-	}
-	@include m( max, $bp-xsmall) {
-		@include type-size-calc-xsmall($size);
+	@include m( min, $bp-xlarge) {
+		@include type-size-calc-xlarge($size);
 	}
 }
 
@@ -223,61 +193,63 @@ h2, .h2, .h2 p {
 	$size: 100px;
 	font-family: $font-secondary;
 	@include type-size-calc($size);
-	@include m( max, $bp-xlarge) {
-		@include type-size-calc-xlarge($size);
-	}
-	@include m( max, $bp-large) {
-		@include type-size-calc-large($size);
-	}
-	@include m( max, $bp-medium) {
-		@include type-size-calc-medium($size);
-	}
-	@include m( max, $bp-small) {
-		@include type-size-calc-small($size);
-	}
-	@include m( max, $bp-xsmall) {
+
+	@include m( min, $bp-xsmall) {
 		@include type-size-calc-xsmall($size);
 	}
+	@include m( min, $bp-small) {
+		@include type-size-calc-small($size);
+	}
+	@include m( min, $bp-medium) {
+		@include type-size-calc-medium($size);
+	}
+	@include m( min, $bp-large) {
+		@include type-size-calc-large($size);
+	}
+	@include m( min, $bp-xlarge) {
+		@include type-size-calc-xlarge($size);
+	}
+	line-height: 0.95;
 }
 
 h3, .h3, .h3 p {
 	$size: 40px;
-
 	@include type-size-calc($size);
-	@include m( max, $bp-xlarge) {
-		@include type-size-calc-xlarge($size);
+
+	@include m( min, $bp-xsmall) {
+		@include type-size-calc-xsmall($size);
 	}
-	@include m( max, $bp-large) {
-		@include type-size-calc-large($size);
-	}
-	@include m( max, $bp-medium) {
-		@include type-size-calc-medium($size);
-	}
-	@include m( max, $bp-small) {
+	@include m( min, $bp-small) {
 		@include type-size-calc-small($size);
 	}
-	@include m( max, $bp-xsmall) {
-		@include type-size-calc-xsmall($size);
+	@include m( min, $bp-medium) {
+		@include type-size-calc-medium($size);
+	}
+	@include m( min, $bp-large) {
+		@include type-size-calc-large($size);
+	}
+	@include m( min, $bp-xlarge) {
+		@include type-size-calc-xlarge($size);
 	}
 }
 .h3 .h3_rant p {
 	$size: 50px;
-
 	@include type-size-calc($size);
-	@include m( max, $bp-xlarge) {
-		@include type-size-calc-xlarge($size);
+
+	@include m( min, $bp-xsmall) {
+		@include type-size-calc-xsmall($size);
 	}
-	@include m( max, $bp-large) {
-		@include type-size-calc-large($size);
-	}
-	@include m( max, $bp-medium) {
-		@include type-size-calc-medium($size);
-	}
-	@include m( max, $bp-small) {
+	@include m( min, $bp-small) {
 		@include type-size-calc-small($size);
 	}
-	@include m( max, $bp-xsmall) {
-		@include type-size-calc-xsmall($size);
+	@include m( min, $bp-medium) {
+		@include type-size-calc-medium($size);
+	}
+	@include m( min, $bp-large) {
+		@include type-size-calc-large($size);
+	}
+	@include m( min, $bp-xlarge) {
+		@include type-size-calc-xlarge($size);
 	}
 }
 
@@ -286,15 +258,25 @@ h4,
 	$size: 30px;
 	@include type-size-calc-large($size);
 }
+
 h5, .h5 {
 	$size: 20px;
+	@include smallcaps(15px);
 
-	@include type-size-calc($size);
-	@include m( max, $bp-xlarge) {
-		@include type-size-calc-xlarge($size);
+	@include m( min, $bp-xsmall) {
+		@include smallcaps(16px);
 	}
-	@include m( max, $bp-large) {
-		@include type-size-calc-large($size);
+	@include m( min, $bp-small) {
+		@include smallcaps(17px);
+	}
+	@include m( min, $bp-medium) {
+		@include smallcaps(18px);
+	}
+	@include m( min, $bp-large) {
+		@include smallcaps(19px);
+	}
+	@include m( min, $bp-xlarge) {
+		@include smallcaps(20px);
 	}
 }
 
@@ -307,21 +289,13 @@ p,
 .p {
 	$size: 20px;
 	font-weight: 300;
-	@include type-size-calc($size);
-	@include m( max, $bp-xlarge) {
-		@include type-size-calc-xlarge($size);
-	}
-	@include m( max, $bp-large) {
+	@include type-size-calc-medium($size);
+
+	@include m( min, $bp-large) {
 		@include type-size-calc-large($size);
 	}
-	@include m( max, $bp-medium) {
-		@include type-size-calc-medium($size);
-	}
-	@include m( max, $bp-small) {
-		@include type-size-calc-small($size);
-	}
-	@include m( max, $bp-xsmall) {
-		@include type-size-calc-xsmall($size);
+	@include m( min, $bp-xlarge) {
+		@include type-size-calc-xlarge($size);
 	}
 }
 
