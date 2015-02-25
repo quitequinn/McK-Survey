@@ -136,6 +136,12 @@ $('.audSwipe:not(view-on)').click(function(){
 ///App ROUTES via PATH.js
 function path(path){
 	var url = path.replace(/[_]/g, '/');
+	var index = path;
+
+	if (path == "home") {
+		url = '';
+		index = "intro";
+	}
 
 	Path.map("#!/" + url).enter(function(){
 		$('.view-on').removeClass('view-on');
@@ -143,9 +149,9 @@ function path(path){
 	}).to(function(){
 		$('#'+path).addClass('view-on').parent().addClass('view-on');
 		$("main")
-			.attr("cur-slide", path)
-			.attr("cur-chapter", path.replace(/([_])\w+/g, ''))
-			.attr("cur-page", path.replace(/\w+([_])/g, ''));
+			.attr("cur-slide", index)
+			.attr("cur-chapter", index.replace(/([_])\w+/g, ''))
+			.attr("cur-page", index.replace(/\w+([_])/g, ''));
 		$('footer a[href$="#!/'+url+'"]').addClass('view-on').attr("onclick","return false");
 		setCarrots();
 	});
@@ -154,21 +160,7 @@ $(".page").each(function(){
 	path($(this).attr("id"));
 });
 
-// HOME AND ROOT
-Path.map("#!/").enter(function(){
-	$('.view-on').removeClass('view-on');
-	$("footer a").attr("onclick","");
-}).to(function(){
-	$('#home').addClass('view-on').parent().addClass('view-on');
-	$("main")
-		.attr("cur-slide", "intro")
-		.attr("cur-chapter", "intro")
-		.attr("cur-page", 'intro');
-	$('footer a[href$="#!/"]').addClass('view-on').attr("onclick","return false");
-	setCarrots();
-});
 Path.root("#!/");
-
 
 Path.listen();
 
@@ -186,6 +178,8 @@ function setCarrots(){
 		}
 	}
 	if ( $(".page.view-on").attr("id") == 'home') {
+		var prevpage = "#!/";
+	} else if ( $(".page.view-on").prev(".page").attr("id") == 'home') {
 		var prevpage = "#!/";
 	} else {
 		var prev = $(".page.view-on").prev(".page");

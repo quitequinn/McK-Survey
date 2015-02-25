@@ -116,6 +116,11 @@ b {
 }
 
 
+.inline{
+  display: inline;
+}
+
+
 /**
  * Small Caps
  */
@@ -287,16 +292,9 @@ h6, .h6 {
 
 p,
 .p {
-	$size: 20px;
+	font-size: 14px;
 	font-weight: 300;
-	@include type-size-calc-medium($size);
-
-	@include m( min, $bp-large) {
-		@include type-size-calc-large($size);
-	}
-	@include m( min, $bp-xlarge) {
-		@include type-size-calc-xlarge($size);
-	}
+	max-width: 450px;
 }
 
 /**

@@ -7,7 +7,7 @@
 					<div class="grid-half">
 						<h2 class="no-margin no-padding-top padding-bottom-small">Clean Energy</h2>
 						<h3>It's pretty simple.</h3>
-						<p>Clean Energy uses less energy to provide the same product or service, or produces heat, power, or fuel from renewable sources of energy.</p>
+						<p>Clean Energy uses less energy to provide the same product or service, or produces heat, power, or fuel from sources of energy.</p>
 					</div>
 				</div>
 			</div>
@@ -76,7 +76,7 @@
 					</div>
 					<div class="grid-half">
 						<img src="info.png">
-						<p><b>Benefit Four:</b> Implementing Clean Energy will help Minnesota reduce the risk of climate disruption to ensure the power stays on during major storm events.</p>
+						<p><b>Benefit Four:</b> Implementing Clean Energy will help Minnesota reduce the pollution and contamination of one of its most precious resources: its fresh water lakes and rivers.</p>
 					</div>
 				</div>
 			</div>
@@ -88,7 +88,7 @@
 				<div class="row">
 					<div class="grid-half">
 						<h3>Those involved in our heritage of agriculture and forestry are also embracing Clean Energy.</h3>
-						<p>Farmers reduce imports of diesel by providing a minimum of 5% renewable diesel for fuel sold in the state during winter months and 10% for summer months.<p>
+						<p>Farmers reduce imports of petroleum diesel by providing a minimum of 5% renewable diesel for fuel sold in the state during winter months and 10% for summer months.<p>
 					</div>
 					<div class="grid-half">
 						<a href="#" class="centerWrap profile-link" style="background: url(img.png) 50% 50%;">
