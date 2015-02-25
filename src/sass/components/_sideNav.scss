@@ -9,7 +9,7 @@
 	.menu{
 		max-width: $width;
 		color: $color-white;
-		padding: 28px 1em 28px 1.5em;
+		padding: 28px 1em 28px 1.25em;
 		width: 100%;
 		a, a:visited{
 			color: $color-white;
@@ -27,10 +27,13 @@
   		opacity: .5;
 	}
 	.margin-bottom{
-		margin-bottom: 60px;
+		margin-bottom: 50px;
 	}
 	.margin-bottom-half{
-		margin-bottom: 30px;
+		margin-bottom: 25px;
+	}
+	h4, p{
+		margin-bottom: .5em;
 	}
 
 }
@@ -47,6 +50,7 @@
 	  	height: 45px;
 	  	display: block;
 	  	position: relative;
+		z-index: 2;
 	}
 	.hamburger, .hamburger:before, .hamburger:after {
 		@include pointer;
@@ -85,7 +89,7 @@
 			transition: all $fast;
 		}
 	}
-	span:last-of-type{
+	a{
 		padding-left: 70px;
 		display: block;
 		margin-top: -31px;

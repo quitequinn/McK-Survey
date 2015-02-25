@@ -1,12 +1,14 @@
 
 <section class="winH economy">
 	<div id='economy' class="page">
-		<div class="container winH centerWrap">
+		<div class="container align winH centerWrap">
 			<div class="center">
 				<div class="row">
-					<div class="grid-half">
+					<div class="grid-full">
 						<h2 class="no-margin no-padding-top padding-bottom-small">Economy</h2>
-						<h3>The people of Minnesota want a better economy.</h3>
+					</div>
+					<div class="grid-half">
+						<h3 class="no-padding margin-bottom-small">The people of Minnesota want a better economy.</h3>
 						<p>Min­ne­sota is mov­ing in the right di­rec­tion. The Clean En­ergy Econ­omy is grow­ing quickly in terms of wages, mar­ket de­vel­op­ment, and jobs.</p>
 					</div>
 				</div>
@@ -14,11 +16,11 @@
 		</div>
 	</div>
 	<div id='economy_1' class="page">
-		<div class="container winH centerWrap">
+		<div class="container align winH centerWrap">
 			<div class="center">
 				<div class="row">
 					<div class="grid-half">
-						<h3>In 2013, Minnesota workers in the Clean Energy Economyearned over $1 billion dollars in wages.</h3>
+						<h3>In 2013, Minnesota workers in the Clean Energy Economy earned over $1 billion dollars in wages.</h3>
 						<p>These are good jobs in a variety of sectors making Minnesota’s economy more productive and competitive and delivering energy that is secure, clean, and affordable. These jobs range from installation and maintenance to manufacturing and research.</p>
 					</div>
 					<div class="grid-half">
@@ -29,18 +31,18 @@
 		</div>
 	</div>
 	<div id='economy_2' class="page">
-		<div class="container winH centerWrap">
+		<div class="container align winH centerWrap">
 			<div class="center">
 				<div class="row">
 					<div class="grid-full">
-						<h6 class="inline">That’s Rougly a </h6><h2 class="inline">$71,000 </h2><h6 class="inline">Salary for every Clean Energy worker. </h6>
+						<h6 class="vcenter">That’s Rougly a </h6><h2 class="vcenter margin-bottom-small">$71,000 </h2><h6 class="vcenter">Salary for every Clean Energy worker. </h6>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div id='economy_3' class="page">
-		<div class="container winH centerWrap">
+		<div class="container align winH centerWrap">
 			<div class="center">
 				<div class="row">
 					<div class="grid-half">
@@ -55,7 +57,7 @@
 		</div>
 	</div>
 	<div id='economy_4' class="page">
-		<div class="container winH centerWrap">
+		<div class="container align winH centerWrap">
 			<div class="center">
 				<div class="row">
 					<div class="grid-full">
@@ -76,7 +78,7 @@
 		</div>
 	</div>
 	<div id='economy_5' class="page">
-		<div class="container winH centerWrap">
+		<div class="container align winH centerWrap">
 			<div class="center">
 				<div class="row">
 					<div class="grid-half">
@@ -92,11 +94,11 @@
 		</div>
 	</div>
 	<div id='economy_6' class="page">
-		<div class="container winH centerWrap">
+		<div class="container align winH centerWrap">
 			<div class="center">
 				<div class="row">
 					<div class="grid-half">
-						<h3>Expanding efforts to grow our Clean Energy Economy will create more opportunities throughout the state. </h3>
+						<h3 class="margin-top">Expanding efforts to grow our Clean Energy Economy will create more opportunities throughout the state. </h3>
 						<p>These opportunities will include training and jobs for young Minnesotans who want to be a part of this wave of innovation.<p>
 					</div>
 					<div class="grid-half">
@@ -105,6 +107,46 @@
 						</a>
 						<a href="#" class="centerWrap profile-link" style="background: url(img.png) 50% 50%;">
 							<h6 class="center">Meet Bill</h6>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id='economy_6_Blattner' class="page profile">
+		<div class="permNav">
+			<a href="#!/economy/6" class="exit-wrap audClick"><div class="exit"></div></a>
+		</div>
+		<div class="container align winH centerWrap">
+			<div class="center">
+				<div class="row">
+					<div class="grid-half">
+						<h3 class="margin-bottom-small">Adam Reich</h3>
+						<h6 class="margin-bottom-large">Farmer</h6>
+						<p>After serving in the Army for six years, Adam Reich enrolled in Midwest Technical Institute’s heating, ventilation and air conditioning program. A job shadow opportunity at Scranton Heating and Cooling in Mt. Sterling, Illinois led to a full time job when he graduated in 2013. “Even though I’m the newest guy on the team, we do service calls together so I’m learning a lot,” says Adam of the on-the-job experience he is gaining installing and servicing residential geothermal energy systems and energy efficient appliances.</p>
+
+						<a href="#!/economy/6/Bill" class="centerWrap profile-link small" style="background: url(img.png) 50% 50%;">
+							<h6>Meet Tom & Jr</h6>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id='economy_6_Bill' class="page profile">
+		<div class="permNav">
+			<a href="#!/economy/6" class="exit-wrap audClick"><div class="exit"></div></a>
+		</div>
+		<div class="container align winH centerWrap">
+			<div class="center">
+				<div class="row">
+					<div class="grid-half">
+						<h3 class="margin-bottom-small">Adam Reich</h3>
+						<h6 class="margin-bottom-large">Farmer</h6>
+						<p>After serving in the Army for six years, Adam Reich enrolled in Midwest Technical Institute’s heating, ventilation and air conditioning program. A job shadow opportunity at Scranton Heating and Cooling in Mt. Sterling, Illinois led to a full time job when he graduated in 2013. “Even though I’m the newest guy on the team, we do service calls together so I’m learning a lot,” says Adam of the on-the-job experience he is gaining installing and servicing residential geothermal energy systems and energy efficient appliances.</p>
+
+						<a href="#!/clean/5/TomAndJr" class="centerWrap profile-link small" style="background: url(img.png) 50% 50%;">
+							<h6>Meet Tom & Jr</h6>
 						</a>
 					</div>
 				</div>
@@ -125,7 +167,7 @@
 			<div class="center">
 				<div class="row">
 					<div class="grid-full">
-						<h1>Economic Impact</h1>
+						<h6>Economic Impact</h6>
 					</div>
 				</div>
 			</div>

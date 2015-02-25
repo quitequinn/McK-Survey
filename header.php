@@ -64,9 +64,9 @@
 
 	<main id="main" class="winH site-content">
 		<div class="pageNav">
-			<a href="#" class="audSwipe chevron fa fa-chevron-circle-right"></a>
-			<a href="#" class="audSwipe chevron fa fa-chevron-circle-left"></a>
+			<a href="#" class="audSwipe chevron icon-right"></a>
+			<a href="#" class="audSwipe chevron icon-left"></a>
 		</div>
 		<div class="permNav">
-			<span class="hamburger-wrap audClick"><div class="hamburger"></div></span> <span class="h6">2015 Future Economy Minnesota</span>
+			<span class="hamburger-wrap audClick"><div class="hamburger"></div></span> <a href="#!/" class="h6">2015 Future Economy Minnesota</a>
 		</div>

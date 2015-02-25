@@ -30,11 +30,20 @@
   width: 100%;
   /* height: 100vh; */
   height: 100%;
+  display: table;
+}
+.loader .center{
+    display: table-cell;
+    margin-right: auto;
+    margin-left: auto;
+    vertical-align: middle;
 }
 .loader img {
   -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
   animation: spin 4s linear infinite;
   margin: 0 auto;
   display: block;
+  width: 100px;
 }
 </style>

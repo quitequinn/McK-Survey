@@ -1,7 +1,6 @@
 /**
  * Gulp Packages
  */
-
 // General
 var gulp = require('gulp');
 var fs = require('fs');
@@ -17,6 +16,11 @@ var watch = require('gulp-watch');
 var livereload = require('gulp-livereload');
 var package = require('./package.json');
 var notify = require("gulp-notify");
+
+//ICON FONTS
+var iconfont = require('gulp-iconfont');
+var iconfontCss = require('gulp-iconfont-css');
+
 
 // Scripts and tests
 var jshint = require('gulp-jshint');
@@ -57,6 +61,11 @@ var paths = {
 	svgs: {
 		input: 'src/svg/*',
 		output: 'dist/svg/'
+	},
+	iconfont: {
+		input: 'src/svg/*',
+		output: 'src/iconfont/',
+		output2: 'dist/css/src/iconfont/'
 	},
 	static: 'src/static/**',
 	test: {
@@ -182,6 +191,24 @@ gulp.task('build:svgs', ['clean:dist'], function () {
 	// .pipe(gulp.dest(paths.svgs.output))
 });
 
+
+
+var fontName = 'iconfont';
+gulp.task('iconfont', function(){
+  return gulp.src(paths.iconfont.input)
+    .pipe(iconfontCss({
+      fontName: fontName,
+      path: 'node_modules/gulp-iconfont-css/templates/_icons.scss',
+      targetPath: '_icons.scss',
+      fontPath: paths.iconfont.output
+    }))
+    .pipe(iconfont({
+      fontName: fontName
+     }))
+    .pipe(gulp.dest(paths.iconfont.output))
+    .pipe(gulp.dest(paths.iconfont.output2));
+});
+
 // Copy static files into output folder
 gulp.task('copy:static', ['clean:dist'], function() {
 	return gulp.src(paths.static)
@@ -278,7 +305,8 @@ gulp.task('compile', [
 	'copy:static',
 	'build:scripts',
 	'build:svgs',
-	'build:styles'
+	'build:styles',
+	"iconfont"
 ]);
 
 // Generate documentation

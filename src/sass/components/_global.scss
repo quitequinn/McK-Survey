@@ -3,6 +3,9 @@ a, a:link, a:visited{
 }
 body{
 	background: $color-gray-light;
+	text-rendering: geometricPrecision;
+	font-smoothing: subpixel-antialiased;
+	-webkit-font-smoothing: antialiased;
 }
 
 @keyframes spin {
@@ -55,8 +58,45 @@ body{
 	padding: .1em;
 	color: $color-black;
 	display: block;
+	line-height: 1;
 	&:hover{
 		color: $color-black;
 		opacity: 0.5;
+	}
+}
+
+
+.exit-wrap{
+	@include pointer;
+  	width: 55px;
+  	padding: 10px;
+  	height: 45px;
+  	display: block;
+  	position: relative;
+	z-index: 2;
+}
+.exit, .exit:before, .exit:after {
+	@include pointer;
+	height: 5px;
+	width: 35px;
+	position: absolute;
+	display: block;
+	content: '';
+	transition: all $fast;
+	background: $color-black;
+		border-radius: 10px;
+}
+.exit{
+	background-color: transparent;
+	margin-top: 21px;
+	transition: all $fast;
+	&:before {
+		transform: rotate(45deg);
+		transition: all $fast;
+	}
+	&:after {
+		transform: translateY(-10px) rotate(-45deg);
+		bottom: 0px;
+		transition: all $fast;
 	}
 }

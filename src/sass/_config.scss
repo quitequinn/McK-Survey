@@ -51,6 +51,19 @@ $spacing: 1.5625em;
 $container-width: 88%;
 $container-max-width: 80em;
 
+@mixin containerPadding(){
+	&.align{
+		padding-right: 98px;
+		padding-left: 98px;
+		width: 100%;
+		@include m(max, $bp-medium){
+			padding-right: inherit;
+			padding-left: inherit;
+			width: 88%;
+		}
+	}
+}
+
 // Transition
 $fast: .3s;
 $medium: 1s;

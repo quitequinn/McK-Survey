@@ -47,7 +47,9 @@
 	text-align: left;
 }
 
-
+.capitalize, h1.capitalize{
+	text-transform: capitalize;
+}
 /**
  * Floats
  */
@@ -113,6 +115,9 @@
 
 .margin-bottom-small {
 	margin-bottom: calc-em(8px);
+}
+.margin-bottom-xsmall {
+	margin-bottom: calc-em(4px);
 }
 
 .margin-bottom-large {

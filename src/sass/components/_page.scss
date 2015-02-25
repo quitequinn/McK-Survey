@@ -23,7 +23,8 @@
 		width: 100%;
 		left: -100%;
 		transition: all $fast;
-		box-shadow: -.5em -1em 1em .5em rgb(0,0,0);
+		box-shadow: -.5em 0 1em .5em rgb(0,0,0);
+  		overflow-y: scroll;
 		&.view-on{
 			z-index: 2;
 			left: 0;
@@ -34,18 +35,25 @@
 			}
 		}
 		.winH{
-			@include m(min, $bp-small){
-				padding-bottom: 40px;
-			}
+				padding-bottom: 120px;
+				padding-top: 80px;
 		}
 		.page{
 			left: -100%;
 			position: absolute;
 			transition: all $fast;
 			width: 100%;
+			.container{
+				opacity: 0;
+				transition: all $fast;
+			}
 			&.view-on{
 				left: 0;
 				transition: all $fast;
+				.container{
+					opacity: 1;
+					transition: all $fast;
+				}
 			}
 		}
 		.spine{
@@ -103,6 +111,16 @@
 				}
 			}
 		}
+		.spine-label{
+  			position: absolute;
+  			right: 0;
+  			top: 50%;
+  			width: 300px;
+  			transform: rotate(90deg);
+  			margin-right: -131px;
+			text-align: center;
+			margin-top: -50px;
+		}
 	}
 	&[cur-slide="toc"]{
 
@@ -141,6 +159,10 @@
 			&:hover{
 				.spine{
 					color: rgba(0,0,0,1);
+					.spine-label{
+						opacity: 1;
+						transition: all $fast;
+					}
 				}
 				&:nth-of-type(2){
 					@include tocW(0, 4);
@@ -164,8 +186,18 @@
 				}
 			}
 		}
+		.spine-label{
+			position: absolute;
+			bottom: 5em;
+			width: 100%;
+			text-align: center;
+			padding: 0 1em;
+			opacity: 0;
+			transition: all $fast;
+		}
 	}
-	&[cur-chapter="clean"], &[cur-chapter="economy"], &[cur-chapter="innovation"], &[cur-chapter="future"] {
+
+	&[cur-chapter="clean"], &[cur-chapter="economy"], &[cur-chapter="innovation"], &[cur-chapter="future"], &[cur-chapter="appendix"] {
 		section{
 			max-width: 95%;
 		}
@@ -173,6 +205,26 @@
 			display: block;
 		}
 	}
+	&[cur-slide="clean_5_Adam"], &[cur-slide="clean_5_TomAndJr"]{
+		.permNav{
+			display: none;
+		}
+		.profile{
+			.permNav{
+		  		display: inherit;
+			}
+		}
+	}
+
+	&[cur-slide="clean_5_Adam"], &[cur-slide="clean_5_TomAndJr"], &[cur-slide="toc"], &[cur-slide="intro"]{
+		.site-footer{
+			display: none;
+		}
+		.winH{
+			padding-bottom: 0;
+		}
+	}
+
 }
 .active #main{
 	margin-left: 250px;
@@ -198,7 +250,7 @@
 .pageNav{
 	display: none;
   	top: 50%;
-	margin-top: -30px;
+	margin-top: -3em;
 	width: 4.5%;
 	right: 0;
 	text-align: center;
@@ -207,9 +259,126 @@
 		color: $color-white;
 	}
 }
+h6.vcenter{
+  display: inline-block;
+  vertical-align: text-bottom;
+  @include m(max, $bp-xlarge){
+  	display: block;
+  	text-align: center
+  }
+}
 
+h2.vcenter{
+  	display: inline-block;
+	padding: 0 .25em;
+  	vertical-align: baseline-middle;
+  	vertical-align: -webkit-baseline-middle;
+  	@include m(max, $bp-xlarge){
+  		display: block;
+  		text-align: center
+  	}
+	@include m( min, $bp-large) {
+		@include type-size-calc-large(120px);
+	}
+}
+.points{
+	p{
+		margin-left: 2em;
+		&:before{
+			content: "+";
+			font-weight: 700;
+			position: absolute;
+			margin-left: -2em;
+			padding: .05em 0;
+		}
+	}
+}
+.profile{
+	position: fixed!important;
+	opacity: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-size: cover!important;
+	transition: left 0s, all $fast;
+	color: $white;
+	h1, h2, h3, h4, h5, h6, p{
+		color: $white;
+	}
+	a, a:link, a:visited, {
+		color: $white;
+		h1, h2, h3, h4, h5, h6, p{
+			color: $white;
+		}
+	}
+	&.view-on{
+		opacity: 1;
+		transition: all $fast;
+	}
+	.profile-link{
+		width: 3em;
+		height: 3em;
+		margin: 0;
+		h6{
+			position: absolute;
+			margin-left: 6em;
+			margin-top: .25em;
+		}
 
+	}
+	.permNav{
+		.exit-wrap{
+			display: table-row;
+			.exit{
+				padding: 0.5em 0 0 0.3em;
+				&:before{
+	  				margin-top: -10px;
+				}
+				&:after{
+  					top: 8px;
+				}
+				&:before, &:after{
+					background: $white;
+				}
+			}
+		}
 
+	}
+}
+.icon-link{
+	span{
+		font-size: 3.5em;
+		position: absolute
+	}
+  	h6{
+		margin-left: 6em;
+  	}
+}
+.appendix{
+
+	.profile-link{
+		width: 90px;
+  		height: 90px;
+  		float: left;
+  		margin: 0 1em 1em 0;
+  		overflow: hidden;
+  		h6{
+  			padding-bottom: 10px;
+			background: linear-gradient(to right, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 75%), linear-gradient(to top, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 75%);
+			transition: all $fast;
+			background-position: 100% 0%;
+			background-size: 500%;
+  		}
+  		&:hover{
+			h6{
+				background-position: 100% 0;
+				background-size: 100%;
+				transition: all $fast;
+			}
+  		}
+	}
+}
 
 
 [data-w=".5"] {
@@ -240,9 +409,86 @@ width: 500px;
 width: 600px;
 }
 
+
+@keyframes wave1 {
+  0%{
+  	transform: rotate(0deg) translateY(0) translate(0) scale(1);
+  } 50%{
+  	transform: rotate(-.5deg) translateY(-1em) translate(-1em) scale(1.1);
+  } 100% {
+	transform: rotate(0deg) translateY(0) translate(0) scale(1);
+  }
+}
+
+@keyframes wave2 {
+  0%{
+  	transform: rotate(0deg) translateY(-2em) translate(0) scale(1);
+	opacity: .2;
+  } 50%{
+  	transform: rotate(0deg) translateY(-2em) translate(-0.5em) scale(1);
+	opacity: .5;
+  } 100% {
+	transform: rotate(0deg) translateY(-2em) translate(0) scale(1);
+	opacity: .2;
+  }
+}
+
+@keyframes wave3 {
+  0%{
+  	transform: rotate(0deg)  translateY(-1em) translate(0) scale(1);
+	opacity: .3;
+  } 50%{
+  	transform: rotate(0deg) translateY(-1em) translate(1em) scale(1);
+	opacity: .2;
+  } 100% {
+	transform: rotate(0deg) translateY(-1em) translate(0) scale(1);
+	opacity: .3;
+  }
+}
+
+@keyframes wave4 {
+  0%{
+  	transform: rotate(0deg)  translateY(0) translate(0) scale(1);
+	opacity: .6;
+  } 50%{
+  	transform: rotate(-1deg) translateY(.5em) translate(0.5em) scale(1);
+	opacity: .4;
+  } 100% {
+	transform: rotate(0deg) translateY(0) translate(0) scale(1);
+	opacity: .6;
+  }
+}
+
 @mixin color-scheme($c1, $c2: rgba(0,0,0,.75)){
 	background: $c1;
 	color: $c2;
+
+	svg.waves{
+		position: relative;
+		path{
+			fill: $c1;
+			opacity: .25;
+			&:nth-of-type(1){
+				opacity: 1;
+				animation: wave1 50s ease infinite;
+			}
+			&:nth-of-type(2){
+				opacity: .3;
+				animation: wave2 26s ease infinite;
+			}
+			&:nth-of-type(3){
+				animation: wave3 30s ease infinite;
+			}
+			&:nth-of-type(4){
+				animation: wave4 42s ease infinite;
+				opacity: 0.5;
+				margin-top: 1em;
+			}
+		}
+		+ h1{
+			  margin-top: -1.1em;
+		}
+	}
 }
 
 .intro{
@@ -282,9 +528,22 @@ width: 600px;
 	}
 }
 
+//Profile IMGs
 
+.profile.page{
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, transparent 75%),
+	            linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 75%),
+	            url(../../profile.jpg) 50% 50%;
+}
+
+#clean_5_TomAndJr{
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, transparent 75%),
+	            linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 75%),
+	            url(../../profile.jpg) 50% 50%;
+}
 //UNIQUE PAGES
 
 #home{
 	width: 95%;
 }
+

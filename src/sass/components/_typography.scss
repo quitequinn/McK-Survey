@@ -195,7 +195,7 @@ h1, .h1, .h1 p {
 }
 
 h2, .h2, .h2 p {
-	$size: 100px;
+	$size: 130px;
 	font-family: $font-secondary;
 	@include type-size-calc($size);
 
@@ -208,37 +208,15 @@ h2, .h2, .h2 p {
 	@include m( min, $bp-medium) {
 		@include type-size-calc-medium($size);
 	}
-	@include m( min, $bp-large) {
-		@include type-size-calc-large($size);
-	}
-	@include m( min, $bp-xlarge) {
-		@include type-size-calc-xlarge($size);
-	}
+	// @include m( min, $bp-large) {
+	// 	@include type-size-calc-large($size);
+	// }
 	line-height: 0.95;
 }
 
 h3, .h3, .h3 p {
-	$size: 40px;
-	@include type-size-calc($size);
-
-	@include m( min, $bp-xsmall) {
-		@include type-size-calc-xsmall($size);
-	}
-	@include m( min, $bp-small) {
-		@include type-size-calc-small($size);
-	}
-	@include m( min, $bp-medium) {
-		@include type-size-calc-medium($size);
-	}
-	@include m( min, $bp-large) {
-		@include type-size-calc-large($size);
-	}
-	@include m( min, $bp-xlarge) {
-		@include type-size-calc-xlarge($size);
-	}
-}
-.h3 .h3_rant p {
 	$size: 50px;
+	font-weight: 100;
 	@include type-size-calc($size);
 
 	@include m( min, $bp-xsmall) {
@@ -253,15 +231,11 @@ h3, .h3, .h3 p {
 	@include m( min, $bp-large) {
 		@include type-size-calc-large($size);
 	}
-	@include m( min, $bp-xlarge) {
-		@include type-size-calc-xlarge($size);
-	}
 }
-
 h4,
 .h4, .h4 p {
-	$size: 30px;
-	@include type-size-calc-large($size);
+	font-size: 24px;
+  	line-height: 36px;
 }
 
 h5, .h5 {
@@ -293,8 +267,9 @@ h6, .h6 {
 p,
 .p {
 	font-size: 14px;
+	line-height: 18px;
 	font-weight: 300;
-	max-width: 450px;
+	max-width: 400px;
 }
 
 /**

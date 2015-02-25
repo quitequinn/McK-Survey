@@ -7,7 +7,7 @@
  * http://gomakethings.com/mit/
  */
 
- $( document ).ready(function() {
+$( document ).ready(function() {
 ////////////////////////////////////////////////
 ////////////////                 ///////////////
 ////////////////    FUNCTIONS    ///////////////
@@ -27,11 +27,18 @@
 		}).widowFix();
 
 		// Add Hyphens
-		$(hyphens).each(function(){
-			var noBS = $(this).html().replace(/&shy;/g,'');
-			$(this).html(noBS);
-			$(this).hyphenate('en-us');
-		})
+		// $(hyphens).each(function(){
+		// 	var noBS = $(this).html().replace(/&shy;/g,'');
+		// 	$(this).html(noBS);
+		// 	$(this).hyphenate('en-us');
+		// 	var unHyph = $(this).html().slice(-60).replace(/\u00AD/g,'');
+		// 	console.log(unHyph);
+
+		// 	var hyph = $(this).html().slice(0, -60);
+
+		// 	$(this).html(hyph.concat(unHyph));
+		// 	// $(this).replace(/\u00AD/g,'');
+		// })
 
 	}
 	fixType();
@@ -114,15 +121,20 @@ $('.hamburger-wrap').click(function(){
 	$("body, .sideNav, .permNav").toggleClass('active');
 });
 
+//Profile Interaction
+$(".profile-link").click(function(){
+	$("body, .sideNav, .permNav").removeClass('active');
+});
+
 //Audio
 $('.audClick:not(view-on)').click(function(){
 	var click = new Audio('click.mp3');
 	click.play();
 });
-$('.audSwipe:not(view-on)').click(function(){
-	var swipe = new Audio('swipe.mp3');
-	swipe.play();
-});
+// $('.audSwipe:not(view-on)').click(function(){
+// 	var swipe = new Audio('swipe.mp3');
+// 	swipe.play();
+// });
 
 
 
@@ -147,6 +159,8 @@ function path(path){
 		$('.view-on').removeClass('view-on');
 		$("footer a").attr("onclick","");
 	}).to(function(){
+		var swipe = new Audio('swipe.mp3');
+		swipe.play();
 		$('#'+path).addClass('view-on').parent().addClass('view-on');
 		$("main")
 			.attr("cur-slide", index)
@@ -189,8 +203,8 @@ function setCarrots(){
 			var prevpage = "#!/" + $(".page.view-on").prev(".page").attr("id").replace(/[_]/g, '/');
 		}
 	}
-	$(".pageNav .fa-chevron-circle-right").attr("href", nextpage);
-	$(".pageNav .fa-chevron-circle-left").attr("href", prevpage);
+	$(".pageNav .icon-right").attr("href", nextpage);
+	$(".pageNav .icon-left").attr("href", prevpage);
 }
 setCarrots();
 
@@ -199,11 +213,11 @@ document.onkeydown = checkKey;
 function checkKey(e) {
     e = e || window.event;
     if (e.keyCode == '37') {
-		$(".pageNav .fa-chevron-circle-left").get(0).click();
+		$(".pageNav .icon-left").get(0).click();
 		setCarrots();
     }
     else if (e.keyCode == '39') {
-        $(".pageNav .fa-chevron-circle-right").get(0).click();
+        $(".pageNav .icon-right").get(0).click();
 		setCarrots();
     }
 
