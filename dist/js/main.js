@@ -122,8 +122,11 @@ $('.hamburger-wrap').click(function(){
 });
 
 //Profile Interaction
-$(".profile-link").click(function(){
+$(".profile-link, section").click(function(){
 	$("body, .sideNav, .permNav").removeClass('active');
+
+	var click = new Audio('click.mp3');
+	click.play();
 });
 
 //Audio
@@ -168,6 +171,7 @@ function path(path){
 			.attr("cur-page", index.replace(/\w+([_])/g, ''));
 		$('footer a[href$="#!/'+url+'"]').addClass('view-on').attr("onclick","return false");
 		setCarrots();
+		checkNav();
 	});
 }
 $(".page").each(function(){
@@ -181,8 +185,8 @@ Path.listen();
 //Set Arrow Routs
 
 function setCarrots(){
-	if ( $(".page.view-on").next(".page") == 'appendix') {
-		var prevpage = "#!/";
+	if ( $(".page.view-on").attr("id") == 'connect-on-energy') {
+		var nextpage = "#!/";
 	} else {
 		var next = $(".page.view-on").next(".page");
 		if( next.length == 0){
@@ -192,7 +196,7 @@ function setCarrots(){
 		}
 	}
 	if ( $(".page.view-on").attr("id") == 'home') {
-		var prevpage = "#!/";
+		var prevpage = "#!/connect-on-energy";
 	} else if ( $(".page.view-on").prev(".page").attr("id") == 'home') {
 		var prevpage = "#!/";
 	} else {
@@ -207,6 +211,11 @@ function setCarrots(){
 	$(".pageNav .icon-left").attr("href", prevpage);
 }
 setCarrots();
+
+// Set Progress Nav
+function checkNav(){
+
+};
 
 // Arrow Keys
 document.onkeydown = checkKey;

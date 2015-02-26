@@ -216,7 +216,7 @@
 		}
 	}
 
-	&[cur-slide="clean_5_Adam"], &[cur-slide="clean_5_TomAndJr"], &[cur-slide="toc"], &[cur-slide="intro"]{
+	&[cur-slide="clean_5_Adam"], &[cur-slide="connect-on-energy"], &[cur-slide="about"], &[cur-slide="clean_5_TomAndJr"], &[cur-slide="toc"], &[cur-slide="intro"]{
 		.site-footer{
 			display: none;
 		}
@@ -337,6 +337,9 @@ h2.vcenter{
 				}
 				&:after{
   					top: 8px;
+  					@include m(min, $bp-xlarge){
+  						top: 10px;
+  					}
 				}
 				&:before, &:after{
 					background: $white;
@@ -379,7 +382,11 @@ h2.vcenter{
   		}
 	}
 }
-
+.grid-fourth{
+	h2{
+		word-wrap: initial;
+	}
+}
 
 [data-w=".5"] {
 width: 50px;
@@ -491,7 +498,7 @@ width: 600px;
 	}
 }
 
-.intro{
+.intro, .call-to-action{
 	@include color-scheme($color-intro);
 	.page{
 		@include color-scheme($color-intro);
@@ -541,7 +548,17 @@ width: 600px;
 	            linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 75%),
 	            url(../../profile.jpg) 50% 50%;
 }
-//UNIQUE PAGES
+
+//UNIQUE Chapters
+
+.call-to-action{
+	p{
+		max-width: 500px;
+	}
+}
+
+
+//UNIQUE pages
 
 #home{
 	width: 95%;

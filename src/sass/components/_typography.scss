@@ -24,7 +24,9 @@ body {
 p {
 	margin-bottom: $spacing;
 }
-
+.uppercase{
+	text-transform: uppercase;
+}
 
 /**
  * Hyperlink styling

@@ -928,10 +928,15 @@ p {
   margin-bottom: 1.5625em;
 }
 
+/* line 27, ../components/_typography.scss */
+.uppercase {
+  text-transform: uppercase;
+}
+
 /**
  * Hyperlink styling
  */
-/* line 33, ../components/_typography.scss */
+/* line 35, ../components/_typography.scss */
 a {
   color: #0088cc;
   text-decoration: none;
@@ -939,14 +944,14 @@ a {
   opacity: 0.75;
 }
 
-/* line 40, ../components/_typography.scss */
+/* line 42, ../components/_typography.scss */
 a:hover,
 a:focus {
   color: #005580;
   text-decoration: none;
 }
 
-/* line 46, ../components/_typography.scss */
+/* line 48, ../components/_typography.scss */
 a img {
   border: none;
   background: none;
@@ -956,7 +961,7 @@ a img {
  * Prevents border/background on linked image hover.
  * Adds slight opacity.
  */
-/* line 55, ../components/_typography.scss */
+/* line 57, ../components/_typography.scss */
 a:hover img {
   border: none;
   background: none;
@@ -966,7 +971,7 @@ a:hover img {
 /**
  * List styling
  */
-/* line 66, ../components/_typography.scss */
+/* line 68, ../components/_typography.scss */
 ul,
 ol,
 dl {
@@ -974,7 +979,7 @@ dl {
   margin-left: 2em;
 }
 
-/* line 73, ../components/_typography.scss */
+/* line 75, ../components/_typography.scss */
 ul ul,
 ul ol,
 ol ol,
@@ -982,17 +987,17 @@ ol ul {
   margin-bottom: 0;
 }
 
-/* line 80, ../components/_typography.scss */
+/* line 82, ../components/_typography.scss */
 dl {
   margin-left: 0;
 }
 
-/* line 84, ../components/_typography.scss */
+/* line 86, ../components/_typography.scss */
 dt {
   font-weight: bold;
 }
 
-/* line 87, ../components/_typography.scss */
+/* line 89, ../components/_typography.scss */
 b {
   font-weight: 700;
 }
@@ -1001,7 +1006,7 @@ b {
  * Removes list styling.
  * For semantic reasons, should only be used on unordered lists.
  */
-/* line 95, ../components/_typography.scss */
+/* line 97, ../components/_typography.scss */
 .list-unstyled {
   margin-left: 0;
   list-style: none;
@@ -1010,7 +1015,7 @@ b {
 /**
  * Display lists on a single line.
  */
-/* line 105, ../components/_typography.scss */
+/* line 107, ../components/_typography.scss */
 .list-inline {
   list-style: none;
   margin-left: -0.5em;
@@ -1018,14 +1023,14 @@ b {
   padding: 0;
 }
 
-/* line 112, ../components/_typography.scss */
+/* line 114, ../components/_typography.scss */
 .list-inline > li {
   display: inline;
   margin-left: 0.5em;
   margin-right: 0.5em;
 }
 
-/* line 119, ../components/_typography.scss */
+/* line 121, ../components/_typography.scss */
 .inline {
   display: inline;
 }
@@ -1040,7 +1045,7 @@ b {
  * Heading styling for h1 through h6 elements.
  * Heading class lets you use one heading type for semantics, but style it as another heading type.
  */
-/* line 164, ../components/_typography.scss */
+/* line 166, ../components/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.3;
   font-weight: normal;
@@ -1049,7 +1054,7 @@ h1, h2, h3, h4, h5, h6 {
   word-wrap: break-word;
 }
 
-/* line 172, ../components/_typography.scss */
+/* line 174, ../components/_typography.scss */
 h1, .h1, .h1 p {
   text-transform: uppercase;
   font-family: "Obsidian A", "Obsidian B", Times, serif;
@@ -1058,7 +1063,7 @@ h1, .h1, .h1 p {
   padding-top: .5em;
 }
 @media (min-width: 400px) {
-  /* line 172, ../components/_typography.scss */
+  /* line 174, ../components/_typography.scss */
   h1, .h1, .h1 p {
     font-size: 65px;
   }
@@ -1068,7 +1073,7 @@ h1, .h1, .h1 p {
   font-size: 65px;
 }
 @media (min-width: 600px) {
-  /* line 172, ../components/_typography.scss */
+  /* line 174, ../components/_typography.scss */
   h1, .h1, .h1 p {
     font-size: 80px;
   }
@@ -1078,7 +1083,7 @@ h1, .h1, .h1 p {
   font-size: 80px;
 }
 @media (min-width: 800px) {
-  /* line 172, ../components/_typography.scss */
+  /* line 174, ../components/_typography.scss */
   h1, .h1, .h1 p {
     font-size: 104px;
   }
@@ -1088,7 +1093,7 @@ h1, .h1, .h1 p {
   font-size: 104px;
 }
 @media (min-width: 1000px) {
-  /* line 172, ../components/_typography.scss */
+  /* line 174, ../components/_typography.scss */
   h1, .h1, .h1 p {
     font-size: 128px;
   }
@@ -1098,7 +1103,7 @@ h1, .h1, .h1 p {
   font-size: 128px;
 }
 @media (min-width: 1200px) {
-  /* line 172, ../components/_typography.scss */
+  /* line 174, ../components/_typography.scss */
   h1, .h1, .h1 p {
     font-size: 160px;
   }
@@ -1108,14 +1113,14 @@ h1, .h1, .h1 p {
   font-size: 160px;
 }
 
-/* line 197, ../components/_typography.scss */
+/* line 199, ../components/_typography.scss */
 h2, .h2, .h2 p {
   font-family: "Obsidian A", "Obsidian B", Times, serif;
   font-size: 58.5px;
   line-height: 0.95;
 }
 @media (min-width: 400px) {
-  /* line 197, ../components/_typography.scss */
+  /* line 199, ../components/_typography.scss */
   h2, .h2, .h2 p {
     font-size: 65px;
   }
@@ -1125,7 +1130,7 @@ h2, .h2, .h2 p {
   font-size: 65px;
 }
 @media (min-width: 600px) {
-  /* line 197, ../components/_typography.scss */
+  /* line 199, ../components/_typography.scss */
   h2, .h2, .h2 p {
     font-size: 71.5px;
   }
@@ -1135,7 +1140,7 @@ h2, .h2, .h2 p {
   font-size: 71.5px;
 }
 @media (min-width: 800px) {
-  /* line 197, ../components/_typography.scss */
+  /* line 199, ../components/_typography.scss */
   h2, .h2, .h2 p {
     font-size: 84.5px;
   }
@@ -1145,13 +1150,13 @@ h2, .h2, .h2 p {
   font-size: 84.5px;
 }
 
-/* line 217, ../components/_typography.scss */
+/* line 219, ../components/_typography.scss */
 h3, .h3, .h3 p {
   font-weight: 100;
   font-size: 22.5px;
 }
 @media (min-width: 400px) {
-  /* line 217, ../components/_typography.scss */
+  /* line 219, ../components/_typography.scss */
   h3, .h3, .h3 p {
     font-size: 25px;
   }
@@ -1161,7 +1166,7 @@ h3, .h3, .h3 p {
   font-size: 25px;
 }
 @media (min-width: 600px) {
-  /* line 217, ../components/_typography.scss */
+  /* line 219, ../components/_typography.scss */
   h3, .h3, .h3 p {
     font-size: 27.5px;
   }
@@ -1171,7 +1176,7 @@ h3, .h3, .h3 p {
   font-size: 27.5px;
 }
 @media (min-width: 800px) {
-  /* line 217, ../components/_typography.scss */
+  /* line 219, ../components/_typography.scss */
   h3, .h3, .h3 p {
     font-size: 32.5px;
   }
@@ -1181,7 +1186,7 @@ h3, .h3, .h3 p {
   font-size: 32.5px;
 }
 @media (min-width: 1000px) {
-  /* line 217, ../components/_typography.scss */
+  /* line 219, ../components/_typography.scss */
   h3, .h3, .h3 p {
     font-size: 40px;
   }
@@ -1191,21 +1196,21 @@ h3, .h3, .h3 p {
   font-size: 40px;
 }
 
-/* line 235, ../components/_typography.scss */
+/* line 237, ../components/_typography.scss */
 h4,
 .h4, .h4 p {
   font-size: 24px;
   line-height: 36px;
 }
 
-/* line 241, ../components/_typography.scss */
+/* line 243, ../components/_typography.scss */
 h5, .h5 {
   text-transform: uppercase;
   letter-spacing: .15em;
   font-size: 15px;
 }
 @media (min-width: 400px) {
-  /* line 241, ../components/_typography.scss */
+  /* line 243, ../components/_typography.scss */
   h5, .h5 {
     text-transform: uppercase;
     letter-spacing: .15em;
@@ -1219,7 +1224,7 @@ h5, .h5 {
   font-size: 16px;
 }
 @media (min-width: 600px) {
-  /* line 241, ../components/_typography.scss */
+  /* line 243, ../components/_typography.scss */
   h5, .h5 {
     text-transform: uppercase;
     letter-spacing: .15em;
@@ -1233,7 +1238,7 @@ h5, .h5 {
   font-size: 17px;
 }
 @media (min-width: 800px) {
-  /* line 241, ../components/_typography.scss */
+  /* line 243, ../components/_typography.scss */
   h5, .h5 {
     text-transform: uppercase;
     letter-spacing: .15em;
@@ -1247,7 +1252,7 @@ h5, .h5 {
   font-size: 18px;
 }
 @media (min-width: 1000px) {
-  /* line 241, ../components/_typography.scss */
+  /* line 243, ../components/_typography.scss */
   h5, .h5 {
     text-transform: uppercase;
     letter-spacing: .15em;
@@ -1261,7 +1266,7 @@ h5, .h5 {
   font-size: 19px;
 }
 @media (min-width: 1200px) {
-  /* line 241, ../components/_typography.scss */
+  /* line 243, ../components/_typography.scss */
   h5, .h5 {
     text-transform: uppercase;
     letter-spacing: .15em;
@@ -1275,7 +1280,7 @@ h5, .h5 {
   font-size: 20px;
 }
 
-/* line 262, ../components/_typography.scss */
+/* line 264, ../components/_typography.scss */
 h6, .h6 {
   text-transform: uppercase;
   letter-spacing: .15em;
@@ -1283,7 +1288,7 @@ h6, .h6 {
   font-weight: 700;
 }
 
-/* line 267, ../components/_typography.scss */
+/* line 269, ../components/_typography.scss */
 p,
 .p {
   font-size: 14px;
@@ -1295,7 +1300,7 @@ p,
 /**
  * Lines, Quotes and Emphasis
  */
-/* line 279, ../components/_typography.scss */
+/* line 281, ../components/_typography.scss */
 hr {
   margin: 2em auto;
   border: 0;
@@ -1303,47 +1308,47 @@ hr {
   border-bottom: 0 solid #ffffff;
 }
 
-/* line 286, ../components/_typography.scss */
+/* line 288, ../components/_typography.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 290, ../components/_typography.scss */
+/* line 292, ../components/_typography.scss */
 em {
   font-style: italic;
 }
 
-/* line 293, ../components/_typography.scss */
+/* line 295, ../components/_typography.scss */
 .thin {
   font-weight: 200;
 }
 
-/* line 296, ../components/_typography.scss */
+/* line 298, ../components/_typography.scss */
 .light {
   font-weight: 300;
 }
 
-/* line 299, ../components/_typography.scss */
+/* line 301, ../components/_typography.scss */
 .regular {
   font-weight: 400;
 }
 
-/* line 302, ../components/_typography.scss */
+/* line 304, ../components/_typography.scss */
 .bold {
   font-weight: 700;
 }
 
-/* line 305, ../components/_typography.scss */
+/* line 307, ../components/_typography.scss */
 .black {
   font-weight: 900;
 }
 
-/* line 308, ../components/_typography.scss */
+/* line 310, ../components/_typography.scss */
 .tx-center {
   text-align: center;
 }
 
-/* line 311, ../components/_typography.scss */
+/* line 313, ../components/_typography.scss */
 sub,
 sup {
   position: relative;
@@ -1354,12 +1359,12 @@ sup {
   margin-left: 0.25em;
 }
 
-/* line 321, ../components/_typography.scss */
+/* line 323, ../components/_typography.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 325, ../components/_typography.scss */
+/* line 327, ../components/_typography.scss */
 sub {
   bottom: -0.25em;
 }
@@ -1367,7 +1372,7 @@ sub {
 /**
  * Highlighting colors
  */
-/* line 332, ../components/_typography.scss */
+/* line 334, ../components/_typography.scss */
 ::-moz-selection {
   color: #ffffff;
   background: #0088cc;
@@ -1380,7 +1385,7 @@ sub {
 /**
  * Blockquotes
  */
-/* line 341, ../components/_typography.scss */
+/* line 343, ../components/_typography.scss */
 blockquote {
   border-left: 0.25em solid #BDBDBD;
   margin-bottom: 1.5625em;
@@ -1388,12 +1393,12 @@ blockquote {
   padding-right: 1.5625em;
 }
 
-/* line 348, ../components/_typography.scss */
+/* line 350, ../components/_typography.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 352, ../components/_typography.scss */
+/* line 354, ../components/_typography.scss */
 blockquote:before,
 blockquote:after,
 q:before,
@@ -2243,11 +2248,11 @@ body {
   display: inherit;
 }
 /* line 220, ../components/_page.scss */
-#main[cur-slide="clean_5_Adam"] .site-footer, #main[cur-slide="clean_5_TomAndJr"] .site-footer, #main[cur-slide="toc"] .site-footer, #main[cur-slide="intro"] .site-footer {
+#main[cur-slide="clean_5_Adam"] .site-footer, #main[cur-slide="connect-on-energy"] .site-footer, #main[cur-slide="about"] .site-footer, #main[cur-slide="clean_5_TomAndJr"] .site-footer, #main[cur-slide="toc"] .site-footer, #main[cur-slide="intro"] .site-footer {
   display: none;
 }
 /* line 223, ../components/_page.scss */
-#main[cur-slide="clean_5_Adam"] .winH, #main[cur-slide="clean_5_TomAndJr"] .winH, #main[cur-slide="toc"] .winH, #main[cur-slide="intro"] .winH {
+#main[cur-slide="clean_5_Adam"] .winH, #main[cur-slide="connect-on-energy"] .winH, #main[cur-slide="about"] .winH, #main[cur-slide="clean_5_TomAndJr"] .winH, #main[cur-slide="toc"] .winH, #main[cur-slide="intro"] .winH {
   padding-bottom: 0;
 }
 
@@ -2421,22 +2426,32 @@ h2.vcenter {
 .profile .permNav .exit-wrap .exit:after {
   top: 8px;
 }
-/* line 341, ../components/_page.scss */
+@media (min-width: 1200px) {
+  /* line 338, ../components/_page.scss */
+  .profile .permNav .exit-wrap .exit:after {
+    top: 10px;
+  }
+}
+/* line 18, ../utils/_helper_mixins.scss */
+#main[min-width~="1200px"] .profile .permNav .exit-wrap .exit:after {
+  top: 10px;
+}
+/* line 344, ../components/_page.scss */
 .profile .permNav .exit-wrap .exit:before, .profile .permNav .exit-wrap .exit:after {
   background: #fff;
 }
 
-/* line 350, ../components/_page.scss */
+/* line 353, ../components/_page.scss */
 .icon-link span {
   font-size: 3.5em;
   position: absolute;
 }
-/* line 354, ../components/_page.scss */
+/* line 357, ../components/_page.scss */
 .icon-link h6 {
   margin-left: 6em;
 }
 
-/* line 360, ../components/_page.scss */
+/* line 363, ../components/_page.scss */
 .appendix .profile-link {
   width: 90px;
   height: 90px;
@@ -2444,7 +2459,7 @@ h2.vcenter {
   margin: 0 1em 1em 0;
   overflow: hidden;
 }
-/* line 366, ../components/_page.scss */
+/* line 369, ../components/_page.scss */
 .appendix .profile-link h6 {
   padding-bottom: 10px;
   background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), color-stop(75%, transparent)), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), color-stop(75%, transparent));
@@ -2456,7 +2471,7 @@ h2.vcenter {
   -webkit-background-size: 500%;
   background-size: 500%;
 }
-/* line 374, ../components/_page.scss */
+/* line 377, ../components/_page.scss */
 .appendix .profile-link:hover h6 {
   background-position: 100% 0;
   -webkit-background-size: 100%;
@@ -2465,47 +2480,52 @@ h2.vcenter {
   transition: all 0.3s;
 }
 
-/* line 384, ../components/_page.scss */
+/* line 386, ../components/_page.scss */
+.grid-fourth h2 {
+  word-wrap: initial;
+}
+
+/* line 391, ../components/_page.scss */
 [data-w=".5"] {
   width: 50px;
 }
 
-/* line 387, ../components/_page.scss */
+/* line 394, ../components/_page.scss */
 [data-w="1"] {
   width: 100px;
 }
 
-/* line 390, ../components/_page.scss */
+/* line 397, ../components/_page.scss */
 [data-w="1.5"] {
   width: 150px;
 }
 
-/* line 393, ../components/_page.scss */
+/* line 400, ../components/_page.scss */
 [data-w="2"] {
   width: 200px;
 }
 
-/* line 396, ../components/_page.scss */
+/* line 403, ../components/_page.scss */
 [data-w="2.5"] {
   width: 250px;
 }
 
-/* line 399, ../components/_page.scss */
+/* line 406, ../components/_page.scss */
 [data-w="3"] {
   width: 300px;
 }
 
-/* line 402, ../components/_page.scss */
+/* line 409, ../components/_page.scss */
 [data-w="4"] {
   width: 400px;
 }
 
-/* line 405, ../components/_page.scss */
+/* line 412, ../components/_page.scss */
 [data-w="5"] {
   width: 500px;
 }
 
-/* line 408, ../components/_page.scss */
+/* line 415, ../components/_page.scss */
 [data-w="6"] {
   width: 600px;
 }
@@ -2641,531 +2661,536 @@ h2.vcenter {
     opacity: .6;
   }
 }
-/* line 494, ../components/_page.scss */
-.intro {
+/* line 501, ../components/_page.scss */
+.intro, .call-to-action {
   background: #f3f3f3;
   color: rgba(0, 0, 0, 0.75);
 }
-/* line 466, ../components/_page.scss */
-.intro svg.waves {
+/* line 473, ../components/_page.scss */
+.intro svg.waves, .call-to-action svg.waves {
   position: relative;
 }
-/* line 468, ../components/_page.scss */
-.intro svg.waves path {
+/* line 475, ../components/_page.scss */
+.intro svg.waves path, .call-to-action svg.waves path {
   fill: #f3f3f3;
   opacity: .25;
 }
-/* line 471, ../components/_page.scss */
-.intro svg.waves path:nth-of-type(1) {
+/* line 478, ../components/_page.scss */
+.intro svg.waves path:nth-of-type(1), .call-to-action svg.waves path:nth-of-type(1) {
   opacity: 1;
   -webkit-animation: wave1 50s ease infinite;
   animation: wave1 50s ease infinite;
 }
-/* line 475, ../components/_page.scss */
-.intro svg.waves path:nth-of-type(2) {
+/* line 482, ../components/_page.scss */
+.intro svg.waves path:nth-of-type(2), .call-to-action svg.waves path:nth-of-type(2) {
   opacity: .3;
   -webkit-animation: wave2 26s ease infinite;
   animation: wave2 26s ease infinite;
 }
-/* line 479, ../components/_page.scss */
-.intro svg.waves path:nth-of-type(3) {
+/* line 486, ../components/_page.scss */
+.intro svg.waves path:nth-of-type(3), .call-to-action svg.waves path:nth-of-type(3) {
   -webkit-animation: wave3 30s ease infinite;
   animation: wave3 30s ease infinite;
 }
-/* line 482, ../components/_page.scss */
-.intro svg.waves path:nth-of-type(4) {
+/* line 489, ../components/_page.scss */
+.intro svg.waves path:nth-of-type(4), .call-to-action svg.waves path:nth-of-type(4) {
   -webkit-animation: wave4 42s ease infinite;
   animation: wave4 42s ease infinite;
   opacity: 0.5;
   margin-top: 1em;
 }
-/* line 488, ../components/_page.scss */
-.intro svg.waves + h1 {
+/* line 495, ../components/_page.scss */
+.intro svg.waves + h1, .call-to-action svg.waves + h1 {
   margin-top: -1.1em;
 }
-/* line 496, ../components/_page.scss */
-.intro .page {
+/* line 503, ../components/_page.scss */
+.intro .page, .call-to-action .page {
   background: #f3f3f3;
   color: rgba(0, 0, 0, 0.75);
 }
-/* line 466, ../components/_page.scss */
-.intro .page svg.waves {
+/* line 473, ../components/_page.scss */
+.intro .page svg.waves, .call-to-action .page svg.waves {
   position: relative;
 }
-/* line 468, ../components/_page.scss */
-.intro .page svg.waves path {
+/* line 475, ../components/_page.scss */
+.intro .page svg.waves path, .call-to-action .page svg.waves path {
   fill: #f3f3f3;
   opacity: .25;
 }
-/* line 471, ../components/_page.scss */
-.intro .page svg.waves path:nth-of-type(1) {
+/* line 478, ../components/_page.scss */
+.intro .page svg.waves path:nth-of-type(1), .call-to-action .page svg.waves path:nth-of-type(1) {
   opacity: 1;
   -webkit-animation: wave1 50s ease infinite;
   animation: wave1 50s ease infinite;
 }
-/* line 475, ../components/_page.scss */
-.intro .page svg.waves path:nth-of-type(2) {
+/* line 482, ../components/_page.scss */
+.intro .page svg.waves path:nth-of-type(2), .call-to-action .page svg.waves path:nth-of-type(2) {
   opacity: .3;
   -webkit-animation: wave2 26s ease infinite;
   animation: wave2 26s ease infinite;
 }
-/* line 479, ../components/_page.scss */
-.intro .page svg.waves path:nth-of-type(3) {
+/* line 486, ../components/_page.scss */
+.intro .page svg.waves path:nth-of-type(3), .call-to-action .page svg.waves path:nth-of-type(3) {
   -webkit-animation: wave3 30s ease infinite;
   animation: wave3 30s ease infinite;
 }
-/* line 482, ../components/_page.scss */
-.intro .page svg.waves path:nth-of-type(4) {
+/* line 489, ../components/_page.scss */
+.intro .page svg.waves path:nth-of-type(4), .call-to-action .page svg.waves path:nth-of-type(4) {
   -webkit-animation: wave4 42s ease infinite;
   animation: wave4 42s ease infinite;
   opacity: 0.5;
   margin-top: 1em;
 }
-/* line 488, ../components/_page.scss */
-.intro .page svg.waves + h1 {
+/* line 495, ../components/_page.scss */
+.intro .page svg.waves + h1, .call-to-action .page svg.waves + h1 {
   margin-top: -1.1em;
 }
 
-/* line 500, ../components/_page.scss */
+/* line 507, ../components/_page.scss */
 .clean {
   background: #E8CfA2;
   color: rgba(0, 0, 0, 0.75);
 }
-/* line 466, ../components/_page.scss */
+/* line 473, ../components/_page.scss */
 .clean svg.waves {
   position: relative;
 }
-/* line 468, ../components/_page.scss */
+/* line 475, ../components/_page.scss */
 .clean svg.waves path {
   fill: #E8CfA2;
   opacity: .25;
 }
-/* line 471, ../components/_page.scss */
+/* line 478, ../components/_page.scss */
 .clean svg.waves path:nth-of-type(1) {
   opacity: 1;
   -webkit-animation: wave1 50s ease infinite;
   animation: wave1 50s ease infinite;
 }
-/* line 475, ../components/_page.scss */
+/* line 482, ../components/_page.scss */
 .clean svg.waves path:nth-of-type(2) {
   opacity: .3;
   -webkit-animation: wave2 26s ease infinite;
   animation: wave2 26s ease infinite;
 }
-/* line 479, ../components/_page.scss */
+/* line 486, ../components/_page.scss */
 .clean svg.waves path:nth-of-type(3) {
   -webkit-animation: wave3 30s ease infinite;
   animation: wave3 30s ease infinite;
 }
-/* line 482, ../components/_page.scss */
+/* line 489, ../components/_page.scss */
 .clean svg.waves path:nth-of-type(4) {
   -webkit-animation: wave4 42s ease infinite;
   animation: wave4 42s ease infinite;
   opacity: 0.5;
   margin-top: 1em;
 }
-/* line 488, ../components/_page.scss */
+/* line 495, ../components/_page.scss */
 .clean svg.waves + h1 {
   margin-top: -1.1em;
 }
-/* line 502, ../components/_page.scss */
+/* line 509, ../components/_page.scss */
 .clean .page {
   background: #E8CfA2;
   color: rgba(0, 0, 0, 0.75);
 }
-/* line 466, ../components/_page.scss */
+/* line 473, ../components/_page.scss */
 .clean .page svg.waves {
   position: relative;
 }
-/* line 468, ../components/_page.scss */
+/* line 475, ../components/_page.scss */
 .clean .page svg.waves path {
   fill: #E8CfA2;
   opacity: .25;
 }
-/* line 471, ../components/_page.scss */
+/* line 478, ../components/_page.scss */
 .clean .page svg.waves path:nth-of-type(1) {
   opacity: 1;
   -webkit-animation: wave1 50s ease infinite;
   animation: wave1 50s ease infinite;
 }
-/* line 475, ../components/_page.scss */
+/* line 482, ../components/_page.scss */
 .clean .page svg.waves path:nth-of-type(2) {
   opacity: .3;
   -webkit-animation: wave2 26s ease infinite;
   animation: wave2 26s ease infinite;
 }
-/* line 479, ../components/_page.scss */
+/* line 486, ../components/_page.scss */
 .clean .page svg.waves path:nth-of-type(3) {
   -webkit-animation: wave3 30s ease infinite;
   animation: wave3 30s ease infinite;
 }
-/* line 482, ../components/_page.scss */
+/* line 489, ../components/_page.scss */
 .clean .page svg.waves path:nth-of-type(4) {
   -webkit-animation: wave4 42s ease infinite;
   animation: wave4 42s ease infinite;
   opacity: 0.5;
   margin-top: 1em;
 }
-/* line 488, ../components/_page.scss */
+/* line 495, ../components/_page.scss */
 .clean .page svg.waves + h1 {
   margin-top: -1.1em;
 }
 
-/* line 506, ../components/_page.scss */
+/* line 513, ../components/_page.scss */
 .economy {
   background: #D9D7B1;
   color: rgba(0, 0, 0, 0.75);
 }
-/* line 466, ../components/_page.scss */
+/* line 473, ../components/_page.scss */
 .economy svg.waves {
   position: relative;
 }
-/* line 468, ../components/_page.scss */
+/* line 475, ../components/_page.scss */
 .economy svg.waves path {
   fill: #D9D7B1;
   opacity: .25;
 }
-/* line 471, ../components/_page.scss */
+/* line 478, ../components/_page.scss */
 .economy svg.waves path:nth-of-type(1) {
   opacity: 1;
   -webkit-animation: wave1 50s ease infinite;
   animation: wave1 50s ease infinite;
 }
-/* line 475, ../components/_page.scss */
+/* line 482, ../components/_page.scss */
 .economy svg.waves path:nth-of-type(2) {
   opacity: .3;
   -webkit-animation: wave2 26s ease infinite;
   animation: wave2 26s ease infinite;
 }
-/* line 479, ../components/_page.scss */
+/* line 486, ../components/_page.scss */
 .economy svg.waves path:nth-of-type(3) {
   -webkit-animation: wave3 30s ease infinite;
   animation: wave3 30s ease infinite;
 }
-/* line 482, ../components/_page.scss */
+/* line 489, ../components/_page.scss */
 .economy svg.waves path:nth-of-type(4) {
   -webkit-animation: wave4 42s ease infinite;
   animation: wave4 42s ease infinite;
   opacity: 0.5;
   margin-top: 1em;
 }
-/* line 488, ../components/_page.scss */
+/* line 495, ../components/_page.scss */
 .economy svg.waves + h1 {
   margin-top: -1.1em;
 }
-/* line 508, ../components/_page.scss */
+/* line 515, ../components/_page.scss */
 .economy .page {
   background: #D9D7B1;
   color: rgba(0, 0, 0, 0.75);
 }
-/* line 466, ../components/_page.scss */
+/* line 473, ../components/_page.scss */
 .economy .page svg.waves {
   position: relative;
 }
-/* line 468, ../components/_page.scss */
+/* line 475, ../components/_page.scss */
 .economy .page svg.waves path {
   fill: #D9D7B1;
   opacity: .25;
 }
-/* line 471, ../components/_page.scss */
+/* line 478, ../components/_page.scss */
 .economy .page svg.waves path:nth-of-type(1) {
   opacity: 1;
   -webkit-animation: wave1 50s ease infinite;
   animation: wave1 50s ease infinite;
 }
-/* line 475, ../components/_page.scss */
+/* line 482, ../components/_page.scss */
 .economy .page svg.waves path:nth-of-type(2) {
   opacity: .3;
   -webkit-animation: wave2 26s ease infinite;
   animation: wave2 26s ease infinite;
 }
-/* line 479, ../components/_page.scss */
+/* line 486, ../components/_page.scss */
 .economy .page svg.waves path:nth-of-type(3) {
   -webkit-animation: wave3 30s ease infinite;
   animation: wave3 30s ease infinite;
 }
-/* line 482, ../components/_page.scss */
+/* line 489, ../components/_page.scss */
 .economy .page svg.waves path:nth-of-type(4) {
   -webkit-animation: wave4 42s ease infinite;
   animation: wave4 42s ease infinite;
   opacity: 0.5;
   margin-top: 1em;
 }
-/* line 488, ../components/_page.scss */
+/* line 495, ../components/_page.scss */
 .economy .page svg.waves + h1 {
   margin-top: -1.1em;
 }
 
-/* line 512, ../components/_page.scss */
+/* line 519, ../components/_page.scss */
 .innovation {
   background: #B1C0AD;
   color: rgba(0, 0, 0, 0.75);
 }
-/* line 466, ../components/_page.scss */
+/* line 473, ../components/_page.scss */
 .innovation svg.waves {
   position: relative;
 }
-/* line 468, ../components/_page.scss */
+/* line 475, ../components/_page.scss */
 .innovation svg.waves path {
   fill: #B1C0AD;
   opacity: .25;
 }
-/* line 471, ../components/_page.scss */
+/* line 478, ../components/_page.scss */
 .innovation svg.waves path:nth-of-type(1) {
   opacity: 1;
   -webkit-animation: wave1 50s ease infinite;
   animation: wave1 50s ease infinite;
 }
-/* line 475, ../components/_page.scss */
+/* line 482, ../components/_page.scss */
 .innovation svg.waves path:nth-of-type(2) {
   opacity: .3;
   -webkit-animation: wave2 26s ease infinite;
   animation: wave2 26s ease infinite;
 }
-/* line 479, ../components/_page.scss */
+/* line 486, ../components/_page.scss */
 .innovation svg.waves path:nth-of-type(3) {
   -webkit-animation: wave3 30s ease infinite;
   animation: wave3 30s ease infinite;
 }
-/* line 482, ../components/_page.scss */
+/* line 489, ../components/_page.scss */
 .innovation svg.waves path:nth-of-type(4) {
   -webkit-animation: wave4 42s ease infinite;
   animation: wave4 42s ease infinite;
   opacity: 0.5;
   margin-top: 1em;
 }
-/* line 488, ../components/_page.scss */
+/* line 495, ../components/_page.scss */
 .innovation svg.waves + h1 {
   margin-top: -1.1em;
 }
-/* line 514, ../components/_page.scss */
+/* line 521, ../components/_page.scss */
 .innovation .page {
   background: #B1C0AD;
   color: rgba(0, 0, 0, 0.75);
 }
-/* line 466, ../components/_page.scss */
+/* line 473, ../components/_page.scss */
 .innovation .page svg.waves {
   position: relative;
 }
-/* line 468, ../components/_page.scss */
+/* line 475, ../components/_page.scss */
 .innovation .page svg.waves path {
   fill: #B1C0AD;
   opacity: .25;
 }
-/* line 471, ../components/_page.scss */
+/* line 478, ../components/_page.scss */
 .innovation .page svg.waves path:nth-of-type(1) {
   opacity: 1;
   -webkit-animation: wave1 50s ease infinite;
   animation: wave1 50s ease infinite;
 }
-/* line 475, ../components/_page.scss */
+/* line 482, ../components/_page.scss */
 .innovation .page svg.waves path:nth-of-type(2) {
   opacity: .3;
   -webkit-animation: wave2 26s ease infinite;
   animation: wave2 26s ease infinite;
 }
-/* line 479, ../components/_page.scss */
+/* line 486, ../components/_page.scss */
 .innovation .page svg.waves path:nth-of-type(3) {
   -webkit-animation: wave3 30s ease infinite;
   animation: wave3 30s ease infinite;
 }
-/* line 482, ../components/_page.scss */
+/* line 489, ../components/_page.scss */
 .innovation .page svg.waves path:nth-of-type(4) {
   -webkit-animation: wave4 42s ease infinite;
   animation: wave4 42s ease infinite;
   opacity: 0.5;
   margin-top: 1em;
 }
-/* line 488, ../components/_page.scss */
+/* line 495, ../components/_page.scss */
 .innovation .page svg.waves + h1 {
   margin-top: -1.1em;
 }
 
-/* line 518, ../components/_page.scss */
+/* line 525, ../components/_page.scss */
 .future {
   background: #DD8361;
   color: rgba(0, 0, 0, 0.75);
 }
-/* line 466, ../components/_page.scss */
+/* line 473, ../components/_page.scss */
 .future svg.waves {
   position: relative;
 }
-/* line 468, ../components/_page.scss */
+/* line 475, ../components/_page.scss */
 .future svg.waves path {
   fill: #DD8361;
   opacity: .25;
 }
-/* line 471, ../components/_page.scss */
+/* line 478, ../components/_page.scss */
 .future svg.waves path:nth-of-type(1) {
   opacity: 1;
   -webkit-animation: wave1 50s ease infinite;
   animation: wave1 50s ease infinite;
 }
-/* line 475, ../components/_page.scss */
+/* line 482, ../components/_page.scss */
 .future svg.waves path:nth-of-type(2) {
   opacity: .3;
   -webkit-animation: wave2 26s ease infinite;
   animation: wave2 26s ease infinite;
 }
-/* line 479, ../components/_page.scss */
+/* line 486, ../components/_page.scss */
 .future svg.waves path:nth-of-type(3) {
   -webkit-animation: wave3 30s ease infinite;
   animation: wave3 30s ease infinite;
 }
-/* line 482, ../components/_page.scss */
+/* line 489, ../components/_page.scss */
 .future svg.waves path:nth-of-type(4) {
   -webkit-animation: wave4 42s ease infinite;
   animation: wave4 42s ease infinite;
   opacity: 0.5;
   margin-top: 1em;
 }
-/* line 488, ../components/_page.scss */
+/* line 495, ../components/_page.scss */
 .future svg.waves + h1 {
   margin-top: -1.1em;
 }
-/* line 520, ../components/_page.scss */
+/* line 527, ../components/_page.scss */
 .future .page {
   background: #DD8361;
   color: rgba(0, 0, 0, 0.75);
 }
-/* line 466, ../components/_page.scss */
+/* line 473, ../components/_page.scss */
 .future .page svg.waves {
   position: relative;
 }
-/* line 468, ../components/_page.scss */
+/* line 475, ../components/_page.scss */
 .future .page svg.waves path {
   fill: #DD8361;
   opacity: .25;
 }
-/* line 471, ../components/_page.scss */
+/* line 478, ../components/_page.scss */
 .future .page svg.waves path:nth-of-type(1) {
   opacity: 1;
   -webkit-animation: wave1 50s ease infinite;
   animation: wave1 50s ease infinite;
 }
-/* line 475, ../components/_page.scss */
+/* line 482, ../components/_page.scss */
 .future .page svg.waves path:nth-of-type(2) {
   opacity: .3;
   -webkit-animation: wave2 26s ease infinite;
   animation: wave2 26s ease infinite;
 }
-/* line 479, ../components/_page.scss */
+/* line 486, ../components/_page.scss */
 .future .page svg.waves path:nth-of-type(3) {
   -webkit-animation: wave3 30s ease infinite;
   animation: wave3 30s ease infinite;
 }
-/* line 482, ../components/_page.scss */
+/* line 489, ../components/_page.scss */
 .future .page svg.waves path:nth-of-type(4) {
   -webkit-animation: wave4 42s ease infinite;
   animation: wave4 42s ease infinite;
   opacity: 0.5;
   margin-top: 1em;
 }
-/* line 488, ../components/_page.scss */
+/* line 495, ../components/_page.scss */
 .future .page svg.waves + h1 {
   margin-top: -1.1em;
 }
 
-/* line 524, ../components/_page.scss */
+/* line 531, ../components/_page.scss */
 .appendix {
   background: #908F74;
   color: rgba(0, 0, 0, 0.75);
 }
-/* line 466, ../components/_page.scss */
+/* line 473, ../components/_page.scss */
 .appendix svg.waves {
   position: relative;
 }
-/* line 468, ../components/_page.scss */
+/* line 475, ../components/_page.scss */
 .appendix svg.waves path {
   fill: #908F74;
   opacity: .25;
 }
-/* line 471, ../components/_page.scss */
+/* line 478, ../components/_page.scss */
 .appendix svg.waves path:nth-of-type(1) {
   opacity: 1;
   -webkit-animation: wave1 50s ease infinite;
   animation: wave1 50s ease infinite;
 }
-/* line 475, ../components/_page.scss */
+/* line 482, ../components/_page.scss */
 .appendix svg.waves path:nth-of-type(2) {
   opacity: .3;
   -webkit-animation: wave2 26s ease infinite;
   animation: wave2 26s ease infinite;
 }
-/* line 479, ../components/_page.scss */
+/* line 486, ../components/_page.scss */
 .appendix svg.waves path:nth-of-type(3) {
   -webkit-animation: wave3 30s ease infinite;
   animation: wave3 30s ease infinite;
 }
-/* line 482, ../components/_page.scss */
+/* line 489, ../components/_page.scss */
 .appendix svg.waves path:nth-of-type(4) {
   -webkit-animation: wave4 42s ease infinite;
   animation: wave4 42s ease infinite;
   opacity: 0.5;
   margin-top: 1em;
 }
-/* line 488, ../components/_page.scss */
+/* line 495, ../components/_page.scss */
 .appendix svg.waves + h1 {
   margin-top: -1.1em;
 }
-/* line 526, ../components/_page.scss */
+/* line 533, ../components/_page.scss */
 .appendix .page {
   background: #908F74;
   color: rgba(0, 0, 0, 0.75);
 }
-/* line 466, ../components/_page.scss */
+/* line 473, ../components/_page.scss */
 .appendix .page svg.waves {
   position: relative;
 }
-/* line 468, ../components/_page.scss */
+/* line 475, ../components/_page.scss */
 .appendix .page svg.waves path {
   fill: #908F74;
   opacity: .25;
 }
-/* line 471, ../components/_page.scss */
+/* line 478, ../components/_page.scss */
 .appendix .page svg.waves path:nth-of-type(1) {
   opacity: 1;
   -webkit-animation: wave1 50s ease infinite;
   animation: wave1 50s ease infinite;
 }
-/* line 475, ../components/_page.scss */
+/* line 482, ../components/_page.scss */
 .appendix .page svg.waves path:nth-of-type(2) {
   opacity: .3;
   -webkit-animation: wave2 26s ease infinite;
   animation: wave2 26s ease infinite;
 }
-/* line 479, ../components/_page.scss */
+/* line 486, ../components/_page.scss */
 .appendix .page svg.waves path:nth-of-type(3) {
   -webkit-animation: wave3 30s ease infinite;
   animation: wave3 30s ease infinite;
 }
-/* line 482, ../components/_page.scss */
+/* line 489, ../components/_page.scss */
 .appendix .page svg.waves path:nth-of-type(4) {
   -webkit-animation: wave4 42s ease infinite;
   animation: wave4 42s ease infinite;
   opacity: 0.5;
   margin-top: 1em;
 }
-/* line 488, ../components/_page.scss */
+/* line 495, ../components/_page.scss */
 .appendix .page svg.waves + h1 {
   margin-top: -1.1em;
 }
 
-/* line 533, ../components/_page.scss */
+/* line 540, ../components/_page.scss */
 .profile.page {
   background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), color-stop(75%, transparent)), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), color-stop(75%, transparent)), url(../../profile.jpg) 50% 50%;
   background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, transparent 75%), -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 0%, transparent 75%), url(../../profile.jpg) 50% 50%;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, transparent 75%), linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 75%), url(../../profile.jpg) 50% 50%;
 }
 
-/* line 539, ../components/_page.scss */
+/* line 546, ../components/_page.scss */
 #clean_5_TomAndJr {
   background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), color-stop(75%, transparent)), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), color-stop(75%, transparent)), url(../../profile.jpg) 50% 50%;
   background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, transparent 75%), -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 0%, transparent 75%), url(../../profile.jpg) 50% 50%;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, transparent 75%), linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 75%), url(../../profile.jpg) 50% 50%;
 }
 
-/* line 546, ../components/_page.scss */
+/* line 555, ../components/_page.scss */
+.call-to-action p {
+  max-width: 500px;
+}
+
+/* line 563, ../components/_page.scss */
 #home {
   width: 95%;
 }
