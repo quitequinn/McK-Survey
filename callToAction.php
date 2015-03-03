@@ -27,12 +27,12 @@
 			<div class="center">
 				<div class="row">
 					<div class="grid-half float-center">
-						<h3>Connect On Energy</h1>
-						<p>Are you a Clean Energy business operating in Minnesota? If so, make your presence known by joining the <b>Connect On Energy</b> community.</p>
-						<p><b>Connect On Energy</b> is a platform designed to profile and showcase the 750+ Clean Energy businesses throughout Minnesota who are committed to advancing the Clean Energy Economy.</p>
-						<p  class="space-bottom-large">Businesses, small and large, are key to driving the transition to a Clean Energy future and shared prosperity for all. Highlight your organization's role in Minnesota's burgeoning Clean Energy ecosystem by signing up today!</p>
+						<h3 >Connect On Energy</h1>
+						<p >Are you a Clean Energy business operating in Minnesota? If so, make your presence known by joining the <b>Connect On Energy</b> community.</p>
+						<p ><b>Connect On Energy</b> is a platform designed to profile and showcase the 750+ Clean Energy businesses throughout Minnesota who are committed to advancing the Clean Energy Economy.</p>
+						<p class="space-bottom-large">Businesses, small and large, are key to driving the transition to a Clean Energy future and shared prosperity for all. Highlight your organization's role in Minnesota's burgeoning Clean Energy ecosystem by signing up today!</p>
 
-						<iframe src='mail.php' frameborder='0' width='100%' height='600' ></iframe>
+						<? @include("mail.php"); ?>
 					</div>
 				</div>
 			</div>

@@ -1,6 +1,9 @@
 
 footer{
 	height: 40px;
+	@include m(max, $bp-xsmall){
+		height: 60px;
+	}
 	background: $color-black;
 	position: absolute;
 	bottom: 0;
@@ -21,21 +24,45 @@ footer{
 	}
 	.social{
 		position: absolute;
-		right: 35px;
+		right: 21px;
+		@include m(min, $bp-large){
+			right: 35px;
+		}
+		@include m(max, $bp-small){
+			display: none;
+		}
 		top: 8px;
 	}
 	.mcKnight{
 		top: 5px;
-		left: 38px;
+		left: 23px;
+		@include m(min, $bp-large){
+			left: 38px;
+		}
 		position: absolute;
 		font-family: Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif;
 		font-size: 22px;
+		@include m(max, $bp-xsmall){
+			font-size: 39px;
+		}
 		color: $color-white;
 	}
 	#footerNav{
 		margin: 10px auto;
 		width: 50%;
-		width: calc(100% - 150px);
+		width: calc(100% - 105px);
+		@include m(min, $bp-large){
+			width: calc(100% - 150px);
+		}
+		@include m(max, $bp-small){
+		  width: calc(100% - 60px);
+		  text-align: right;
+		  position: absolute;
+		  right: 0;
+		}
+		@include m(max, 480px){
+			display: none;
+		}
 		padding-right: 1em;
 		max-width: 700px;
  	 	text-align: center;

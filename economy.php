@@ -86,8 +86,11 @@
 						<p>It has added $5 billion in economic value to the state through job creation and reduction of air and water pollution from petroleum-based gasoline and diesel. These efforts have placed Minnesota 4th in the nation for ethanol production.</p>
 					</div>
 					<div class="grid-half">
-						<a href="#" class="centerWrap profile-link" style="background: url(img.png) 50% 50%;">
-						</a>
+						<div class="centerWrap" >
+							<div class="center">
+								<img src="img/biofuleimage.png">
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -6,8 +6,14 @@
 	background: $color-black;
 	z-index: 0;
 	width: $width;
+	@include m(max, $bp-small){
+		width: 100%;
+	}
 	.menu{
 		max-width: $width;
+		@include m(max, $bp-small){
+			max-width: 100%;
+		}
 		color: $color-white;
 		padding: 28px 1em 28px 1.25em;
 		width: 100%;
@@ -35,6 +41,19 @@
 	h4, p{
 		margin-bottom: .5em;
 	}
+	&.active .permNav{
+		display:none;
+		@include m(max, $bp-small){
+			display: block;
+			width: 44px;
+			right: 0;
+			opacity: 1!important;
+			.hamburger:before, .hamburger:after {
+				background: $color-white;
+			}
+
+		}
+	}
 
 }
 .permNav{
@@ -43,6 +62,12 @@
 	margin: 25px 30px;
 	width: 100%;
 	z-index: 99;
+	opacity: 1;
+	transition: all $fast;
+	@include m(max, $bp-large){
+		margin: 25px 15px;
+	}
+
 	.hamburger-wrap{
 		@include pointer;
 	  	width: 55px;
@@ -75,23 +100,38 @@
 			transition: all $fast;
 		}
 	}
-	&.active .hamburger{
-		background-color: transparent;
-		margin-top: 21px;
-		transition: all $fast;
-		&:before {
-			transform: rotate(45deg);
+	.h6{
+
+	}
+	&.active {
+		@include m(max, $bp-small){
+			opacity: 0;
 			transition: all $fast;
 		}
-		&:after {
-			transform: translateY(-10px) rotate(-45deg);
-			bottom: 0px;
+		.hamburger{
+			background-color: transparent;
+			margin-top: 21px;
 			transition: all $fast;
+			&:before {
+				transform: rotate(45deg);
+				transition: all $fast;
+			}
+			&:after {
+				transform: translateY(-10px) rotate(-45deg);
+				bottom: 0px;
+				transition: all $fast;
+			}
 		}
 	}
 	a{
 		padding-left: 70px;
 		display: block;
 		margin-top: -31px;
+		&.h6{
+			@include m(max, $bp-xsmall){
+			  	width: 200px;
+			  	margin-top: -48px;
+			}
+		}
 	}
 }

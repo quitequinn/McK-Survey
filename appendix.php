@@ -56,12 +56,23 @@
 		<div class="container align winH centerWrap">
 			<div class="center">
 				<div class="row">
-					<div class="grid-full">
+					<div class="grid-half">
 						<h3>Clean Energy Definitions</h3>
 						<p class="margin-bottom-small"><b>CLEAN ENERGY</b></p>
 						<p>Clean Energy is energy that produces or utilizes less energy to provide the same service, or energy that produces heat, power, or fuel from renewable sources of energy.</p>
 						<p class="margin-bottom-small"><b>BIOFUELS</b></p>
 						<p>Biofuels are energy sources made from living things, or the waste that living things produce.</p>
+						<p class="margin-bottom-small"><b>ENERGY EFFICIENCY</b></p>
+						<p>The practice of using technologies, methods, or strategies that result in using less energy to produce the same service or product, or to provide the same level of performance, comfort or convenience. Examples include LED lights and Energy Star appliances and windows.</p>
+					</div>
+					<div class="grid-half">
+						<p class="margin-bottom-small"><b>WIND POWER</b></p>
+						<p>This type of power utilizes wind through the use of turbines, blades, and towers and includes  development and installation for residential, commercial and utility-scale markets.</p>
+						<p class="margin-bottom-small"><b>SOLAR ENERGY</b></p>
+						<p>Refers to radiant energy and heat harnessed from the sun and used to power a variety of things such as solar system components like inverters, racking, system balances, and monitoring equipment, as well as services such as installation, finance, consulting, and manufacturing.</p>
+						<p class="margin-bottom-small"><b>SMART GRID</b></p>
+						<p>Smart grid refers to integrated and automated communication between components of the electric grid including centralized and distributed energy production, transmission, and use. Other examples include smart meters and measuring devices, energy storage, improved management dashboards and decision support software.</p>
+
 					</div>
 				</div>
 			</div>
@@ -74,6 +85,15 @@
 				<div class="row">
 					<div class="grid-full">
 						<h5 class="rotate no-space appendix-label">Appendix</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container spine-label">
+			<div class="center">
+				<div class="row">
+					<div class="grid-full">
+						<h6>Appendix</h6>
 					</div>
 				</div>
 			</div>

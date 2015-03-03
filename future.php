@@ -24,21 +24,25 @@
 					<p class="grid-half">Over the last 25 years, Minnesota has developed a robust Clean Energy Economy along with its public and private sectors, technical and financial expertise, homegrown talent, substaintial Clean Energy infrastrucuture, and businesses spanning the value chain.<p>
 				</div>
 				<div class="row">
-					<div class="grid-fourth">
-						<h2 class="no-space-top margin-bottom-xsmall">8th</h2>
-						<p>Minnesota ranks eighth in the nation for registered Clean Energy Patents.</p>
+					<div class="grid-half grid-half-wrap">
+						<div class="grid-half">
+							<h2 class="no-space-top margin-bottom-xsmall">8th</h2>
+							<p>Minnesota ranks eighth in the nation for registered Clean Energy Patents.</p>
+						</div>
+						<div class="grid-half">
+							<h2 class="no-space-top margin-bottom-xsmall">42%</h2>
+							<p>Clean Energy wages are 42% higher than statewide averages.</p>
+						</div>
 					</div>
-					<div class="grid-fourth">
-						<h2 class="no-space-top margin-bottom-xsmall">42%</h2>
-						<p>Clean Energy wages are 42% higher than statewide averages.</p>
-					</div>
-					<div class="grid-fourth">
-						<h2 class="no-space-top margin-bottom-xsmall">78%</h2>
-						<p>Increase in Clean Energy Jobs since 2000. Total jobs is now at: 15,300.</p>
-					</div>
-					<div class="grid-fourth">
-						<h2 class="no-space-top margin-bottom-xsmall">122%</h2>
-						<p>Clean Energy businesses grew from 338 to 774 in the past 14 years.</p>
+					<div class="grid-half grid-half-wrap">
+						<div class="grid-half">
+							<h2 class="no-space-top margin-bottom-xsmall">78%</h2>
+							<p>Increase in Clean Energy Jobs since 2000. Total jobs is now at: 15,300.</p>
+						</div>
+						<div class="grid-half">
+							<h2 class="no-space-top margin-bottom-xsmall">122%</h2>
+							<p>Clean Energy businesses grew from 338 to 774 in the past 14 years.</p>
+						</div>
 					</div>
 				</div>
 			</div>

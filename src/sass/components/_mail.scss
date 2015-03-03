@@ -1,0 +1,43 @@
+#contact_form{
+	width: 100%;
+	display: block;
+}
+input, textarea{
+	margin-bottom: 2.8%;
+}
+input:not([type=file]), textarea{
+	border: 1px solid $color-white;
+	width: 100%;
+	background: $color-gray-light;
+	padding: 1.5em;
+	font-size: 14px;
+	font-weight: 600;
+	outline: none;
+	box-shadow: none;
+   	color: rgba($color-black, 1);
+	&:focus{
+		border: 1px solid $color-white;
+		background: $color-white;
+		outline: none;
+		box-shadow: none;
+	}
+}
+::placeholder{
+   	color: rgba($color-black, .5);
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+textarea{
+	resize: vertical;
+}
+input[type=submit]{
+	background: $color-gray-dark;
+}
+label.grid-half{
+	padding-left: 0;
+	+ .grid-half{
+		padding-left: 1.4%;
+		padding-right: 0;
+	}
+}

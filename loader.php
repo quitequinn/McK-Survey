@@ -2,10 +2,23 @@
 <div class="centerWrap winH loader">
 	<div class="center">
 		<img data-w="1" class="no-space" src="stars.png">
+    <h6>Try using your arrow keys or swiping</h6>
 	</div>
 </div>
 
 <style>
+.loader h6 {
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    font-size: 14px;
+    line-height: 2;
+    font-weight: 600;
+    text-align: center;
+    font-family: sans-serif;
+    width: 250px;
+    margin: 3em auto;
+}
+
 @-webkit-keyframes spin {
   100% {
     -webkit-transform: rotate(360deg);

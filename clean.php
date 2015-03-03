@@ -9,7 +9,7 @@
 					</div>
 					<div class="grid-half">
 						<h3 class="no-padding margin-bottom-small">It's pretty simple.</h3>
-						<p>Clean Energy uses less energy to provide the same product or service, or produces heat, power, or fuel from sources of energy.</p>
+						<p>Clean Energy uses less energy to provide the same product or service, or produces heat, power, or fuel from sources of renewable energy.</p>
 					</div>
 				</div>
 			</div>
@@ -37,7 +37,7 @@
 						<p>As of 2012, annual energy efficiency savings and renewable electricity capacity in Minnesota was enough to power over 1.4 million homes in the state for a year.</p>
 					</div>
 					<div class="grid-half">
-						<img src="info.png">
+						<? include("img/info-01.svg"); ?>
 					</div>
 				</div>
 			</div>
@@ -57,7 +57,7 @@
 						<p><b>Benefit One:</b> State Biofuel production capacity was enough to replace traditional fuel for 1.7 million vehicles for one year.</p>
 					</div>
 					<div class="grid-half">
-						<img src="info.png">
+						<? include("img/info-02.svg"); ?>
 						<p><b>Benefit Two:</b> Minnesota is utilizing the state’s abundant natural renewable resources such as wind, solar, and different types of biomass. In 2013, the US produced only 4.1% of its electricity using wind, whereas Minnesota utilized wind to generate 15.7% in the same year.</p>
 					</div>
 				</div>
@@ -78,7 +78,7 @@
 						<p><b>Benefit Three:</b> Only 4% of the electricity generated in Minnesota in 2000 came from renewable energy, but by 2011 renewable electricity jumped to 16% of total generation. Utilizing these renewable resources keep our air and water clean. </p>
 					</div>
 					<div class="grid-half">
-						<img src="info.png">
+						<? include("img/info-03.svg"); ?>
 						<p><b>Benefit Four:</b> Implementing Clean Energy will help Minnesota reduce the pollution and contamination of one of its most precious resources: its fresh water lakes and rivers.</p>
 					</div>
 				</div>

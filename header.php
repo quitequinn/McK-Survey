@@ -78,8 +78,8 @@
 
 	<main id="main" class="winH site-content">
 		<div class="pageNav">
-			<a href="#" class="audSwipe chevron icon-right"></a>
 			<a href="#" class="audSwipe chevron icon-left"></a>
+			<a href="#" class="audSwipe chevron icon-right"></a>
 		</div>
 		<div class="permNav">
 			<span class="hamburger-wrap audClick"><div class="hamburger"></div></span> <a href="#!/" class="h6">2015 Future Economy Minnesota</a>

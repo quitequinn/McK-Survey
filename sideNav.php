@@ -1,4 +1,8 @@
 <nav class="sideNav">
+
+	<div class="permNav">
+		<span class="hamburger-wrap audClick"><div class="hamburger"></div></span>
+	</div>
 	<div class="menu winH container">
 		<div class="row">
 			<div class="grid-full">

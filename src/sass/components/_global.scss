@@ -13,6 +13,11 @@ body{
 		transform:rotate(360deg);
 	}
 }
+img.center{
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+}
 .loader{
 	position: fixed;
 	top: 0;
@@ -59,6 +64,9 @@ body{
 	color: $color-black;
 	display: block;
 	line-height: 1;
+	@include m(max, $bp-xsmall){
+		font-size: 44px;
+	}
 	&:hover{
 		color: $color-black;
 		opacity: 0.5;

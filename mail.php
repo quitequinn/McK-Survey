@@ -1,97 +1,97 @@
-<?PHP
-/*
-    Contact Form from HTML Form Guide
-    This program is free software published under the
-    terms of the GNU Lesser General Public License.
-    See this page for more info:
-    http://www.html-form-guide.com/contact-form/contact-form-attachment.html
-*/
-require_once("mailer/include/fgcontactform.php");
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 
-$formproc = new FGContactForm();
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#submit_btn").click(function() {
 
-//1. Add your email address here.
-//You can add more than one receipients.
-$formproc->AddRecipient('qkeave@gmail.com'); //<<---Put your email address here
+      var proceed = true;
+        //simple validation at client's end
+        //loop through each field and we simply change border color to red for invalid fields
+    $("#contact_form input[required=true], #contact_form textarea[required=true]").each(function(){
+      $(this).css('border-color','');
+      if(!$.trim($(this).val())){ //if this field is empty
+        $(this).css('border-color','red'); //change border color to red
+        proceed = false; //set do not proceed flag
+      }
+      //check invalid email
+      var email_reg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+      if($(this).attr("type")=="email" && !email_reg.test($.trim($(this).val()))){
+        $(this).css('border-color','red'); //change border color to red
+        proceed = false; //set do not proceed flag
+      }
+    });
 
+        if(proceed) //everything looks good! proceed...
+        {
+           //data to be sent to server
+            var m_data = new FormData();
+            m_data.append( 'user_name', $('input[name=name]').val());
+            m_data.append( 'user_email', $('input[name=email]').val());
+            m_data.append( 'subject', $('select[name=subject]').val());
+      m_data.append( 'msg', $('textarea[name=message]').val());
+      m_data.append( 'file_attach', $('input[name=file_attach]')[0].files[0]);
 
-//2. For better security. Get a random tring from this link: http://tinyurl.com/randstr
-// and put it here
-$formproc->SetFormRandomKey('Sf6fxUX1SDPHMjf');
-
-$formproc->AddFileUploadField('photo','jpg,jpeg,gif,png,bmp',2024);
-
-if(isset($_POST['submitted'])) {
-   if($formproc->ProcessForm()) {
-        $formproc->RedirectToURL("mailer/thank-you.php");
-   }
-}
-
-?>
-
-<script type='text/javascript' src='mailer/scripts/gen_validatorv31.js'></script>
-<script type='text/javascript' src='mailer/scripts/fg_captcha_validator.js'></script>
-
-<!-- Form Code Start -->
-<form id='contactus' action='<?php echo $formproc->GetSelfScript(); ?>' method='post' enctype="multipart/form-data" accept-charset='UTF-8'>
-
-<fieldset >
-<legend>Contact us</legend>
-
-<input type='hidden' name='submitted' id='submitted' value='1'/>
-<input type='hidden' name='<?php echo $formproc->GetFormIDInputName(); ?>' value='<?php echo $formproc->GetFormIDInputValue(); ?>'/>
-<input type='text'  class='spmhidip' name='<?php echo $formproc->GetSpamTrapInputName(); ?>' />
-
-<div class='short_explanation'>* required fields</div>
-
-<div><span class='error'><?php echo $formproc->GetErrorMessage(); ?></span></div>
-<div class='container'>
-    <label for='name' >Your Full Name*: </label><br/>
-    <input type='text' name='name' id='name' value='<?php echo $formproc->SafeDisplay('name') ?>' maxlength="50" /><br/>
-    <span id='contactus_name_errorloc' class='error'></span>
-</div>
-<div class='container'>
-    <label for='email' >Email Address*:</label><br/>
-    <input type='text' name='email' id='email' value='<?php echo $formproc->SafeDisplay('email') ?>' maxlength="50" /><br/>
-    <span id='contactus_email_errorloc' class='error'></span>
-</div>
-<div class='container'>
-    <label for='message' >Message:</label><br/>
-    <span id='contactus_message_errorloc' class='error'></span>
-    <textarea rows="10" cols="50" name='message' id='message'><?php echo $formproc->SafeDisplay('message') ?></textarea>
-</div>
-<div class='container'>
-    <label for='photo' >Upload your photo:</label><br/>
-    <input type="file" name='photo' id='photo' /><br/>
-    <span id='contactus_photo_errorloc' class='error'></span>
-</div>
+            //instead of $.post() we are using $.ajax()
+            //that's because $.ajax() has more options and flexibly.
+        $.ajax({
+              url: 'mail/contact_me.php',
+              data: m_data,
+              processData: false,
+              contentType: false,
+              type: 'POST',
+              dataType:'json',
+              success: function(response){
+                 //load json data from server and output message
+        if(response.type == 'error'){ //load json data from server and output message
+          output = '<div class="error">'+response.text+'</div>';
+        }else{
+            output = '<div class="success">'+response.text+'</div>';
+        }
+        $("#contact_form #contact_results").hide().html(output).slideDown();
+              }
+            });
 
 
-<div class='container'>
-    <input type='submit' name='Submit' value='Submit' />
-</div>
+        }
+    });
 
-</fieldset>
-</form>
-<!-- client-side Form Validations:
-Uses the excellent form validation script from JavaScript-coder.com-->
-
-<script type='text/javascript'>
-// <![CDATA[
-
-    var frmvalidator  = new Validator("contactus");
-    frmvalidator.EnableOnPageErrorDisplay();
-    frmvalidator.EnableMsgsTogether();
-    frmvalidator.addValidation("name","req","Please provide your name");
-
-    frmvalidator.addValidation("email","req","Please provide your email address");
-
-    frmvalidator.addValidation("email","email","Please provide a valid email address");
-
-    frmvalidator.addValidation("message","maxlen=2048","The message is too long!(more than 2KB!)");
-
-    frmvalidator.addValidation("photo","file_extn=jpg;jpeg;gif;png;bmp","Upload images only. Supported file types are: jpg,gif,png,bmp");
-// ]]>
+    //reset previously set border colors and hide all message on .keyup()
+    $("#contact_form  input[required=true], #contact_form textarea[required=true]").keyup(function() {
+        $(this).css('border-color','');
+        $("#result").slideUp();
+    });
+});
 </script>
-</body>
-</html>
+
+<div class="form-style" id="contact_form">
+    <div id="contact_results"></div>
+    <div id="contact_body">
+        <label>
+            <input type="text" name="name" id="name" placeholder="Company Name" required="true" class="input-field"/>
+        </label>
+        <label class="grid-half">
+            <input type="text" name="name" id="year" placeholder="Year founded" required="true" class="input-field"/>
+        </label>
+        <label class="grid-half">
+            <input type="text" name="name" id="industry" placeholder="Industry" required="true" class="input-field"/>
+        </label>
+        <label>
+            <input type="text" name="name" id="owner" placeholder="Owner/Principle Name(s)" required="true" class="input-field"/>
+        </label>
+        <label>
+            <input type="email" name="email" placeholder="Contact Email" required="true" class="input-field"/>
+        </label>
+        <label for="field5">
+            <textarea name="message" id="message" placeholder="Mission Statment (500 Word Max)" class="textarea-field" maxlength="50-" required="true"></textarea>
+        </label>
+        <label for="field5">
+            <textarea name="message" id="message" placeholder="Company product or service" class="textarea-field" required="true"></textarea>
+        </label>
+        <label class="grid-half">
+            <input type="file" name="file_attach" class="input-field" /><span>Upload logo</span>
+        </label>
+        <label class="grid-half">
+            <input type="submit" id="submit_btn" value="Submit" />
+        </label>
+    </div>
+</div>

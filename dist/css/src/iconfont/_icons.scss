@@ -28,6 +28,9 @@
 	@if $filename == right {
 		$char: "\E002";
 	}
+	@if $filename == up {
+		$char: "\E003";
+	}
 
 	@return $char;
 }
@@ -44,4 +47,7 @@
 }
 .icon-right {
 	@include icon(right);
+}
+.icon-up {
+	@include icon(up);
 }

@@ -60,10 +60,12 @@ $( document ).ready(function() {
 		if(navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/iPhone|iPad|iPod/i) || navigator.userAgent.match(/IEMobile/i)){
 			return true; } else { return false; }
 	}
+	if (isMobile()) { $("html").addClass("ismobile")};
 	function iphone() {
 		if(navigator.userAgent.match(/iPhone|iPad|iPod/i)){
 			return true; } else { return false; }
 	}
+	if (iphone()) { $("html").addClass("iphone")};
 
 ////////////////////////////////////////////////
 	//GET VENDOR PREFIXES
@@ -123,23 +125,32 @@ $('.hamburger-wrap').click(function(){
 
 //Profile Interaction
 $(".profile-link, section").click(function(){
+	if ($("body, .sideNav, .permNav").hasClass('active')) {
+		var click = new Audio('click.mp3');
+		click.play();
+	};
 	$("body, .sideNav, .permNav").removeClass('active');
-
-	var click = new Audio('click.mp3');
-	click.play();
 });
+
 
 //Audio
-$('.audClick:not(view-on)').click(function(){
+$('.audClick:not(view-on), input').click(function(){
 	var click = new Audio('click.mp3');
 	click.play();
 });
+
 // $('.audSwipe:not(view-on)').click(function(){
 // 	var swipe = new Audio('swipe.mp3');
 // 	swipe.play();
 // });
 
-
+//square
+function fullImg(){
+	$(".full-img").each( function(){
+		$(this).css("height",$(this).width());
+	});
+}
+fullImg();
 
 ////////////////////////////////////////////////
 //////////////////             /////////////////
@@ -172,6 +183,8 @@ function path(path){
 		$('footer a[href$="#!/'+url+'"]').addClass('view-on').attr("onclick","return false");
 		setCarrots();
 		checkNav();
+		fullImg();
+		fullHeight();
 	});
 }
 $(".page").each(function(){
@@ -214,7 +227,8 @@ setCarrots();
 
 // Set Progress Nav
 function checkNav(){
-
+	$(".complete").removeClass("complete")
+	$( ".first-pageLink" ).nextUntil( ".view-on" ).addClass("complete");
 };
 
 // Arrow Keys
@@ -232,6 +246,19 @@ function checkKey(e) {
 
 }
 
+
+// Swipe Events
+
+$("main").hammer().bind("swiperight", function(event) {
+	$(".pageNav .icon-left").get(0).click();
+	setCarrots();
+});
+
+$("main").hammer().bind("swipeleft", function(event) {
+    $(".pageNav .icon-right").get(0).click();
+	setCarrots();
+});
+
 ////////////////////////////////////////////////
 ////////////////                 ///////////////
 ////////////////    LISTENERS    ///////////////
@@ -243,6 +270,8 @@ function checkKey(e) {
 	var updateLayout = _.debounce(function(e) {
 		forwidth();
 		fixType();
+		fullImg();
+		fullHeight();
 	}, 500);
 	window.addEventListener("resize", updateLayout, false);
 

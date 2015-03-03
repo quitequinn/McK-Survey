@@ -9,7 +9,7 @@
 
 // Colors
 $color-primary: #0088cc;
-$color-black: #272727;
+$color-black: #2b2723;
 $color-pure-black: #000;
 $color-white: #ffffff;
 
@@ -19,8 +19,8 @@ $color-danger: #880e14; // Red
 $color-warning: #dba909; // Yellow
 $color-code: #dd1144;
 
-$color-gray-dark: #808080;
-$color-gray-light: #BDBDBD;
+$color-gray-dark: #CDCDCD;
+$color-gray-light: #E8E8E8;
 
 $color-intro: #f3f3f3;
 $color-clean: #E8CfA2;
@@ -56,7 +56,13 @@ $container-max-width: 80em;
 		padding-right: 98px;
 		padding-left: 98px;
 		width: 100%;
-		@include m(max, $bp-medium){
+
+		@include m(max, $bp-large){
+			padding-right: 82px;
+			padding-left: 82px;
+			width: 100%;
+		}
+		@include m(max, $bp-small){
 			padding-right: inherit;
 			padding-left: inherit;
 			width: 88%;

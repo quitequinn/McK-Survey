@@ -1,11 +1,12 @@
 
 <section class="winH intro view-on">
 	<div id='home' class="view-on page">
-		<div class="container winH centerWrap">
+		<div class="container winH centerWrap no-padding">
 			<div class="center">
 				<div class="row">
 					<div class="grid-full">
-						<img data-w="1" class="center margin-top" src="stars.png">
+						<h6 class="introText">2015 Future Economy</h6>
+						<img data-w="1" class="center" src="stars.png">
 						<h1 class="no-space">Minnesota</h1>
 						<p class="grid-two-thirds float-center tx-center">Learn how Clean Energy is lessening Minnesota's reliance on imported fossil fuels while growing a vibrant economy, a healthier environment, and shared prosperity for all citizens.</p>
 						<a href="#!/toc" class="margin-small audSwipe margin-top-large chevron icon-right tx-center"></a>
