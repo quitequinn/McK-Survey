@@ -266,6 +266,11 @@ h6, .h6 {
 	font-weight: 700;
 }
 
+.h7 {
+	@include smallcaps(10px);
+	font-weight: 300;
+}
+
 p, .p {
 	font-size: 14px;
 	line-height: 18px;
@@ -308,6 +313,7 @@ em {
 }
 .tx-center{
 	text-align: center;
+	max-width: 100%;
 }
 sub,
 sup {

@@ -1,7 +1,7 @@
 	<footer class="site-footer section">
-		<a href="#" class="mcKnight">M</a>
+		<a href="https://www.mcknight.org/" class="mcKnight">M</a>
 		<div id="footerNav">
-			<a href="#!/" class="first-pageLink audSwipe intro homeLink"></a>
+			<a href="#!/toc" class="first-pageLink audSwipe intro homeLink"></a>
 			<a href="#!/clean" class="audSwipe clean chapterLink"></a>
 			<a href="#!/clean/1" class="audSwipe clean pageLink"></a>
 			<a href="#!/clean/2" class="audSwipe clean pageLink"></a>
@@ -14,18 +14,13 @@
 			<a href="#!/economy/3" class="audSwipe economy pageLink"></a>
 			<a href="#!/economy/4" class="audSwipe economy pageLink"></a>
 			<a href="#!/economy/5" class="audSwipe economy pageLink"></a>
+			<a href="#!/economy/6" class="audSwipe economy pageLink"></a>
 			<a href="#!/innovation" class="audSwipe innovation chapterLink"></a>
 			<a href="#!/innovation/1" class="audSwipe innovation pageLink"></a>
 			<a href="#!/innovation/2" class="audSwipe innovation pageLink"></a>
-			<a href="#!/innovation/3" class="audSwipe innovation pageLink"></a>
-			<a href="#!/innovation/4" class="audSwipe innovation pageLink"></a>
-			<a href="#!/innovation/5" class="audSwipe innovation pageLink"></a>
 			<a href="#!/future" class="audSwipe future chapterLink"></a>
 			<a href="#!/future/1" class="audSwipe future pageLink"></a>
 			<a href="#!/future/2" class="audSwipe future pageLink"></a>
-			<a href="#!/future/3" class="audSwipe future pageLink"></a>
-			<a href="#!/future/4" class="audSwipe future pageLink"></a>
-			<a href="#!/future/5" class="audSwipe future pageLink"></a>
 			<a href="#!/appendix" class="audSwipe appendix chapterLink"></a>
 		</div>
 		<div class="social">

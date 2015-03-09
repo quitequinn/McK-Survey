@@ -24,7 +24,8 @@
 						<p>These are good jobs in a variety of sectors making Minnesota’s economy more productive and competitive and delivering energy that is secure, clean, and affordable. These jobs range from installation and maintenance to manufacturing and research.</p>
 					</div>
 					<div class="grid-half">
-						<img src="info.png">
+						<? include("img/info-04.svg"); ?><br/>
+						<p class="tx-center">( Hover to reveal jobs by sector )</p>
 					</div>
 				</div>
 			</div>
@@ -35,7 +36,7 @@
 			<div class="center">
 				<div class="row">
 					<div class="grid-full">
-						<h6 class="vcenter">That’s Rougly a </h6><h2 class="vcenter margin-bottom-small">$71,000 </h2><h6 class="vcenter">Salary for every Clean Energy worker. </h6>
+						<h6 class="vcenter">That’s Rougly a </h6><h2 class="vcenter margin-bottom-xsmall">$71,000 </h2><h6 class="vcenter">Salary for every Clean Energy worker. </h6>
 					</div>
 				</div>
 			</div>
@@ -50,7 +51,8 @@
 						<p>Minnesota’s average annual wages in the Clean Energy Economy was 42% higher than the statewide average for all jobs.</p>
 					</div>
 					<div class="grid-half">
-						<img src="info.png">
+						<? include("img/info-08.svg"); ?>
+						<p class="tx-center">( Hover to reveal jobs by regions )</p>
 					</div>
 				</div>
 			</div>
@@ -78,17 +80,27 @@
 		</div>
 	</div>
 	<div id='economy_5' class="page">
-		<div class="container align winH centerWrap">
+		<div class="container align winH centerWrap no-padding">
 			<div class="center">
 				<div class="row">
 					<div class="grid-half">
 						<h3>Minnesota’s biofuel market has been active for over 20 years. </h3>
 						<p>It has added $5 billion in economic value to the state through job creation and reduction of air and water pollution from petroleum-based gasoline and diesel. These efforts have placed Minnesota 4th in the nation for ethanol production.</p>
+						<div class="expando">
+							<div class="initial">
+								<div class="button"><p><b>P</b></p></div>
+								<h6 class="center">Click to view policy</h6>
+							</div>
+							<div class="info">
+								<div class="button fa-3 fa fa-close"></div>
+								<h6 class="center">ethanol development: producer payments 41A.09 Goal for ethanol production plants in the state attain certain levels: cash payments for producers of thanol located in the state.</h6>
+							</div>
+						</div>
 					</div>
 					<div class="grid-half">
-						<div class="centerWrap" >
+						<div class="centerWrap fullHeight">
 							<div class="center">
-								<img src="img/biofuleimage.png">
+								<img class="center" src="img/biofuleimage.png"/>
 							</div>
 						</div>
 					</div>
@@ -105,18 +117,18 @@
 						<p>These opportunities will include training and jobs for young Minnesotans who want to be a part of this wave of innovation.<p>
 					</div>
 					<div class="grid-half">
-						<a href="#" class="centerWrap profile-link" style="background: url(img.png) 50% 50%;">
-							<h6 class="center">Meet Blattner Energy</h6>
+						<a href="#!/economy/6/SteveEvans" class="centerWrap profile-link" style="background: url(img/steve.jpg) 50% 50%;">
+							<h6 class="center">Steve Evans</h6>
 						</a>
-						<a href="#" class="centerWrap profile-link" style="background: url(img.png) 50% 50%;">
-							<h6 class="center">Meet Bill</h6>
+						<a href="#!/economy/6/ShanelleMontana" class="centerWrap profile-link" style="background: url(img/shanelle.jpg) 50% 50%;">
+							<h6 class="center">Shanelle Montana</h6>
 						</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div id='economy_6_Blattner' class="page profile">
+	<div id='economy_6_SteveEvans' class="page profile">
 		<div class="permNav">
 			<a href="#!/economy/6" class="exit-wrap audClick"><div class="exit"></div></a>
 		</div>
@@ -124,19 +136,21 @@
 			<div class="center">
 				<div class="row">
 					<div class="grid-half">
-						<h3 class="margin-bottom-small">Adam Reich</h3>
-						<h6 class="margin-bottom-large">Farmer</h6>
-						<p>After serving in the Army for six years, Adam Reich enrolled in Midwest Technical Institute’s heating, ventilation and air conditioning program. A job shadow opportunity at Scranton Heating and Cooling in Mt. Sterling, Illinois led to a full time job when he graduated in 2013. “Even though I’m the newest guy on the team, we do service calls together so I’m learning a lot,” says Adam of the on-the-job experience he is gaining installing and servicing residential geothermal energy systems and energy efficient appliances.</p>
+						<h3 class="no-space-bottom">Steve Evans</h3>
+						<h6 class="no-space-top margin-bottom-large">Operations, Iberdrola</h6>
+						<p>Steve Evans is a member of Iberdrola’s Operations Team and works at the company’s Elm Creek II Wind Project just northeast of Jackson, MN. This is the third project Iberdrola has developed in partnership with a landowner group and includes 62 turbines.</p>
+						<p>Iberdrola Renewables is the second-largest wind operator in the U.S. and is one of the few companies capable of providing structured energy solutions that allowing large industrial and commercial customers to manage risks and uncertainty in the natural gas and power industries.</p><p>Iberdrola Renewables is at the forefront of transforming the way the U.S. produces and uses energy. Strongly positioned to develop, build, and operate the Clean Energy infrastructure of the future, Iberdrola Renewables is already generating power from more than 40 renewable energy projects for its utility-scale customers in the United States and leading both Minnesota and America’s transition to a renewable energy future.</p>
 
-						<a href="#!/economy/6/Bill" class="centerWrap profile-link small" style="background: url(img.png) 50% 50%;">
-							<h6>Meet Tom & Jr</h6>
+						<a href="#!/economy/6/ShanelleMontana" class="centerWrap profile-link small" style="background: url(img/shanelle.jpg) 50% 50%;">
+							<h6>Shanelle Montana</h6>
 						</a>
 					</div>
+					<div class="steve profile-img"></div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div id='economy_6_Bill' class="page profile">
+	<div id='economy_6_ShanelleMontana' class="page profile">
 		<div class="permNav">
 			<a href="#!/economy/6" class="exit-wrap audClick"><div class="exit"></div></a>
 		</div>
@@ -144,14 +158,15 @@
 			<div class="center">
 				<div class="row">
 					<div class="grid-half">
-						<h3 class="margin-bottom-small">Adam Reich</h3>
-						<h6 class="margin-bottom-large">Farmer</h6>
-						<p>After serving in the Army for six years, Adam Reich enrolled in Midwest Technical Institute’s heating, ventilation and air conditioning program. A job shadow opportunity at Scranton Heating and Cooling in Mt. Sterling, Illinois led to a full time job when he graduated in 2013. “Even though I’m the newest guy on the team, we do service calls together so I’m learning a lot,” says Adam of the on-the-job experience he is gaining installing and servicing residential geothermal energy systems and energy efficient appliances.</p>
+						<h3 class="no-space-bottom">Shanelle Montana</h3>
+						<h6 class="no-space-top margin-bottom-large">Project Developer, EDF Renewable Energy</h6>
+						<p>Shanelle is a Project Developer at EDF Renewable Energy where she focuses on the company's development pipeline as well as public policy efforts relating to wind and solar power. She identifies and creates new market and policy opportunities for EDF Renewable Energy.</p><p>EDF Renewable Energy is a U.S. Independent power producer with over 25 years expertise in project development, operations, and maintenance services. EDF has a history of utilizing homegrown talent to implement and develop Clean Energy solutions.</p>
 
-						<a href="#!/clean/5/TomAndJr" class="centerWrap profile-link small" style="background: url(img.png) 50% 50%;">
-							<h6>Meet Tom & Jr</h6>
+						<a href="#!/innovation" class="centerWrap profile-link small" style="background: #B1C0AD;">
+							<h6>Next up → Innovation</h6>
 						</a>
 					</div>
+					<div class="shanelle profile-img"></div>
 				</div>
 			</div>
 		</div>

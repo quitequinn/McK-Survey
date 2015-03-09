@@ -16,7 +16,7 @@ $(document).ready(function() {
       //check invalid email
       var email_reg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
       if($(this).attr("type")=="email" && !email_reg.test($.trim($(this).val()))){
-        $(this).css('border-color','red'); //change border color to red
+        $(this).css('background','red'); //change border color to red
         proceed = false; //set do not proceed flag
       }
     });
@@ -26,10 +26,13 @@ $(document).ready(function() {
            //data to be sent to server
             var m_data = new FormData();
             m_data.append( 'user_name', $('input[name=name]').val());
+            m_data.append( 'year', $('input[name=year]').val());
+            m_data.append( 'industry', $('input[name=industry]').val());
+            m_data.append( 'owner', $('input[name=owner]').val());
             m_data.append( 'user_email', $('input[name=email]').val());
-            m_data.append( 'subject', $('select[name=subject]').val());
-      m_data.append( 'msg', $('textarea[name=message]').val());
-      m_data.append( 'file_attach', $('input[name=file_attach]')[0].files[0]);
+            m_data.append( 'message', $('textarea[name=message]').val());
+            m_data.append( 'messagetwo', $('select[name=messagetwo]').val());
+            m_data.append( 'file_attach', $('input[name=file_attach]')[0].files[0]);
 
             //instead of $.post() we are using $.ajax()
             //that's because $.ajax() has more options and flexibly.
@@ -70,13 +73,13 @@ $(document).ready(function() {
             <input type="text" name="name" id="name" placeholder="Company Name" required="true" class="input-field"/>
         </label>
         <label class="grid-half">
-            <input type="text" name="name" id="year" placeholder="Year founded" required="true" class="input-field"/>
+            <input type="text" name="year" id="year" placeholder="Year founded" required="true" class="input-field"/>
         </label>
         <label class="grid-half">
-            <input type="text" name="name" id="industry" placeholder="Industry" required="true" class="input-field"/>
+            <input type="text" name="industry" id="industry" placeholder="Industry" required="true" class="input-field"/>
         </label>
         <label>
-            <input type="text" name="name" id="owner" placeholder="Owner/Principle Name(s)" required="true" class="input-field"/>
+            <input type="text" name="owner" id="owner" placeholder="Owner/Principle Name(s)" required="true" class="input-field"/>
         </label>
         <label>
             <input type="email" name="email" placeholder="Contact Email" required="true" class="input-field"/>
@@ -85,13 +88,21 @@ $(document).ready(function() {
             <textarea name="message" id="message" placeholder="Mission Statment (500 Word Max)" class="textarea-field" maxlength="50-" required="true"></textarea>
         </label>
         <label for="field5">
-            <textarea name="message" id="message" placeholder="Company product or service" class="textarea-field" required="true"></textarea>
+            <textarea name="messagetwo" id="messagetwo" placeholder="Company product or service" class="textarea-field" required="true"></textarea>
         </label>
         <label class="grid-half">
-            <input type="file" name="file_attach" class="input-field" /><span>Upload logo</span>
+            <input style="display:none;" type="file" name="file_attach" class="input-field add_logo" /><span class="fa fa-arrow-circle-o-up"></span><span>Upload logo</span>
         </label>
         <label class="grid-half">
             <input type="submit" id="submit_btn" value="Submit" />
         </label>
     </div>
 </div>
+
+<script>
+
+  $('#contact_body .fa-arrow-circle-o-up').click( function(){
+    $("add_logo").click()
+  })
+
+</script>

@@ -1,0 +1,136 @@
+
+.profile{
+	position: fixed!important;
+	opacity: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-size: cover!important;
+	transition: left 0s, all $fast;
+	color: $white;
+  	overflow-y: scroll;
+  	overflow-x: hidden;
+
+	h1, h2, h3, h4, h5, h6, p{
+		color: $white;
+	}
+	a, a:link, a:visited, {
+		color: $white;
+		h1, h2, h3, h4, h5, h6, p{
+			color: $white;
+		}
+	}
+	&.view-on{
+		opacity: 1;
+		transition: all $fast;
+	}
+	.profile-link{
+		width: 3em;
+		height: 3em;
+		margin: 0;
+		h6{
+			position: absolute;
+			margin-left: 6em;
+			margin-top: .25em;
+		}
+
+	}
+	.permNav{
+		.exit-wrap{
+			display: table-row;
+			.exit{
+				padding: 0.5em 0 0 0.3em;
+				&:before{
+	  				margin-top: -10px;
+				}
+				&:after{
+  					top: 8px;
+  					@include m(min, $bp-xlarge){
+  						top: 10px;
+  					}
+				}
+				&:before, &:after{
+					background: $white;
+				}
+			}
+		}
+	}
+}
+// .profile.view-on{
+// 	&:after{
+// 		content:"";
+// 		background-size: cover!important;
+// 		position: fixed;
+// 		width: 50%;
+// 		right: -5%;
+// 		top: 0;
+// 		bottom: 0;
+//   		background: url(../../img/martinmorud.jpg) 50% 50%;
+// 	}
+// }
+#main[profile="true"]{
+	section{
+		max-width: 100%!important;
+	}
+}
+//Profile IMGs
+
+.profile.page{
+	background: $color-black
+}
+
+.profile-img{
+	background-size: cover!important;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	z-index: -1;
+	width: 0;
+	left: 0;
+}
+.profile.view-on{
+	.profile-img{
+		width: 100%;
+		@include m(min, $bp-medium){
+			width: 50%;
+			right: -5%;
+			left: initial;
+		}
+	}
+}
+
+@mixin profile($url){
+
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.75) 0%, transparent 95%),
+	            linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 95%),
+	            url(../../img/#{$url}.jpg) 50% 50%;
+	@include m(min, $bp-medium){
+		background: url(../../img/#{$url}.jpg) 50% 50%;
+	}
+}
+.martin{
+	@include profile(martin);
+}
+.shanelle{
+	@include profile(shanelle);
+}
+.steverupp{
+	@include profile(steverupp);
+}
+.steve{
+	@include profile(steve);
+}
+.bob{
+	@include profile(bob);
+}
+
+// #clean_5_TomAndJr{
+// 	background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, transparent 75%),
+// 	            linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 75%),
+// 	            url(../../profile.jpg) 50% 50%;
+// }
+
+
+
+

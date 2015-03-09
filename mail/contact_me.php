@@ -1,7 +1,7 @@
 <?php
 if($_POST)
 {
-    $to_email       = "qkeave@gmail.com"; //Recipient email, Replace with own email here
+    $to_email       = "info@cleanenergyeconomymn.org"; //Recipient email, Replace with own email here
 	$from_email 	= "noreply@quitetype.com"; //From email address (eg: no-reply@YOUR-DOMAIN.com)
 
     //check if its an ajax request, exit if not
@@ -15,14 +15,17 @@ if($_POST)
 
     //Sanitize input data using PHP filter_var().
     $user_name      = filter_var($_POST["user_name"], FILTER_SANITIZE_STRING);
+    $year      = filter_var($_POST["year"], FILTER_SANITIZE_STRING);
+    $industry      = filter_var($_POST["industry"], FILTER_SANITIZE_STRING);
+    $owner    = filter_var($_POST["owner"], FILTER_SANITIZE_STRING);
     $user_email     = filter_var($_POST["user_email"], FILTER_SANITIZE_EMAIL);
-    $country_code   = filter_var($_POST["country_code"], FILTER_SANITIZE_NUMBER_INT);
-    $phone_number   = filter_var($_POST["phone_number"], FILTER_SANITIZE_NUMBER_INT);
-    $subject        = filter_var($_POST["subject"], FILTER_SANITIZE_STRING);
-    $message        = filter_var($_POST["msg"], FILTER_SANITIZE_STRING);
+    // $country_code   = filter_var($_POST["country_code"], FILTER_SANITIZE_NUMBER_INT);
+    // $phone_number   = filter_var($_POST["phone_number"], FILTER_SANITIZE_NUMBER_INT);
+    $message        = filter_var($_POST["message"], FILTER_SANITIZE_STRING);
+    $messagetwo     = filter_var($_POST["messagetwo"], FILTER_SANITIZE_STRING);
 
     //additional php validation
-    if(strlen($user_name)<4){ // If length is less than 4 it will output JSON error.
+    if(strlen($user_name)<1){ // If length is less than 4 it will output JSON error.
         $output = json_encode(array('type'=>'error', 'text' => 'Name is too short or empty!'));
         die($output);
     }
@@ -30,25 +33,33 @@ if($_POST)
         $output = json_encode(array('type'=>'error', 'text' => 'Please enter a valid email!'));
         die($output);
     }
-    if(!filter_var($country_code, FILTER_VALIDATE_INT)){ //check for valid numbers in country code field
-        $output = json_encode(array('type'=>'error', 'text' => 'Enter only digits in country code'));
+    // if(!filter_var($country_code, FILTER_VALIDATE_INT)){ //check for valid numbers in country code field
+    //     $output = json_encode(array('type'=>'error', 'text' => 'Enter only digits in country code'));
+    //     die($output);
+    // }
+    // if(!filter_var($phone_number, FILTER_SANITIZE_NUMBER_FLOAT)){ //check for valid numbers in phone number field
+    //     $output = json_encode(array('type'=>'error', 'text' => 'Enter only digits in phone number'));
+    //     die($output);
+    // }
+    if(strlen($year)<3){ //check emtpy messagetwo
+        $output = json_encode(array('type'=>'error', 'text' => 'Year founded is required'));
         die($output);
     }
-    if(!filter_var($phone_number, FILTER_SANITIZE_NUMBER_FLOAT)){ //check for valid numbers in phone number field
-        $output = json_encode(array('type'=>'error', 'text' => 'Enter only digits in phone number'));
-        die($output);
-    }
-    if(strlen($subject)<3){ //check emtpy subject
-        $output = json_encode(array('type'=>'error', 'text' => 'Subject is required'));
+    if(strlen($industry)<3){ //check emtpy messagetwo
+        $output = json_encode(array('type'=>'error', 'text' => 'Industry is required'));
         die($output);
     }
     if(strlen($message)<3){ //check emtpy message
-        $output = json_encode(array('type'=>'error', 'text' => 'Too short message! Please enter something.'));
+        $output = json_encode(array('type'=>'error', 'text' => 'Too short Mission Statment! Please enter something.'));
+        die($output);
+    }
+    if(strlen($messagetwo)<3){ //check emtpy messagetwo
+        $output = json_encode(array('type'=>'error', 'text' => 'Please enter something your product or service.'));
         die($output);
     }
 
     //email body
-    $message_body = $message."\r\n\r\n".$user_name."\r\nEmail : ".$user_email."\r\nPhone Number : (".$country_code.") ". $phone_number ;
+    $message_body = $user_name."\r\nYear : ".$year."\r\nIndustry : ".$industry."\r\nOwner : ".$owner."\r\nEmail : ".$user_email"\r\nYear : ".$year."\r\n\r\nMission Statment:".$message."\r\n\r\nProduct or Service:".$messagetwo;
 
 	### Attachment Preparation ###
 	$file_attached = false;

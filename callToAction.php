@@ -11,11 +11,27 @@
 						<p>This site also reveals the link between the state’s clean energy policies and industry growth. Employment in clean energy firms is growing more rapidly than employment in the state overall and these are high-quality jobs with wages well above the state average.</p>
 						<p>The figures and statistics used to create Clean Energy Economy Minnesota came from Minnesota’s Clean Energy Economy Profile report, the state’s most comprehensive effort to quantify the businesses, employment, wages, and investments directly engaged in the clean energy economy.</p>
 						<p>This research is part of the Minnesota National Governors Association (NGA) Policy Academy’s effort to align economic development and clean energy strategies.</p>
-						<p class="space-bottom-large">More information about the NGA project and its findings can be found at www.mn.gov/deed/clean.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="grid-half float-center">
 						<p class="margin-bottom-small	"><b class="uppercase">This research was made possible by funding from:</b></p>
-						<img class="margin-bottom-large" src="mcklogo.png">
+					</div>
+				</div>
+				<div class="row">
+					<div class="grid-half float-center">
+						<img class="margin-bottom-large" src="img/mcklogo.png">
+					</div>
+				</div>
+				<div class="row">
+					<div class="grid-half float-center">
 						<p class="margin-bottom-small	"><b class="uppercase">SITE DESIGN & DEVELOPED:</b></p>
-						<img class="margin-bottom-large" src="424logo.png">
+					</div>
+				</div>
+				<div class="row">
+					<div class="grid-half float-center">
+						<a href="http://studio-424.com/" class="aboutlogo margin-bottom-large" ><img src="img/424logo.png"></a>
+<!-- 						<a href="http://quitetype.com/" class="aboutlogo margin-bottom-large" ><? include("img/qt_logo.svg");?></a> -->
 					</div>
 				</div>
 			</div>

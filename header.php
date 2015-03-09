@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8"/>
 
-	<title></title>
+	<title>Clean Energy Economy Minnesota</title>
 
 	<link rel="profile" href="http://gmpg.org/xfn/11"/>
 
@@ -82,5 +82,5 @@
 			<a href="#" class="audSwipe chevron icon-right"></a>
 		</div>
 		<div class="permNav">
-			<span class="hamburger-wrap audClick"><div class="hamburger"></div></span> <a href="#!/" class="h6">2015 Future Economy Minnesota</a>
+			<span class="hamburger-wrap audClick"><div class="hamburger"></div></span> <a href="#!/" class="h6">Clean Energy Economy Minnesota</a>
 		</div>

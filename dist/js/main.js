@@ -2,7 +2,7 @@
  * Kraken v5.6.0
  * A lightweight front-end boilerplate, by Chris Ferdinandi.
  * http://github.com/cferdinandi/kraken
- * 
+ *
  * Free to use under the MIT License.
  * http://gomakethings.com/mit/
  */
@@ -132,9 +132,17 @@ $(".profile-link, section").click(function(){
 	$("body, .sideNav, .permNav").removeClass('active');
 });
 
+//Expando interaction
+$('.initial').click(function(){
+	$(this).parent().toggleClass('active');
+});
+$('.fa-close').click(function(){
+	$(this).parent().parent().toggleClass('active');
+});
+
 
 //Audio
-$('.audClick:not(view-on), input').click(function(){
+$('.audClick:not(view-on), input, .initial, .fa-close').click(function(){
 	var click = new Audio('click.mp3');
 	click.play();
 });
@@ -146,11 +154,18 @@ $('.audClick:not(view-on), input').click(function(){
 
 //square
 function fullImg(){
-	$(".full-img").each( function(){
+	$(".fullImg").each( function(){
 		$(this).css("height",$(this).width());
 	});
 }
 fullImg();
+
+function fullHeight(){
+	$(".fullHeight").each( function(){
+		$(this).css("height", $(this).parent().prev().height());
+	});
+}
+fullHeight();
 
 ////////////////////////////////////////////////
 //////////////////             /////////////////
@@ -163,12 +178,12 @@ fullImg();
 function path(path){
 	var url = path.replace(/[_]/g, '/');
 	var index = path;
+	var profile;
 
 	if (path == "home") {
 		url = '';
 		index = "intro";
 	}
-
 	Path.map("#!/" + url).enter(function(){
 		$('.view-on').removeClass('view-on');
 		$("footer a").attr("onclick","");
@@ -176,15 +191,25 @@ function path(path){
 		var swipe = new Audio('swipe.mp3');
 		swipe.play();
 		$('#'+path).addClass('view-on').parent().addClass('view-on');
+
+		if($(".page.view-on").hasClass("profile")) {
+			profile = "true";
+		} else {
+			profile = "false";
+		};
 		$("main")
 			.attr("cur-slide", index)
 			.attr("cur-chapter", index.replace(/([_])\w+/g, ''))
-			.attr("cur-page", index.replace(/\w+([_])/g, ''));
+			.attr("cur-chapter", index.replace(/([_])\w+/g, ''))
+			.attr("profile", profile);
+
 		$('footer a[href$="#!/'+url+'"]').addClass('view-on').attr("onclick","return false");
 		setCarrots();
 		checkNav();
 		fullImg();
 		fullHeight();
+		expandoCheck();
+		animateCheck();
 	});
 }
 $(".page").each(function(){
@@ -243,9 +268,19 @@ function checkKey(e) {
         $(".pageNav .icon-right").get(0).click();
 		setCarrots();
     }
-
 }
 
+// img scroll hack
+var n_scHack=1;
+function scHack(){
+	if (n_scHack==1) {
+		n_scHack = 2;
+		$(".page.view-on .profile-img").css("background-color", "white");
+	} else {
+		n_scHack = 1;
+		$(".page.view-on .profile-img").css("background-color", "black");
+	}
+}
 
 // Swipe Events
 
@@ -258,6 +293,112 @@ $("main").hammer().bind("swipeleft", function(event) {
     $(".pageNav .icon-right").get(0).click();
 	setCarrots();
 });
+
+
+//expando
+function expandoCheck(){
+	$(".expando, .page").removeClass('expando-fixed');
+	$(".container").removeClass('oversize');
+	if ($(".page.view-on").height() <= $(window).height()) {
+		$(".page.view-on .expando, .page.view-on").addClass('expando-fixed');
+	} else{
+		$(".page.view-on .container").addClass("oversize");
+	}
+}
+expandoCheck();
+
+//animations
+
+function animateCheck(){
+
+	var n_ball = 0;
+	var interval;
+	function aniball(){
+		n_ball += 1;
+		$(".ball").css("left", n_ball + "0%");
+		$("font.value").text(Math.round(20-(12*(n_ball/10))));
+		if (n_ball == 10) {
+			n_ball = 0;
+			clearInterval(interval);
+		}
+	}
+	if ($("#innovation_1").hasClass("view-on")) {
+		interval = setInterval(aniball, 500);
+	}
+
+
+	function mapinfo(place, stats){
+		$("body").append("<div class='mapinfo'><h6 class='no-space'>"+stats+" jobs</h6><h6 class='no-space thin'>"+place+"</h6></div>");
+	}
+	function removeMapinfo(){
+		$(".mapinfo").remove();
+	}
+	if ($("#economy_3").hasClass("view-on")) {
+		$( "#energymap path.1" )
+		  .mouseover(function(){ mapinfo("Central Region", "1,393"); })
+		  .mouseout(function(){ removeMapinfo(); });
+		$( "#energymap path.2" )
+		  .mouseover(function(){ mapinfo("Northeast","317"); })
+		  .mouseout(function(){ removeMapinfo(); });
+		$( "#energymap path.3" )
+		  .mouseover(function(){ mapinfo("Northwest","74" ); })
+		  .mouseout(function(){ removeMapinfo(); });
+		$( "#energymap path.4" )
+		  .mouseover(function(){ mapinfo("West Central", "283"); })
+		  .mouseout(function(){ removeMapinfo(); });
+		$( "#energymap path.5" )
+		  .mouseover(function(){ mapinfo("Southwest", "1,312"); })
+		  .mouseout(function(){ removeMapinfo(); });
+		$( "#energymap path.6" )
+		  .mouseover(function(){ mapinfo("Southern Region", "2,234"); })
+		  .mouseout(function(){ removeMapinfo(); });
+		$( "#energymap path.7" )
+		  .mouseover(function(){ mapinfo("Twin Cities Metro","9,752"); })
+		  .mouseout(function(){ removeMapinfo(); });
+
+		$(document).on('mousemove', function(e){
+		    $('.mapinfo').css("left", e.pageX );
+		    $('.mapinfo').css("top", e.pageY );
+		});
+	} else {
+		$( "#energymap path" ).unbind( "mouseover" ).unbind( "mouseout" );
+	}
+
+
+
+
+	function mapinfo2(target, jobs, percent){
+		$("body").append("<div class='mapinfo'><h6 class='no-space'>"+percent+"%</h6></div>");
+		$(".countercircle .target").text(target);
+		$(".countercircle .value").text(jobs);
+	}
+	if ($("#economy_1").hasClass("view-on")) {
+		$( "#energyCircle path.1" )
+		  .mouseover(function(){ mapinfo2("Smart Grid", "967", "6.3"); })
+		  .mouseout(function(){ removeMapinfo(); });
+		$( "#energyCircle path.2" )
+		  .mouseover(function(){ mapinfo2("Solar Energy", "1,230", "8"); })
+		  .mouseout(function(){ removeMapinfo(); });
+		$( "#energyCircle path.3" )
+		  .mouseover(function(){ mapinfo2("Bioenergy", "1,823", "11.9"); })
+		  .mouseout(function(){ removeMapinfo(); });
+		$( "#energyCircle path.4" )
+		  .mouseover(function(){ mapinfo2("Wind Power", "1,713", "11.2" ); })
+		  .mouseout(function(){ removeMapinfo(); });
+		$( "#energyCircle path.5" )
+		  .mouseover(function(){ mapinfo2("Energy Efficiency", "1,823", "62.6"); })
+		  .mouseout(function(){ removeMapinfo(); });
+
+		$(document).on('mousemove', function(e){
+		    $('.mapinfo').css("left", e.pageX );
+		    $('.mapinfo').css("top", e.pageY );
+		});
+	} else {
+		$( "#energyCircle path" ).unbind( "mouseover" ).unbind( "mouseout" );
+	}
+}
+
+
 
 ////////////////////////////////////////////////
 ////////////////                 ///////////////
@@ -272,22 +413,30 @@ $("main").hammer().bind("swipeleft", function(event) {
 		fixType();
 		fullImg();
 		fullHeight();
+		expandoCheck();
 	}, 500);
 	window.addEventListener("resize", updateLayout, false);
 
 ////////////////////////////////////////////////
 	//ON scroll
-	var scroll = _.throttle(function(e) {
+	// var scroll = _.throttle(function(e) {
+	// }, 500);
+	// window.addEventListener("scroll", scroll, false);
 
-	}, 500);
-	window.addEventListener("scroll", scroll, false);
+	$( ".page").scroll(function() {
+		scHack();
+	});
+
+	$(window).load(function() {
+
+	    $(".loader").css("display", "none");
+		forwidth();
+		fixType();
+		fullImg();
+		fullHeight();
+		expandoCheck();
+		animateCheck();
+	}); // `~*# The end.
 
 });
-
-$(window).load(function() {
-
-    $(".loader").css("display", "none")
-
-}); // `~*# The end.
-
 

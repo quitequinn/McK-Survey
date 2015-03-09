@@ -9,6 +9,14 @@
 	@include m(max, $bp-small){
 		width: 100%;
 	}
+	a{
+		display:block;
+	}
+	.social{
+		a{
+			float: left;
+		}
+	}
 	.menu{
 		max-width: $width;
 		@include m(max, $bp-small){
@@ -29,7 +37,7 @@
 	.menu-footer{
 		width: 100%;
 		position: absolute;
-  		bottom: -.7em;
+  		bottom: 0;
   		opacity: .5;
 	}
 	.margin-bottom{
@@ -51,10 +59,8 @@
 			.hamburger:before, .hamburger:after {
 				background: $color-white;
 			}
-
 		}
 	}
-
 }
 .permNav{
 	position: absolute;

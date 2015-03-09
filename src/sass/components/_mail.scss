@@ -41,3 +41,13 @@ label.grid-half{
 		padding-right: 0;
 	}
 }
+#contact_body .fa-arrow-circle-o-up{
+	font-size: 3em;
+	@include pointer;
+	float: left;
+	padding-right: 10px;
+	+ span{
+		  line-height: 3em;
+
+	}
+}
