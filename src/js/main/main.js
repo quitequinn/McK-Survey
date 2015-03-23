@@ -37,8 +37,8 @@ $( document ).ready(function() {
 ////////////////////////////////////////////////
 	//JS SPECIFIC LAYOUT ADJ
 	function forwidth(){
-		var winH = '.winH{ min-height:' + $(window).height() + 'px;}';
-		var winHalf = '.winHalf{ top:' + ($(window).height()/2) + 'px;}';
+		var winH = '.winH{ min-height:' + $(window).height() + 'px;} .moz .winH{ height:' + $(window).height() + 'px;}';
+		var winHalf = '.winHalf{ top:' + ($(window).height()/2) + 'px;} ';
 		var styling = '<style>'+winH+winHalf+'</style>'
 		$('.jsdump').html(styling);
 	}
@@ -201,6 +201,7 @@ function path(path){
 		fullHeight();
 		expandoCheck();
 		animateCheck();
+		removeMapinfo();
 	});
 }
 $(".page").each(function(){
@@ -300,6 +301,12 @@ expandoCheck();
 
 //animations
 
+
+
+function removeMapinfo(){
+	$(".mapinfo").remove();
+}
+
 function animateCheck(){
 
 	var n_ball = 0;
@@ -320,9 +327,6 @@ function animateCheck(){
 
 	function mapinfo(place, stats){
 		$("body").append("<div class='mapinfo'><h6 class='no-space'>"+stats+" jobs</h6><h6 class='no-space thin'>"+place+"</h6></div>");
-	}
-	function removeMapinfo(){
-		$(".mapinfo").remove();
 	}
 	if ($("#economy_3").hasClass("view-on")) {
 		$( "#energymap path.1" )

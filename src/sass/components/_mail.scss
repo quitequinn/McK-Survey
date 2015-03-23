@@ -1,6 +1,11 @@
 #contact_form{
 	width: 100%;
 	display: block;
+	.grid-full{
+		padding-left: 0;
+		padding-right: 0;
+		margin-bottom: 0;
+	}
 }
 input, textarea{
 	margin-bottom: 2.8%;
@@ -36,8 +41,14 @@ input[type=submit]{
 }
 label.grid-half{
 	padding-left: 0;
+	@include m(max, $bp-medium){
+		margin-bottom: 0;
+	}
 	+ .grid-half{
 		padding-left: 1.4%;
+		@include m(max, $bp-medium){
+			padding-left: 0;
+		}
 		padding-right: 0;
 	}
 }

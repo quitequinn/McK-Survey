@@ -2,7 +2,7 @@
  * Kraken v5.6.0
  * A lightweight front-end boilerplate, by Chris Ferdinandi.
  * http://github.com/cferdinandi/kraken
- *
+ * 
  * Free to use under the MIT License.
  * http://gomakethings.com/mit/
  */
@@ -46,8 +46,8 @@ $( document ).ready(function() {
 ////////////////////////////////////////////////
 	//JS SPECIFIC LAYOUT ADJ
 	function forwidth(){
-		var winH = '.winH{ min-height:' + $(window).height() + 'px;}';
-		var winHalf = '.winHalf{ top:' + ($(window).height()/2) + 'px;}';
+		var winH = '.winH{ min-height:' + $(window).height() + 'px;} .moz .winH{ height:' + $(window).height() + 'px;}';
+		var winHalf = '.winHalf{ top:' + ($(window).height()/2) + 'px;} ';
 		var styling = '<style>'+winH+winHalf+'</style>'
 		$('.jsdump').html(styling);
 	}
@@ -210,6 +210,7 @@ function path(path){
 		fullHeight();
 		expandoCheck();
 		animateCheck();
+		removeMapinfo();
 	});
 }
 $(".page").each(function(){
@@ -309,6 +310,12 @@ expandoCheck();
 
 //animations
 
+
+
+function removeMapinfo(){
+	$(".mapinfo").remove();
+}
+
 function animateCheck(){
 
 	var n_ball = 0;
@@ -330,21 +337,18 @@ function animateCheck(){
 	function mapinfo(place, stats){
 		$("body").append("<div class='mapinfo'><h6 class='no-space'>"+stats+" jobs</h6><h6 class='no-space thin'>"+place+"</h6></div>");
 	}
-	function removeMapinfo(){
-		$(".mapinfo").remove();
-	}
 	if ($("#economy_3").hasClass("view-on")) {
 		$( "#energymap path.1" )
 		  .mouseover(function(){ mapinfo("Central Region", "1,393"); })
 		  .mouseout(function(){ removeMapinfo(); });
 		$( "#energymap path.2" )
-		  .mouseover(function(){ mapinfo("Northeast","317"); })
+		  .mouseover(function(){ mapinfo("Northeast","???"); })
 		  .mouseout(function(){ removeMapinfo(); });
 		$( "#energymap path.3" )
-		  .mouseover(function(){ mapinfo("Northwest","74" ); })
+		  .mouseover(function(){ mapinfo("Northwest","357" ); })
 		  .mouseout(function(){ removeMapinfo(); });
 		$( "#energymap path.4" )
-		  .mouseover(function(){ mapinfo("West Central", "283"); })
+		  .mouseover(function(){ mapinfo("West Central", "357"); })
 		  .mouseout(function(){ removeMapinfo(); });
 		$( "#energymap path.5" )
 		  .mouseover(function(){ mapinfo("Southwest", "1,312"); })

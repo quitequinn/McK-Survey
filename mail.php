@@ -69,7 +69,7 @@ $(document).ready(function() {
 <div class="form-style" id="contact_form">
     <div id="contact_results"></div>
     <div id="contact_body">
-        <label>
+        <label class="grid-full">
             <input type="text" name="name" id="name" placeholder="Company Name" required="true" class="input-field"/>
         </label>
         <label class="grid-half">
@@ -78,16 +78,16 @@ $(document).ready(function() {
         <label class="grid-half">
             <input type="text" name="industry" id="industry" placeholder="Industry" required="true" class="input-field"/>
         </label>
-        <label>
+        <label class="grid-full">
             <input type="text" name="owner" id="owner" placeholder="Owner/Principle Name(s)" required="true" class="input-field"/>
         </label>
-        <label>
+        <label class="grid-full">
             <input type="email" name="email" placeholder="Contact Email" required="true" class="input-field"/>
         </label>
-        <label for="field5">
+        <label class="grid-full" for="field5">
             <textarea name="message" id="message" placeholder="Mission Statment (500 Word Max)" class="textarea-field" maxlength="50-" required="true"></textarea>
         </label>
-        <label for="field5">
+        <label class="grid-full" for="field5">
             <textarea name="messagetwo" id="messagetwo" placeholder="Company product or service" class="textarea-field" required="true"></textarea>
         </label>
         <label class="grid-half">

@@ -72,13 +72,10 @@
 #main[profile="true"]{
 	section{
 		max-width: 100%!important;
+		background: $color-black;
 	}
 }
 //Profile IMGs
-
-.profile.page{
-	background: $color-black
-}
 
 .profile-img{
 	background-size: cover!important;

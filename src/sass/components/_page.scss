@@ -14,6 +14,10 @@
 	transition: all $fast;
 	img{
 		max-width: 300px;
+		display: block;
+	}
+	.center > img{
+		width: 100%;
 	}
 	section{
 		position: absolute;
@@ -23,7 +27,8 @@
 		left: -100%;
 		transition: all $fast;
 		box-shadow: -.5em 0 1em .5em rgb(0,0,0);
-  		overflow-y: scroll;
+ 		overflow: hidden;
+ 		overflow-y: scroll;
 		&.view-on{
 			z-index: 2;
 			left: 0;
@@ -73,6 +78,7 @@
 			left: 0;
 		}
 		section{
+ 			overflow: hidden;
 			&:nth-of-type(1){
 				width: 90%;
 				z-index: 6;
@@ -153,6 +159,7 @@
 				}
 		section{
 			left: 0;
+ 			overflow: hidden;
 			&:nth-of-type(1){
 				width: 50%;
 				z-index: 6;

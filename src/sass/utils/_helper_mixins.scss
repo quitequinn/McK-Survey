@@ -11,11 +11,11 @@
 @mixin m($updown: min, $amount: 600px, $elem: #main) {
   @if $updown == "max" {
     @media (max-width: $amount) { @content; }
-    #{$elem}[max-width~="#{$amount}"] & { @content; }
+ //   #{$elem}[max-width~="#{$amount}"] & { @content; }
   }
   @if $updown == "min" {
     @media (min-width: $amount) { @content; }
-    #{$elem}[min-width~="#{$amount}"] & { @content; }
+ //   #{$elem}[min-width~="#{$amount}"] & { @content; }
   }
 }
 
