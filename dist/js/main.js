@@ -342,13 +342,13 @@ function animateCheck(){
 		  .mouseover(function(){ mapinfo("Central Region", "1,393"); })
 		  .mouseout(function(){ removeMapinfo(); });
 		$( "#energymap path.2" )
-		  .mouseover(function(){ mapinfo("Northeast","???"); })
+		  .mouseover(function(){ mapinfo("Northeast","317"); })
 		  .mouseout(function(){ removeMapinfo(); });
 		$( "#energymap path.3" )
-		  .mouseover(function(){ mapinfo("Northwest","357" ); })
+		  .mouseover(function(){ mapinfo("Northwest","74" ); })
 		  .mouseout(function(){ removeMapinfo(); });
 		$( "#energymap path.4" )
-		  .mouseover(function(){ mapinfo("West Central", "357"); })
+		  .mouseover(function(){ mapinfo("West Central", "283"); })
 		  .mouseout(function(){ removeMapinfo(); });
 		$( "#energymap path.5" )
 		  .mouseover(function(){ mapinfo("Southwest", "1,312"); })

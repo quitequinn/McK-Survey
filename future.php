@@ -26,8 +26,8 @@
 				<div class="row">
 					<div class="grid-half grid-half-wrap">
 						<div class="grid-half">
-							<h2 class="no-space-top margin-bottom-xsmall">8th</h2>
-							<p>Minnesota ranks eighth in the nation for registered Clean Energy Patents.</p>
+							<h2 class="no-space-top margin-bottom-xsmall">$11B</h2>
+							<p>$11 Billion private sector investment in renewable energy projects since 2004.</p>
 						</div>
 						<div class="grid-half">
 							<h2 class="no-space-top margin-bottom-xsmall">42%</h2>
@@ -53,17 +53,37 @@
 			<div class="center">
 				<div class="row">
 					<div class="grid-full">
-						<h3>Minnesota is advancing its Clean Energy economic development in communities throughout the state and can continue to do this by:</h3>
+						<h3>The Clean Energy Economy is advancing economic development across our state but many strategic opportunities remain:</h3>
 					</div>
 				</div>
 				<div class="row">
 					<div class="grid-half points">
-						<p>Increasing the existing Renewable Energy Standard to 40% by 2030.</p>
-						<p>Improving the yearly energy savings goal for utilities from 1.5% to 2%.</p>
+						<p>Develop policies and programs to stimulate adoption of new and existing technologies, fund promising start-ups, and accelerate private-sector growth.</p>
+						<p>Formulate a coordinated statewide clean energy strategy.</p>
 					</div>
 					<div class="grid-half points">
-						<p>Implementing policies that will grow renewable energy in Greater Minnesota.</p>
-						<p>Continuing Rural Clean Energy Tax Credit.</p>
+						<p>Improve access to capital and technical assistance available to businesses and communities.</p>
+						<p>Ensure consistent regulation and permitting adaptable to business needs.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id='future_3' class="page">
+		<div class="container align winH centerWrap">
+			<div class="center">
+				<div class="row">
+					<div class="grid-full">
+						<h3>The Clean Energy Economy is advancing economic development across our state but many strategic opportunities remain:</h3>
+					</div>
+				</div>
+				<div class="row">
+					<div class="grid-half points">
+						<p>Create an education and marketing campaign for clean energy products and services.</p>
+						<p>Increase collaboration between higher education institutions and the clean energy business community to prepare a trained workforce to meet industry demand.</p>
+					</div>
+					<div class="grid-half points">
+						<p>Develop the energy infrastructure of the future to improve reliability, security, and accessibility to support the growth of the clean energy industry.</p>
 					</div>
 				</div>
 			</div>

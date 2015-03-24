@@ -44,8 +44,8 @@
 			<div class="center">
 				<div class="row">
 					<div class="grid-half">
-						<h3>Growing our Clean Energy Economy has been essential in our transition to decreasing this dependency.</h1>
-						<p>As of 2012, annual energy efficiency savings and renewable electricity capacity in Minnesota was enough to power over 1.4 million homes in the state for a year.</p>
+						<h3>Clean Energy has been essential in decreasing our reliance on imported fossil fuels.</h3>
+						<p>Annual energy efficiency savings and renewable energy generation in Minnesota was enough to power 1.4 million homes in the state for a year in 2012.</p>
 
 						<div class="expando">
 							<div class="initial">
@@ -54,7 +54,8 @@
 							</div>
 							<div class="info">
 								<div class="button fa-3 fa fa-close"></div>
-								<h6 class="center">Energy Conservation Improvement 216B.241 Energy savings requirement for Minnesota electric and natural gas utilities.</h6>
+								<h6 class="center">Energy Conservation Improvement 216B.241 Energy savings requirement for Minnesota electric and natural gas utilities.
+								<br/><br/><a href="https://www.revisor.mn.gov/statutes/?id=216B.241" target="_blank">(source)</a></h6>
 							</div>
 						</div>
 					</div>
@@ -69,7 +70,7 @@
 		<div class="container align winH centerWrap">
 			<div class="center">
 				<div class="row">
-					<div class="grid-half">
+					<div class="grid-full">
 						<h3>There are more benefits to a Clean Energy economy.</h3>
 					</div>
 				</div>
@@ -132,61 +133,10 @@
 		<div class="container align winH centerWrap">
 			<div class="center">
 				<div class="row">
-					<div class="grid-half">
+					<div class="grid-full">
 						<h3 class="margin-top no-padding-top">Those involved in our heritage of agriculture and forestry are also embracing Clean Energy.</h3>
 						<p>Farmers reduce imports of petroleum diesel by providing a minimum of 5% renewable diesel for fuel sold in the state during winter months and 10% for summer months.<p>
 					</div>
-					<div class="grid-half">
-						<a href="#!/clean/5/MartinMorud" class="centerWrap profile-link" style="background: url(img/martin.jpg) 50% 50%;">
-							<h6 class="center">Martin Morud</h6>
-						</a>
-						<a href="#!/clean/5/SteveRupp" class="centerWrap profile-link" style="background: url(img/steverupp.jpg) 50% 50%;">
-							<h6 class="center">Steve Rupp</h6>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id='clean_5_MartinMorud' class="page profile">
-		<div class="permNav">
-			<a href="#!/clean/5" class="exit-wrap audClick"><div class="exit"></div></a>
-		</div>
-		<div class="container align winH centerWrap">
-			<div class="center">
-				<div class="row">
-					<div class="grid-half">
-						<h3 class="no-space-bottom">Martin Morud</h3>
-						<h6 class="no-space-top margin-bottom-large">President / Owner, TRU NORTH SOLAR</h6>
-						<p>From the very beginning it was imperative to Founder Marty Morud that TruNorth build a reputation for high quality solar installation and a company culture of substance, character, and integrity. Marty has comprehensive knowledge of the solar industry and the regulatory structure in which it operates, allowing the TruNorth team to utilize new and rapidly developing policies to the benefit of customers and the environment. TruNorth’s mission reflects its relentless passion for the stewardship of the planet and creating a meaningful difference in our future energy recipe.</p>
-						<p>Marty is a prime mover behind the Minnesota Community Solar Garden law and its implementing regulations and tariffs. Marty leads the Minnesota Solar Energy Industry Association Community Solar Garden Working Group and co-leads the Xcel Energy Solar Rewards Community Working Group. Marty has represented the local solar industry at the Minnesota Public Utilities Commission, testifying often on behalf of garden developers.</p>
-
-						<a href="#!/clean/5/SteveRupp" class="centerWrap profile-link small" style="background: url(img/steverupp.jpg) 50% 50%;">
-							<h6>Steve Rupp</h6>
-						</a>
-					</div>
-					<div class="martin profile-img" ></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id='clean_5_SteveRupp' class="page profile" >
-		<div class="permNav">
-			<a href="#!/clean/5" class="exit-wrap audClick"><div class="exit"></div></a>
-		</div>
-		<div class="container align winH centerWrap">
-			<div class="center">
-				<div class="row">
-					<div class="grid-half">
-						<h3 class="no-space-bottom">Steve Rupp</h3>
-						<h6 class="no-space-top margin-bottom-large">Vice President, Ever Cat Fuels</h6>
-						<p>Mr. Steven Rupp has been Vice President of Ever Cat Fuels, LLC since 2008 and serves on the Minnesota Biodiesel Council and the Minnesota Biodiesel Task Force. Steve holds an Interdisciplinary degree in Mathematics and Economics from Bowdoin College in Brunswick, ME and received a Master of Management and a Master of Manufacturing degree from the Kellogg Graduate School of Management at Northwestern University in Evanston, IL where he majored in finance, marketing and entrepreneurship.</p><p>Ever Cat Fuels operates a three million gallon per year commercial biodiesel production facility in rural Isanti, MN.  The state-of-the-art facility features a revolutionary production technology known as the Mcgyan®process. The Mcgyan® process utilizes a simple, fixed bed continuous reactor to quickly and economically catalyze the production of biodiesel fuel from non-food based raw materials.</p>
-
-						<a href="#!/economy" class="centerWrap profile-link small" style="background: #D9D7B1;">
-							<h6>Next up → Economy</h6>
-						</a>
-					</div>
-					<div class="steverupp profile-img"></div>
 				</div>
 			</div>
 		</div>

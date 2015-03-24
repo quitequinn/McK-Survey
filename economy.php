@@ -93,7 +93,7 @@
 							</div>
 							<div class="info">
 								<div class="button fa-3 fa fa-close"></div>
-								<h6 class="center">ethanol development: producer payments 41A.09 Goal for ethanol production plants in the state attain certain levels: cash payments for producers of thanol located in the state.</h6>
+								<h6 class="center">Ethanol Development: Producer Payments 41a.09 Goal for ethanol production plants in the state attain certain levels; cash payments for producers of ethanol located in the state.</h6>
 							</div>
 						</div>
 					</div>
@@ -117,6 +117,9 @@
 						<p>These opportunities will include training and jobs for young Minnesotans who want to be a part of this wave of innovation.<p>
 					</div>
 					<div class="grid-half">
+						<a href="#!/economy/6/MartinMorud" class="centerWrap profile-link" style="background: url(img/martin.jpg) 50% 50%;">
+							<h6 class="center">Martin Morud</h6>
+						</a>
 						<a href="#!/economy/6/SteveEvans" class="centerWrap profile-link" style="background: url(img/steve.jpg) 50% 50%;">
 							<h6 class="center">Steve Evans</h6>
 						</a>
@@ -124,6 +127,28 @@
 							<h6 class="center">Shanelle Montana</h6>
 						</a>
 					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id='economy_6_MartinMorud' class="page profile">
+		<div class="permNav">
+			<a href="#!/economy/6" class="exit-wrap audClick"><div class="exit"></div></a>
+		</div>
+		<div class="container align winH centerWrap">
+			<div class="center">
+				<div class="row">
+					<div class="grid-half">
+						<h3 class="no-space-bottom">Martin Morud</h3>
+						<h6 class="no-space-top margin-bottom-large">President / Owner, TRU NORTH SOLAR</h6>
+						<p>From the very beginning it was imperative to Founder Marty Morud that TruNorth build a reputation for high quality solar installation and a company culture of substance, character, and integrity. Marty has comprehensive knowledge of the solar industry and the regulatory structure in which it operates, allowing the TruNorth team to utilize new and rapidly developing policies to the benefit of customers and the environment. TruNorth’s mission reflects its relentless passion for the stewardship of the planet and creating a meaningful difference in our future energy recipe.</p>
+						<p>Marty is a prime mover behind the Minnesota Community Solar Garden law and its implementing regulations and tariffs. Marty leads the Minnesota Solar Energy Industry Association Community Solar Garden Working Group and co-leads the Xcel Energy Solar Rewards Community Working Group. Marty has represented the local solar industry at the Minnesota Public Utilities Commission, testifying often on behalf of garden developers.</p>
+
+						<a href="#!/economy/6/SteveEvans" class="centerWrap profile-link small" style="background: url(img/steve.jpg) 50% 50%;">
+							<h6>Steve Evans</h6>
+						</a>
+					</div>
+					<div class="martin profile-img" ></div>
 				</div>
 			</div>
 		</div>
@@ -163,7 +188,7 @@
 						<p>Shanelle is a Project Developer at EDF Renewable Energy where she focuses on the company's development pipeline as well as public policy efforts relating to wind and solar power. She identifies and creates new market and policy opportunities for EDF Renewable Energy.</p><p>EDF Renewable Energy is a U.S. Independent power producer with over 25 years expertise in project development, operations, and maintenance services. EDF has a history of utilizing homegrown talent to implement and develop Clean Energy solutions.</p>
 
 						<a href="#!/innovation" class="centerWrap profile-link small" style="background: #B1C0AD;">
-							<h6>Next up → Innovation</h6>
+							<h6>Next up &nbsp;<i class="fa fa-chevron-right"></i>&nbsp; Innovation</h6>
 						</a>
 					</div>
 					<div class="shanelle profile-img"></div>

@@ -258,7 +258,7 @@
 			}
 		}
 	}
-	&[cur-slide="economy_6_SteveEvans"], &[cur-slide="economy_6_ShanelleMontana"], &[cur-slide="clean_5_MartinMorud"], &[cur-slide="clean_5_SteveRupp"],  &[cur-slide="innovation_2_BobFrench"]{
+	&[cur-slide="economy_6_SteveEvans"], &[cur-slide="economy_6_ShanelleMontana"], &[cur-slide="economy_6_MartinMorud"], &[cur-slide="innovation_2_SteveRupp"],  &[cur-slide="innovation_2_BobFrench"]{
 		.permNav{
 			display: none;
 		}
@@ -269,7 +269,7 @@
 		}
 	}
 
-	&[cur-slide="economy_6_SteveEvans"], &[cur-slide="economy_6_ShanelleMontana"], &[cur-slide="clean_5_MartinMorud"], &[cur-slide="clean_5_SteveRupp"],  &[cur-slide="innovation_2_BobFrench"], &[cur-slide="clean_5_Adam"], &[cur-slide="connect-on-energy"], &[cur-slide="about"], &[cur-slide="clean_5_TomAndJr"], &[cur-slide="toc"], &[cur-slide="intro"]{
+	&[cur-slide="economy_6_SteveEvans"], &[cur-slide="economy_6_ShanelleMontana"], &[cur-slide="economy_6_MartinMorud"], &[cur-slide="innovation_2_SteveRupp"],  &[cur-slide="innovation_2_BobFrench"], &[cur-slide="clean_5_Adam"], &[cur-slide="connect-on-energy"], &[cur-slide="about"], &[cur-slide="clean_5_TomAndJr"], &[cur-slide="toc"], &[cur-slide="intro"]{
 		.site-footer{
 			display: none;
 		}
@@ -640,13 +640,20 @@ svg#counter{
 	margin-right: auto;
 	margin-left: auto;
 	display: block;
+	position: relative;
 	.back{
 		opacity: .1;
+	}
+	.info{
+		&:hover{
+			cursor: none;
+		}
 	}
 }
 
 
 #energymap{
+	position: relative;
 	path{
 		fill: rgba($color-black, .5);
 		.disc{
@@ -657,6 +664,11 @@ svg#counter{
 			+ .disc{
 				display: initial;
 			}
+		}
+	}
+	.info{
+		&:hover{
+			cursor: none;
 		}
 	}
 }
@@ -880,6 +892,9 @@ svg{
 		transition:all $fast;
 	    background: linear-gradient(to right, rgba(0, 0, 0, 0.75) 0%, transparent 75%), linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 75%);
  	}
+}
+a.profile-link.small:hover{
+	opacity: 1;
 }
 //UNIQUE Chapters
 

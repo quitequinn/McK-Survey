@@ -27,6 +27,15 @@ input:not([type=file]), textarea{
 		box-shadow: none;
 	}
 }
+.active{
+	span{
+		color: green;
+	}
+	.fa:before{
+		animation: rotate $fast;
+		content: "\f05d";
+	}
+}
 ::placeholder{
    	color: rgba($color-black, .5);
 	font-size: 14px;

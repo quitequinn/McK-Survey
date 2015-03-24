@@ -23,11 +23,8 @@
 							<li><a href="">Join now (link)</a></li>
 						</ul>
 
-						<a href="#!/clean/5/MartinMorud" class="centerWrap profile-link small" style="background: url(img/martin.jpg) 50% 50%;">
+						<a href="#!/economy/6/MartinMorud" class="centerWrap profile-link small" style="background: url(img/martin.jpg) 50% 50%;">
 							<h6 class="center">Martin Morud</h6>
-						</a>
-						<a href="#!/clean/5/SteveRupp" class="centerWrap profile-link small" style="background: url(img/steverupp.jpg) 50% 50%;">
-							<h6 class="center">Steve Rupp</h6>
 						</a>
 						<a href="#!/economy/6/SteveEvans" class="centerWrap profile-link small" style="background: url(img/steve.jpg) 50% 50%;">
 							<h6 class="center">Steve Evans</h6>
@@ -37,6 +34,9 @@
 						</a>
 						<a href="#!/innovation/2/BobFrench" class="centerWrap profile-link small" style="background: url(img/bob.jpg) 50% 50%;">
 							<h6 class="center">Bob French</h6>
+						</a>
+						<a href="#!/innovation/2/SteveRupp" class="centerWrap profile-link small" style="background: url(img/steverupp.jpg) 50% 50%;">
+							<h6 class="center">Steve Rupp</h6>
 						</a>
 					</div>
 				</div>

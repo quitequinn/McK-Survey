@@ -15,7 +15,7 @@
 				</a>
 				<a href="#!/connect-on-energy" class="margin-bottom-large">
 					<h6>Connect on Energy</h6>
-					<p>Connect On Energy is a platform designed to profile and showcase the 750+ Clean Energy businesses throughout Minnesota who are committed to advancing the Clean Energy Economy.</p>
+<!--  				<p>Connect On Energy is a platform designed to profile and showcase the 750+ Clean Energy businesses throughout Minnesota who are committed to advancing the Clean Energy Economy.</p> -->
 					<p>Highlight your organization's role in Minnesota's burgeoning Clean Energy ecosystem by signing up today!</p>
 				</a>
 				<a href="#!/about" class="margin-bottom-large">
