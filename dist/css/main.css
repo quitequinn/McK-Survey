@@ -4268,11 +4268,11 @@ input:not([type=file]):focus, textarea:focus {
 }
 
 /* line 31, ../components/_mail.scss */
-.active span {
+.active > span {
   color: green;
 }
 /* line 34, ../components/_mail.scss */
-.active .fa:before {
+.active > .fa:before {
   -webkit-animation: rotate 0.3s;
   animation: rotate 0.3s;
   content: "\f05d";

@@ -85,8 +85,8 @@ $( document ).ready(function() {
 		}
 	}
 
+////////////////////////////////////////////////
 // Share
-
 function setShareLinks(){
 	if (iphone()) {
 		$(".fa-twitter").attr('href', "twitter://post?message=" + encodeURIComponent(document.URL));
@@ -109,11 +109,13 @@ $(".social > a").click(function(){
 	return false;
 });
 
+////////////////////////////////////////////////
 //Side Nav
 $('.hamburger-wrap').click(function(){
 	$("body, .sideNav, .permNav").toggleClass('active');
 });
 
+////////////////////////////////////////////////
 //Profile Interaction
 $(".profile-link, section").click(function(){
 	if ($("body, .sideNav, .permNav").hasClass('active')) {
@@ -123,6 +125,7 @@ $(".profile-link, section").click(function(){
 	$("body, .sideNav, .permNav").removeClass('active');
 });
 
+////////////////////////////////////////////////
 //Expando interaction
 $('.initial').click(function(){
 	$(this).parent().toggleClass('active');
@@ -131,7 +134,7 @@ $('.fa-close').click(function(){
 	$(this).parent().parent().toggleClass('active');
 });
 
-
+////////////////////////////////////////////////
 //Audio
 $('.audClick:not(view-on), input, .initial, .fa-close').click(function(){
 	var click = new Audio('click.mp3');
@@ -143,6 +146,7 @@ $('.audClick:not(view-on), input, .initial, .fa-close').click(function(){
 // 	swipe.play();
 // });
 
+////////////////////////////////////////////////
 //square
 function fullImg(){
 	$(".fullImg").each( function(){

@@ -28,10 +28,10 @@ input:not([type=file]), textarea{
 	}
 }
 .active{
-	span{
+	> span{
 		color: green;
 	}
-	.fa:before{
+	> .fa:before{
 		animation: rotate $fast;
 		content: "\f05d";
 	}
