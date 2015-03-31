@@ -21,7 +21,7 @@
 				<div class="row">
 					<div class="grid-half">
 						<h3>In 2013, Minnesota workers in the Clean Energy Economy earned over $1 billion dollars in wages.</h3>
-						<p>This is 42 percent higher than the statewide average for all jobs. These are good jobs in a variety of sectors making Minnesota’s economy more productive and competitive and delivering energy that is secure, clean, and affordable. These jobs range from installation and maintenance to manufacturing and research.</p>
+						<p>Total wages were up 79 percent from $600 million in 2000 across all five CleanEnergy sectors (energy efficiency, wind power, solar energy, bioenergy, and smart grid). These are good jobs making Minnesota’s economy more productive and competitive while delivering energy that is secure, clean, and affordable. Jobs range from manufacturing, sales, and distribution to installation, maintenance, and research.</p>
 					</div>
 					<div class="grid-half">
 						<? include("img/info-04.svg"); ?><br/>

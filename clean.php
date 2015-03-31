@@ -85,13 +85,14 @@
 							</div>
 							<div class="info">
 								<div class="button fa-3 fa fa-close"></div>
-								<h6 class="center">oxygenated gasoline (ethanol) 239.791 minimum ethanol content required in minnesta</h6>
+								<h6 class="center">oxygenated gasoline (ethanol) 239.791 minimum ethanol content required in minnesta
+								<br/><a href="https://revisor.mn.gov/statutes/?id=239.791">(source)</a></h6>
 							</div>
 						</div>
 					</div>
 					<div class="grid-half">
 						<? include("img/info-02.svg"); ?>
-						<p><b>Benefit Two:</b> Minnesota is utilizing the state’s abundant natural resources such as wind, solar, and different types of biomass. In 2013, the US produced only 4.1% of its electricity using wind, whereas Minnesota utilized wind to generate 15.7% in the same year.</p>
+						<p><b>Benefit Two:</b> Minnesota is blessed with abundant natural resources such as wind, solar, and different types of biomass. In 2013, Minnesota utilized wind to generate 15.7 percent of the state’s total electricity, whereas, the US as a whole generated only 4.1 percent of electricity from wind.</p>
 
 						<div class="expando">
 							<div class="initial">
@@ -100,7 +101,8 @@
 							</div>
 							<div class="info">
 								<div class="button fa-3 fa fa-close"></div>
-								<h6 class="center">Biodiesel content mandate 239.77 minimum biodiesel content required in minnesota</h6>
+								<h6 class="center">Biodiesel content mandate 239.77 minimum biodiesel content required in minnesota.
+								<br/><a href="https://www.revisor.mn.gov/statutes/?id=239.77">(source)</a></h6>
 							</div>
 						</div>
 					</div>
@@ -113,17 +115,17 @@
 			<div class="center">
 				<div class="row">
 					<div class="grid-half">
-						<h3>There are more benefits to a Clean Energy economy.</h3>
+						<h3>Benefits Continued.</h3>
 					</div>
 				</div>
 				<div class="row">
 					<div class="grid-half">
 						<h2 class="no-margin no-space-top padding-bottom-small">16%</h2>
-						<p><b>Benefit Three:</b> Only 4% of the electricity generated in Minnesota in 2000 came from renewable energy, but by 2011 renewable electricity jumped to 16% of total generation. Utilizing these renewable resources keeps our air and water clean. </p>
+						<p><b>Benefit Three:</b> Minnesota had 14 megawatts (MW) of solar energy capacity installed as of September 2013. Most of this capacity, 86 percent, was installed between 2010 and 2013.</p>
 					</div>
 					<div class="grid-half">
 						<? include("img/info-03.svg"); ?>
-						<p><b>Benefit Four:</b> Implementing Clean Energy will help Minnesota reduce the pollution and contamination of one of its most precious resources: its fresh water lakes and rivers.</p>
+						<p><b>Benefit Four:</b> Implementing Clean Energy will help preserve Minnesota’s four seasons while improving air quality and reducing water pollution in our lakes, streams, and rivers.</p>
 					</div>
 				</div>
 			</div>
