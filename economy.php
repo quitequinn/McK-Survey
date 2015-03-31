@@ -21,7 +21,7 @@
 				<div class="row">
 					<div class="grid-half">
 						<h3>In 2013, Minnesota workers in the Clean Energy Economy earned over $1 billion dollars in wages.</h3>
-						<p>These are good jobs in a variety of sectors making Minnesota’s economy more productive and competitive and delivering energy that is secure, clean, and affordable. These jobs range from installation and maintenance to manufacturing and research.</p>
+						<p>This is 42 percent higher than the statewide average for all jobs. These are good jobs in a variety of sectors making Minnesota’s economy more productive and competitive and delivering energy that is secure, clean, and affordable. These jobs range from installation and maintenance to manufacturing and research.</p>
 					</div>
 					<div class="grid-half">
 						<? include("img/info-04.svg"); ?><br/>
@@ -47,8 +47,8 @@
 			<div class="center">
 				<div class="row">
 					<div class="grid-half">
-						<h3>Employment in Clean Energy Sectors reached 15,300 in 2014 and is growing faster than the total state employment.</h3>
-						<p>Minnesota’s average annual wages in the Clean Energy Economy was 42% higher than the statewide average for all jobs.</p>
+						<h3>Employment in the Clean Energy Economy reached…</h3>
+						<p>Minnesota’s Clean Energy employment grew 78 percent since 2000 adding nearly 7,000 jobs while growing seven times faster than the state’s overall employment.</p>
 					</div>
 					<div class="grid-half">
 						<? include("img/info-08.svg"); ?>
@@ -63,67 +63,38 @@
 			<div class="center">
 				<div class="row">
 					<div class="grid-full">
-						<h3>Nationally, Minnesota has been a leader in the Clean Energy Economy.</h3>
+						<h3>Nationally, Minnesota is a leader in the Clean Energy Economy.</h3>
 					</div>
 				</div>
 				<div class="row">
 					<div class="grid-half">
-						<p>In 2013, Minnesota was ranked 5th highest in the US for share of electricity produced wind.</p>
-						<p>Additionally, the state has implemented a number of solar specific programs and mandates, which help defray the up-front cost for consumers and stimulate demand for solar energy</p>
+						<p>State utilities, through the Conservation Improvement Program (CIP), have saved over 56 trillion BTUs of electricity and natural gas. In 2012, annual energy savings were more than double the savings in 1997, and are 70 percent higher than annual savings in 2007.</p>
+						<p>In 2013, Minnesota was ranked 5th produced from wind.</p>
 					</div>
 					<div class="grid-half">
-						<p>Minnesota was the first state to require the use of ethanol in our fuel supply and now has the most E85 stations in the country.</p>
-						<p>In 2013, the Solar Energy Standard required investor-owned utilities to have 1.5% of electric sales from solar power by 2020.</p>
+						<p>Minnesota was the first state to require the use of ethanol in our fuel supply and ranks 4thin the US for ethanol production capacity. The state also has the most E85 stations in the country.</p>
+						<p>In 2013, the Solar Energy Standard was passed requiring investor-owned utilities to have 1.5% of electric sales from solar by 2020. The state also required the development of a program for community solar projects as well as created the nation’s first Value of Solar tariff as an alternative to net metering.</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div id='economy_5' class="page">
-		<div class="container align winH centerWrap no-padding">
-			<div class="center">
-				<div class="row">
-					<div class="grid-half">
-						<h3>Minnesota’s biofuel market has been active for over 20 years. </h3>
-						<p>It has added $5 billion in economic value to the state through job creation and reduction of air and water pollution from petroleum-based gasoline and diesel. These efforts have placed Minnesota 4th in the nation for ethanol production.</p>
-						<div class="expando">
-							<div class="initial">
-								<div class="button"><p><b>P</b></p></div>
-								<h6 class="center">Click to view policy</h6>
-							</div>
-							<div class="info">
-								<div class="button fa-3 fa fa-close"></div>
-								<h6 class="center">Ethanol Development: Producer Payments 41a.09 Goal for ethanol production plants in the state attain certain levels; cash payments for producers of ethanol located in the state.</h6>
-							</div>
-						</div>
-					</div>
-					<div class="grid-half">
-						<div class="centerWrap fullHeight">
-							<div class="center">
-								<img class="center" src="img/biofuleimage.png"/>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id='economy_6' class="page">
 		<div class="container align winH centerWrap">
 			<div class="center">
 				<div class="row">
 					<div class="grid-half">
-						<h3 class="margin-top">Expanding efforts to grow our Clean Energy Economy will create more opportunities throughout the state. </h3>
-						<p>These opportunities will include training and jobs for young Minnesotans who want to be a part of this wave of innovation.<p>
+						<h3 class="margin-top">Efforts to grow our Clean Energy Economy will create more opportunities throughout the state.</h3>
+						<p>These opportunities will include training and jobs for Minnesotans who want to be a part of this wave of innovation.<p>
 					</div>
 					<div class="grid-half">
-						<a href="#!/economy/6/MartinMorud" class="centerWrap profile-link" style="background: url(img/martin.jpg) 50% 50%;">
+						<a href="#!/economy/5/MartinMorud" class="centerWrap profile-link" style="background: url(img/martin.jpg) 50% 50%;">
 							<h6 class="center">Martin Morud</h6>
 						</a>
-						<a href="#!/economy/6/SteveEvans" class="centerWrap profile-link" style="background: url(img/steve.jpg) 50% 50%;">
+						<a href="#!/economy/5/SteveEvans" class="centerWrap profile-link" style="background: url(img/steve.jpg) 50% 50%;">
 							<h6 class="center">Steve Evans</h6>
 						</a>
-						<a href="#!/economy/6/ShanelleMontana" class="centerWrap profile-link" style="background: url(img/shanelle.jpg) 50% 50%;">
+						<a href="#!/economy/5/ShanelleMontana" class="centerWrap profile-link" style="background: url(img/shanelle.jpg) 50% 50%;">
 							<h6 class="center">Shanelle Montana</h6>
 						</a>
 					</div>
@@ -131,9 +102,9 @@
 			</div>
 		</div>
 	</div>
-	<div id='economy_6_MartinMorud' class="page profile">
+	<div id='economy_5_MartinMorud' class="page profile">
 		<div class="permNav">
-			<a href="#!/economy/6" class="exit-wrap audClick"><div class="exit"></div></a>
+			<a href="#!/economy/5" class="exit-wrap audClick"><div class="exit"></div></a>
 		</div>
 		<div class="container align winH centerWrap">
 			<div class="center">
@@ -144,7 +115,7 @@
 						<p>From the very beginning it was imperative to Founder Marty Morud that TruNorth build a reputation for high quality solar installation and a company culture of substance, character, and integrity. Marty has comprehensive knowledge of the solar industry and the regulatory structure in which it operates, allowing the TruNorth team to utilize new and rapidly developing policies to the benefit of customers and the environment. TruNorth’s mission reflects its relentless passion for the stewardship of the planet and creating a meaningful difference in our future energy recipe.</p>
 						<p>Marty is a prime mover behind the Minnesota Community Solar Garden law and its implementing regulations and tariffs. Marty leads the Minnesota Solar Energy Industry Association Community Solar Garden Working Group and co-leads the Xcel Energy Solar Rewards Community Working Group. Marty has represented the local solar industry at the Minnesota Public Utilities Commission, testifying often on behalf of garden developers.</p>
 
-						<a href="#!/economy/6/SteveEvans" class="centerWrap profile-link small" style="background: url(img/steve.jpg) 50% 50%;">
+						<a href="#!/economy/5/SteveEvans" class="centerWrap profile-link small" style="background: url(img/steve.jpg) 50% 50%;">
 							<h6>Steve Evans</h6>
 						</a>
 					</div>
@@ -153,9 +124,9 @@
 			</div>
 		</div>
 	</div>
-	<div id='economy_6_SteveEvans' class="page profile">
+	<div id='economy_5_SteveEvans' class="page profile">
 		<div class="permNav">
-			<a href="#!/economy/6" class="exit-wrap audClick"><div class="exit"></div></a>
+			<a href="#!/economy/5" class="exit-wrap audClick"><div class="exit"></div></a>
 		</div>
 		<div class="container align winH centerWrap">
 			<div class="center">
@@ -166,7 +137,7 @@
 						<p>Steve Evans is a member of Iberdrola’s Operations Team and works at the company’s Elm Creek II Wind Project just northeast of Jackson, MN. This is the third project Iberdrola has developed in partnership with a landowner group and includes 62 turbines.</p>
 						<p>Iberdrola Renewables is the second-largest wind operator in the U.S. and is one of the few companies capable of providing structured energy solutions that allowing large industrial and commercial customers to manage risks and uncertainty in the natural gas and power industries.</p><p>Iberdrola Renewables is at the forefront of transforming the way the U.S. produces and uses energy. Strongly positioned to develop, build, and operate the Clean Energy infrastructure of the future, Iberdrola Renewables is already generating power from more than 40 renewable energy projects for its utility-scale customers in the United States and leading both Minnesota and America’s transition to a renewable energy future.</p>
 
-						<a href="#!/economy/6/ShanelleMontana" class="centerWrap profile-link small" style="background: url(img/shanelle.jpg) 50% 50%;">
+						<a href="#!/economy/5/ShanelleMontana" class="centerWrap profile-link small" style="background: url(img/shanelle.jpg) 50% 50%;">
 							<h6>Shanelle Montana</h6>
 						</a>
 					</div>
@@ -175,9 +146,9 @@
 			</div>
 		</div>
 	</div>
-	<div id='economy_6_ShanelleMontana' class="page profile">
+	<div id='economy_5_ShanelleMontana' class="page profile">
 		<div class="permNav">
-			<a href="#!/economy/6" class="exit-wrap audClick"><div class="exit"></div></a>
+			<a href="#!/economy/5" class="exit-wrap audClick"><div class="exit"></div></a>
 		</div>
 		<div class="container align winH centerWrap">
 			<div class="center">

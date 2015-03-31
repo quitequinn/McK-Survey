@@ -66,7 +66,7 @@ function inputChange(){
 }
 </script>
 
-<div class="form-style" id="contact_form">
+<div class="form-style row" id="contact_form">
 		<div id="contact_results"></div>
 		<div id="contact_body">
 				<label class="grid-full">

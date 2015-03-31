@@ -216,15 +216,15 @@ Path.root("#!/");
 
 Path.listen();
 
+////////////////////////////////////////////////
 //Set Arrow Routs
-
 function setCarrots(){
 	if ( $(".page.view-on").attr("id") == 'connect-on-energy') {
 		var nextpage = "#!/";
 	} else {
-		var next = $(".page.view-on").next(".page");
+		var next = $(".page.view-on").next(".page:not(.profile)");
 		if( next.length == 0){
-			var nextpage = "#!/" + $(".page.view-on").parent().next().children().first(".page").attr("id").replace(/[_]/g, '/');
+			var nextpage = "#!/" + $(".page.view-on").parent().next().children().first(".page:not(.profile)").attr("id").replace(/[_]/g, '/');
  		} else {
 			var nextpage = "#!/" + $(".page.view-on").next(".page").attr("id").replace(/[_]/g, '/');
 		}
@@ -234,9 +234,9 @@ function setCarrots(){
 	} else if ( $(".page.view-on").prev(".page").attr("id") == 'home') {
 		var prevpage = "#!/";
 	} else {
-		var prev = $(".page.view-on").prev(".page");
+		var prev = $(".page.view-on").prev(".page:not(.profile)");
 		if( prev.length == 0){
-			var prevpage = "#!/" + $(".page.view-on").parent().prev().children().next(".page:last-of-type").attr("id").replace(/[_]/g, '/');
+			var prevpage = "#!/" + $(".page.view-on").parent().prev().children().next(".page:not(.profile)").last().attr("id").replace(/[_]/g, '/');
  		} else {
 			var prevpage = "#!/" + $(".page.view-on").prev(".page").attr("id").replace(/[_]/g, '/');
 		}
@@ -246,12 +246,14 @@ function setCarrots(){
 }
 setCarrots();
 
+////////////////////////////////////////////////
 // Set Progress Nav
 function checkNav(){
 	$(".complete").removeClass("complete")
 	$( ".first-pageLink" ).nextUntil( ".view-on" ).addClass("complete");
 };
 
+////////////////////////////////////////////////
 // Arrow Keys
 document.onkeydown = checkKey;
 function checkKey(e) {
@@ -266,6 +268,7 @@ function checkKey(e) {
     }
 }
 
+////////////////////////////////////////////////
 // img scroll hack
 var n_scHack=1;
 function scHack(){
@@ -278,8 +281,8 @@ function scHack(){
 	}
 }
 
+////////////////////////////////////////////////
 // Swipe Events
-
 $("main").hammer().bind("swiperight", function(event) {
 	$(".pageNav .icon-left").get(0).click();
 	setCarrots();
@@ -290,7 +293,7 @@ $("main").hammer().bind("swipeleft", function(event) {
 	setCarrots();
 });
 
-
+////////////////////////////////////////////////
 //expando
 function expandoCheck(){
 	$(".expando, .page").removeClass('expando-fixed');
@@ -303,10 +306,8 @@ function expandoCheck(){
 }
 expandoCheck();
 
+////////////////////////////////////////////////
 //animations
-
-
-
 function removeMapinfo(){
 	$(".mapinfo").remove();
 }
@@ -327,7 +328,6 @@ function animateCheck(){
 	if ($("#innovation_1").hasClass("view-on")) {
 		interval = setInterval(aniball, 500);
 	}
-
 
 	function mapinfo(place, stats){
 		$("body").append("<div class='mapinfo'><h6 class='no-space'>"+stats+" jobs</h6><h6 class='no-space thin'>"+place+"</h6></div>");
@@ -365,7 +365,10 @@ function animateCheck(){
 
 
 
-
+	function resetMapInfo(){
+		$(".countercircle .target").html("Total Clean<br/>Energy Employees");
+		$(".countercircle .value").text("15,338");
+	}
 	function mapinfo2(target, jobs, percent){
 		$("body").append("<div class='mapinfo'><h6 class='no-space'>"+percent+"%</h6></div>");
 		$(".countercircle .target").text(target);
@@ -374,19 +377,19 @@ function animateCheck(){
 	if ($("#economy_1").hasClass("view-on")) {
 		$( "#energyCircle path.1" )
 		  .mouseover(function(){ mapinfo2("Smart Grid", "967", "6.3"); })
-		  .mouseout(function(){ removeMapinfo(); });
+		  .mouseout(function(){ removeMapinfo(); resetMapInfo();});
 		$( "#energyCircle path.2" )
 		  .mouseover(function(){ mapinfo2("Solar Energy", "1,230", "8"); })
-		  .mouseout(function(){ removeMapinfo(); });
+		  .mouseout(function(){ removeMapinfo(); resetMapInfo();});
 		$( "#energyCircle path.3" )
 		  .mouseover(function(){ mapinfo2("Bioenergy", "1,823", "11.9"); })
-		  .mouseout(function(){ removeMapinfo(); });
+		  .mouseout(function(){ removeMapinfo(); resetMapInfo();});
 		$( "#energyCircle path.4" )
 		  .mouseover(function(){ mapinfo2("Wind Power", "1,713", "11.2" ); })
-		  .mouseout(function(){ removeMapinfo(); });
+		  .mouseout(function(){ removeMapinfo(); resetMapInfo();});
 		$( "#energyCircle path.5" )
-		  .mouseover(function(){ mapinfo2("Energy Efficiency", "1,823", "62.6"); })
-		  .mouseout(function(){ removeMapinfo(); });
+		  .mouseover(function(){ mapinfo2("Energy Efficiency", "9,604", "62.6"); })
+		  .mouseout(function(){ removeMapinfo(); resetMapInfo();});
 
 		$(document).on('mousemove', function(e){
 		    $('.mapinfo').css("left", e.pageX );

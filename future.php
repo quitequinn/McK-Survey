@@ -21,7 +21,7 @@
 					<h3 class="grid-two-thirds margin-bottom-small">The state has a significant competitive advantage.</h3>
 				</div>
 				<div class="row margin-bottom-large">
-					<p class="grid-half">Over the last 25 years, Minnesota has developed a robust Clean Energy Economy along with its public and private sectors, technical and financial expertise, homegrown talent, substaintial Clean Energy infrastrucuture, and businesses spanning the value chain.<p>
+					<p class="grid-half">Over the last 25 years, Minnesota has developed a robust Clean Energy Economy by successfully leveraging its robust base of innovative private and  public firms, talented workforce, and higher education institutions to increase its competitive position in the global economy.<p>
 				</div>
 				<div class="row">
 					<div class="grid-half grid-half-wrap">

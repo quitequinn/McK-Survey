@@ -20,8 +20,8 @@
 			<div class="center">
 				<div class="row">
 					<div class="grid-half">
-						<h3>Minnesota is advancing innovation by developing and depolying new Clean Energy Technologies at an increasing rate.</h3>
-						<p>Businesses in the state are inventing new Clean Energy technologies, placing Minnesota 8th in the US in total Clean Energy patents in 2013.</p>
+						<h3>Clean Energy technologies are being developed and deployed in Minnesota at an increasing rate.</h3>
+						<p>Minnesota ranked eighth in the US in total clean energy patents in 2013, up from 20th in 2003.</p>
 					</div>
 					<div class="grid-half">
 						<? include("img/info-07.svg"); ?>
@@ -35,8 +35,8 @@
 			<div class="center">
 				<div class="row">
 					<div class="grid-half">
-						<h3 class="margin-top">Clean Energy innovators are working diligently to create new Clean Energy technologies and patents.</h3>
-						<p>Minnesota is in a unique position to foster these innovators, ultimately helping the state to continue its leadership in the Clean Energy Economy.<p>
+						<h3 class="margin-top">Clean Energy innovators are working diligently to disrupt the status quo.</h3>
+						<p>Minnesota entrepreneurs, companies, universities, and research institutions are in a unique position to foster these innovators, ultimately helping the state to continue its leadership in the Clean Energy Economy.<p>
 					</div>
 					<div class="grid-half">
 						<a href="#!/innovation/2/BobFrench" class="centerWrap profile-link" style="background: url(img/bob.jpg) 50% 50%;">
