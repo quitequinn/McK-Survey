@@ -339,11 +339,8 @@ function animateCheck(){
 		$( "#energymap path.2" )
 		  .mouseover(function(){ mapinfo("Northeast","317"); })
 		  .mouseout(function(){ removeMapinfo(); });
-		$( "#energymap path.3" )
-		  .mouseover(function(){ mapinfo("Northwest","74" ); })
-		  .mouseout(function(){ removeMapinfo(); });
-		$( "#energymap path.4" )
-		  .mouseover(function(){ mapinfo("West Central", "283"); })
+		$( "#energymap g.3" )
+		  .mouseover(function(){ mapinfo("Northwest and West Central","357"); })
 		  .mouseout(function(){ removeMapinfo(); });
 		$( "#energymap path.5" )
 		  .mouseover(function(){ mapinfo("Southwest", "1,312"); })

@@ -654,12 +654,12 @@ svg#counter{
 
 #energymap{
 	position: relative;
-	path{
+	path, g{
 		fill: rgba($color-black, .5);
 		.disc{
 			display: none;
 		}
-		&:hover{
+		&:hover, &:hover path{
 			fill: rgba(#51614a, 1);
 			+ .disc{
 				display: initial;

@@ -452,38 +452,6 @@
   stroke: #111;
 }
 
-@font-face {
-  font-family: "iconfont";
-  src: url("src/iconfont/iconfont.eot");
-  src: url("src/iconfont/iconfont.eot?#iefix") format("eot"), url("src/iconfont/iconfont.woff") format("woff"), url("src/iconfont/iconfont.ttf") format("truetype"), url("src/iconfont/iconfont.svg#iconfont") format("svg");
-}
-/* line 10, ../../../../../../../Users/qkeave/Desktop/WEB/McK-Survey/src/iconfont/_icons.scss */
-.icon-left:before, .icon-right:before, .icon-up:before {
-  font-family: "iconfont";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  text-decoration: none;
-  text-transform: none;
-}
-
-/* line 39, ../../../../../../../Users/qkeave/Desktop/WEB/McK-Survey/src/iconfont/_icons.scss */
-.icon-left:before {
-  content: "";
-}
-
-/* line 39, ../../../../../../../Users/qkeave/Desktop/WEB/McK-Survey/src/iconfont/_icons.scss */
-.icon-right:before {
-  content: "";
-}
-
-/* line 39, ../../../../../../../Users/qkeave/Desktop/WEB/McK-Survey/src/iconfont/_icons.scss */
-.icon-up:before {
-  content: "";
-}
-
 /* User Select None */
 /* Media Query Mixin */
 /* Responsive breaks */
@@ -3074,19 +3042,19 @@ svg#counter {
   position: relative;
 }
 /* line 657, ../components/_page.scss */
-#energymap path {
+#energymap path, #energymap g {
   fill: rgba(43, 39, 35, 0.5);
 }
 /* line 659, ../components/_page.scss */
-#energymap path .disc {
+#energymap path .disc, #energymap g .disc {
   display: none;
 }
 /* line 662, ../components/_page.scss */
-#energymap path:hover {
+#energymap path:hover, #energymap path:hover path, #energymap g:hover, #energymap g:hover path {
   fill: #51614a;
 }
 /* line 664, ../components/_page.scss */
-#energymap path:hover + .disc {
+#energymap path:hover + .disc, #energymap path:hover path + .disc, #energymap g:hover + .disc, #energymap g:hover path + .disc {
   display: initial;
 }
 /* line 670, ../components/_page.scss */
