@@ -2565,16 +2565,16 @@ img.center {
   }
 }
 /* line 262, ../components/_page.scss */
-#main[cur-slide="economy_6_SteveEvans"] .permNav, #main[cur-slide="economy_6_ShanelleMontana"] .permNav, #main[cur-slide="economy_6_MartinMorud"] .permNav, #main[cur-slide="innovation_2_SteveRupp"] .permNav, #main[cur-slide="innovation_2_BobFrench"] .permNav {
-  display: none;
+#main[cur-slide="economy_5_SteveEvans"] .permNav, #main[cur-slide="economy_5_ShanelleMontana"] .permNav, #main[cur-slide="economy_5_MartinMorud"] .permNav, #main[cur-slide="innovation_2_SteveRupp"] .permNav, #main[cur-slide="innovation_2_BobFrench"] .permNav {
+  visibility: hidden;
 }
 /* line 266, ../components/_page.scss */
-#main[cur-slide="economy_6_SteveEvans"] .profile .permNav, #main[cur-slide="economy_6_ShanelleMontana"] .profile .permNav, #main[cur-slide="economy_6_MartinMorud"] .profile .permNav, #main[cur-slide="innovation_2_SteveRupp"] .profile .permNav, #main[cur-slide="innovation_2_BobFrench"] .profile .permNav {
-  display: inherit;
+#main[cur-slide="economy_5_SteveEvans"] .profile .permNav, #main[cur-slide="economy_5_ShanelleMontana"] .profile .permNav, #main[cur-slide="economy_5_MartinMorud"] .profile .permNav, #main[cur-slide="innovation_2_SteveRupp"] .profile .permNav, #main[cur-slide="innovation_2_BobFrench"] .profile .permNav {
+  visibility: visible;
 }
 /* line 273, ../components/_page.scss */
-#main[cur-slide="economy_6_SteveEvans"] .site-footer, #main[cur-slide="economy_6_ShanelleMontana"] .site-footer, #main[cur-slide="economy_6_MartinMorud"] .site-footer, #main[cur-slide="innovation_2_SteveRupp"] .site-footer, #main[cur-slide="innovation_2_BobFrench"] .site-footer, #main[cur-slide="clean_5_Adam"] .site-footer, #main[cur-slide="connect-on-energy"] .site-footer, #main[cur-slide="about"] .site-footer, #main[cur-slide="clean_5_TomAndJr"] .site-footer, #main[cur-slide="toc"] .site-footer, #main[cur-slide="intro"] .site-footer {
-  display: none;
+#main[cur-slide="economy_5_SteveEvans"] .site-footer, #main[cur-slide="economy_5_ShanelleMontana"] .site-footer, #main[cur-slide="economy_5_MartinMorud"] .site-footer, #main[cur-slide="innovation_2_SteveRupp"] .site-footer, #main[cur-slide="innovation_2_BobFrench"] .site-footer, #main[cur-slide="clean_5_Adam"] .site-footer, #main[cur-slide="connect-on-energy"] .site-footer, #main[cur-slide="about"] .site-footer, #main[cur-slide="clean_5_TomAndJr"] .site-footer, #main[cur-slide="toc"] .site-footer, #main[cur-slide="intro"] .site-footer {
+  visibility: hidden;
 }
 /* line 281, ../components/_page.scss */
 #main[cur-slide="intro"] .pageNav a, #main[cur-slide="toc"] .pageNav a, #main[cur-slide="about"] .pageNav a, #main[cur-slide="connect-on-energy"] .pageNav a {

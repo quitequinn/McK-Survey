@@ -40,9 +40,6 @@
 			<a href="#!/economy/5" class="audSwipe economy pageLink">
 				<div class="footerInfo"><h6 class='no-space'>page</h6></div>
 			</a>
-			<a href="#!/economy/6" class="audSwipe economy pageLink">
-				<div class="footerInfo"><h6 class='no-space'>page</h6></div>
-			</a>
 			<a href="#!/innovation" class="audSwipe innovation chapterLink">
 				<div class="footerInfo"><h6 class='no-space'>page</h6></div>
 			</a>
