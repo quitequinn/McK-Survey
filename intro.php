@@ -8,8 +8,8 @@
 						<h6 class="introText">Clean Energy Economy Minnesota</h6>
 						<img data-w="1" class="center" src="stars.png">
 						<h1 class="no-space">Minnesota</h1>
-						<p class="grid-two-thirds float-center tx-center">Learn how Clean Energy is lessening Minnesota's reliance on imported fossil fuels while growing a vibrant economy, a healthier environment, and shared prosperity for all citizens.</p>
-						<a href="#!/toc" class="margin-small audSwipe margin-top-large chevron icon-right tx-center"><h6>view report</h6></a>
+						<p class="grid-two-thirds float-center tx-center">How Clean Energy is lessening Minnesota's reliance on imported fossil fuels while growing a vibrant economy, a healthier environment, and shared prosperity for our citizens.</p>
+						<a href="#!/toc" class="margin-small audSwipe margin-top-large chevron icon-right tx-center"><h6>learn how</h6></a>
 					</div>
 				</div>
 			</div>
@@ -21,8 +21,7 @@
 				<div class="row">
 					<div class="grid-full">
 						<h3>Table of Contents</h3>
-						<p>Clean Energy Economy Minnesota offers an in-depth look at the Clean Energy Economy in Minnesota.</p>
-						<p class="space-bottom-large"> It is based on data provided by research and surveys conducted by Minnesota  Department of Employment and Economic Development.</p>
+						<p class="space-bottom-large">Clean Energy Economy Minnesota offers and in-depth look at employment, wages, and investments in Minnesota's Clean Energy industry. It is based on survey data and research conducted by Collaborative Economics, Inc., a strategic advisory and consulting firm that provides clean economy, innovation, and sector analysis for clients across the country.</p>
 						<div class="desktop">
 							<? include("img/info-05.svg"); ?>
 							<h6>Use your keypad</h6>

@@ -166,5 +166,54 @@ footer{
 				}
 			}
 		}
+		> a{
+		  	&:after{
+		  		display: block;
+				position: absolute;
+				margin-top: -50px;
+				margin-left: -8px;
+				content: '';
+				width: 0;
+				height: 0;
+				border-right: 15px solid transparent;
+				border-top: 15px solid #2b2723;
+				border-left: 15px solid transparent;
+				@include user-select-none;
+				opacity: 0;
+				visibility: hidden;
+				transition: all $fast;
+		  	}
+			.footerInfo{
+				position: absolute;
+				visibility: hidden;
+				opacity: 0;
+				transition: all $fast;
+			  	z-index: 99;
+			  	background: $color-black;
+			  	color: white;
+			  	padding: .5em;
+			  	top: 0;
+			  	margin-top: -50px;
+			  	margin-left: .2em;
+			}
+			&:hover{
+				&:after, .footerInfo{
+					visibility: visible;
+					opacity: 1;
+					transition: all $fast;
+				}
+			}
+		}
+		.chapterLink{
+		  	&:after{
+		  		margin-left: 0;
+		  	}
+		}
+		.homeLink{
+		  	&:after{
+		  		margin-left: 0;
+		  		margin-top: -40px;
+		  	}
+		}
 	}
 }

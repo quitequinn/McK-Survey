@@ -322,7 +322,6 @@ function removeMapinfo(){
 }
 
 function animateCheck(){
-
 	var n_ball = 0;
 	var interval;
 	function aniball(){
@@ -407,6 +406,19 @@ function animateCheck(){
 }
 
 
+////////////////////////////////////////////////
+//footer animations
+function footerInfoMargin(){
+	$("#footerNav > a").each(function(){
+		if ($(this).hasClass("chapterLink")) {
+			$(this).find(".footerInfo").css("margin-left", ($(this).find(".footerInfo").width()-14)/-2);
+		}else if ($(this).hasClass("homeLink")) {
+			$(this).find(".footerInfo").css("margin-left", ($(this).find(".footerInfo").width()-14)/-2);
+		}else{
+			$(this).find(".footerInfo").css("margin-left", $(this).find(".footerInfo").width()/-2);
+		};
+	});
+}
 
 ////////////////////////////////////////////////
 ////////////////                 ///////////////
@@ -422,6 +434,7 @@ function animateCheck(){
 		fullImg();
 		fullHeight();
 		expandoCheck();
+		footerInfoMargin();
 	}, 500);
 	window.addEventListener("resize", updateLayout, false);
 
@@ -444,6 +457,7 @@ function animateCheck(){
 		fullHeight();
 		expandoCheck();
 		animateCheck();
+		footerInfoMargin();
 	}); // `~*# The end.
 
 });

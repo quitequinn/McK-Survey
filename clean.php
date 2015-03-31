@@ -9,7 +9,7 @@
 					</div>
 					<div class="grid-half">
 						<h3 class="no-padding margin-bottom-small">It's pretty simple.</h3>
-						<p>Clean Energy uses less energy to provide the same product or service, or produces heat, power, or fuel from sources of renewable energy.</p>
+						<p>Clean Energy uses less energy to provide the same product or service, or produces heat, power, or fuel from sources of renewable sources of energy.</p>
 					</div>
 				</div>
 			</div>
@@ -22,7 +22,7 @@
 					<div class="grid-full">
 						<? include("waves.php") ?>
 						<h1 class="no-space-top margin-bottom-xsmall tx-center capitalize">$18 Billion</h1>
-						<p class="grid-two-thirds float-center tx-center">Every year since 2010, Minnesota spent at least $18 billion on importing fossil fuels to the state</p>
+						<p class="grid-two-thirds float-center tx-center">Minnesota has spent at least $18 billion on importing fossil fuels to the state every year since 2011./p>
 
 						<div class="expando source">
 							<div class="initial">
@@ -71,13 +71,13 @@
 			<div class="center">
 				<div class="row">
 					<div class="grid-full">
-						<h3>There are more benefits to a Clean Energy economy.</h3>
+						<h3>There are more benefits to a Clean Energy Economy.</h3>
 					</div>
 				</div>
 				<div class="row">
 					<div class="grid-half">
 						<h2 class="no-margin no-space-top padding-bottom-small">$17 Billion</h2>
-						<p><b>Benefit One:</b> State Biofuel production capacity was enough to replace traditional fuel for 1.7 million vehicles for one year.</p>
+						<p><b>Benefit One:</b> State biofuel production capacity was enough to replace traditional fuel for 1.7 million vehicles for one year in 2012.</p>
 						<div class="expando">
 							<div class="initial">
 								<div class="button"><p><b>P</b></p></div>

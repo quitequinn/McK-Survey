@@ -1,28 +1,72 @@
 	<footer class="site-footer section">
 		<a href="https://www.mcknight.org/" class="mcKnight">M</a>
 		<div id="footerNav">
-			<a href="#!/toc" class="first-pageLink audSwipe intro homeLink"></a>
-			<a href="#!/clean" class="audSwipe clean chapterLink"></a>
-			<a href="#!/clean/1" class="audSwipe clean pageLink"></a>
-			<a href="#!/clean/2" class="audSwipe clean pageLink"></a>
-			<a href="#!/clean/3" class="audSwipe clean pageLink"></a>
-			<a href="#!/clean/4" class="audSwipe clean pageLink"></a>
-			<a href="#!/clean/5" class="audSwipe clean pageLink"></a>
-			<a href="#!/economy" class="audSwipe economy chapterLink"></a>
-			<a href="#!/economy/1" class="audSwipe economy pageLink"></a>
-			<a href="#!/economy/2" class="audSwipe economy pageLink"></a>
-			<a href="#!/economy/3" class="audSwipe economy pageLink"></a>
-			<a href="#!/economy/4" class="audSwipe economy pageLink"></a>
-			<a href="#!/economy/5" class="audSwipe economy pageLink"></a>
-			<a href="#!/economy/6" class="audSwipe economy pageLink"></a>
-			<a href="#!/innovation" class="audSwipe innovation chapterLink"></a>
-			<a href="#!/innovation/1" class="audSwipe innovation pageLink"></a>
-			<a href="#!/innovation/2" class="audSwipe innovation pageLink"></a>
-			<a href="#!/future" class="audSwipe future chapterLink"></a>
-			<a href="#!/future/1" class="audSwipe future pageLink"></a>
-			<a href="#!/future/2" class="audSwipe future pageLink"></a>
-			<a href="#!/future/3" class="audSwipe future pageLink"></a>
-			<a href="#!/appendix" class="audSwipe appendix chapterLink"></a>
+			<a href="#!/toc" class="first-pageLink audSwipe intro homeLink">
+				<div class="footerInfo"><h6 class='no-space'>page</h6></div>
+			</a>
+			<a href="#!/clean" class="audSwipe clean chapterLink">
+				<div class="footerInfo"><h6 class='no-space'>page</h6></div>
+			</a>
+			<a href="#!/clean/1" class="audSwipe clean pageLink">
+				<div class="footerInfo"><h6 class='no-space'>page</h6></div>
+			</a>
+			<a href="#!/clean/2" class="audSwipe clean pageLink">
+				<div class="footerInfo"><h6 class='no-space'>page</h6></div>
+			</a>
+			<a href="#!/clean/3" class="audSwipe clean pageLink">
+				<div class="footerInfo"><h6 class='no-space'>page</h6></div>
+			</a>
+			<a href="#!/clean/4" class="audSwipe clean pageLink">
+				<div class="footerInfo"><h6 class='no-space'>page</h6></div>
+			</a>
+			<a href="#!/clean/5" class="audSwipe clean pageLink">
+				<div class="footerInfo"><h6 class='no-space'>page</h6></div>
+			</a>
+			<a href="#!/economy" class="audSwipe economy chapterLink">
+				<div class="footerInfo"><h6 class='no-space'>page</h6></div>
+			</a>
+			<a href="#!/economy/1" class="audSwipe economy pageLink">
+				<div class="footerInfo"><h6 class='no-space'>page</h6></div>
+			</a>
+			<a href="#!/economy/2" class="audSwipe economy pageLink">
+				<div class="footerInfo"><h6 class='no-space'>page</h6></div>
+			</a>
+			<a href="#!/economy/3" class="audSwipe economy pageLink">
+				<div class="footerInfo"><h6 class='no-space'>page</h6></div>
+			</a>
+			<a href="#!/economy/4" class="audSwipe economy pageLink">
+				<div class="footerInfo"><h6 class='no-space'>page</h6></div>
+			</a>
+			<a href="#!/economy/5" class="audSwipe economy pageLink">
+				<div class="footerInfo"><h6 class='no-space'>page</h6></div>
+			</a>
+			<a href="#!/economy/6" class="audSwipe economy pageLink">
+				<div class="footerInfo"><h6 class='no-space'>page</h6></div>
+			</a>
+			<a href="#!/innovation" class="audSwipe innovation chapterLink">
+				<div class="footerInfo"><h6 class='no-space'>page</h6></div>
+			</a>
+			<a href="#!/innovation/1" class="audSwipe innovation pageLink">
+				<div class="footerInfo"><h6 class='no-space'>page</h6></div>
+			</a>
+			<a href="#!/innovation/2" class="audSwipe innovation pageLink">
+				<div class="footerInfo"><h6 class='no-space'>page</h6></div>
+			</a>
+			<a href="#!/future" class="audSwipe future chapterLink">
+				<div class="footerInfo"><h6 class='no-space'>page</h6></div>
+			</a>
+			<a href="#!/future/1" class="audSwipe future pageLink">
+				<div class="footerInfo"><h6 class='no-space'>page</h6></div>
+			</a>
+			<a href="#!/future/2" class="audSwipe future pageLink">
+				<div class="footerInfo"><h6 class='no-space'>page</h6></div>
+			</a>
+			<a href="#!/future/3" class="audSwipe future pageLink">
+				<div class="footerInfo"><h6 class='no-space'>page</h6></div>
+			</a>
+			<a href="#!/appendix" class="audSwipe appendix chapterLink">
+				<div class="footerInfo"><h6 class='no-space'>page</h6></div>
+			</a>
 		</div>
 		<div class="social">
 			<a href="#" class="fa fa-facebook"></a>

@@ -111,9 +111,9 @@
 				<div class="row">
 					<div class="grid-half">
 						<h3 class="no-space-bottom">Martin Morud</h3>
-						<h6 class="no-space-top margin-bottom-large">President / Owner, TRU NORTH SOLAR</h6>
-						<p>From the very beginning it was imperative to Founder Marty Morud that TruNorth build a reputation for high quality solar installation and a company culture of substance, character, and integrity. Marty has comprehensive knowledge of the solar industry and the regulatory structure in which it operates, allowing the TruNorth team to utilize new and rapidly developing policies to the benefit of customers and the environment. TruNorth’s mission reflects its relentless passion for the stewardship of the planet and creating a meaningful difference in our future energy recipe.</p>
-						<p>Marty is a prime mover behind the Minnesota Community Solar Garden law and its implementing regulations and tariffs. Marty leads the Minnesota Solar Energy Industry Association Community Solar Garden Working Group and co-leads the Xcel Energy Solar Rewards Community Working Group. Marty has represented the local solar industry at the Minnesota Public Utilities Commission, testifying often on behalf of garden developers.</p>
+						<h6 class="no-space-top margin-bottom-large">President, <a href="http://www.trunorthsolar.com/">TruNorth</a>, Solar Energy</h6>
+						<p>In 2009, Martin’s father asked him and a few friends to build a solar array for their farm in Bemidji. He never imagined it would take him down the path to own and operate a sustainable solar business, TruNorth Solar,  which he built with genuine passion for environmental stewardship. TruNorth Solar operates two divisions: one focused on Residential/Small Commercial Solar and the other on Commercial/Industrial/Community Solar. Solar installation is not easy.” says Martin. “It’s extremely physical and combines many different trades and skills to install a quality solar pv system. TruNorth Solar’s culture is founded on our addiction to a hard day’s work and we pride ourselves in flipping the switch at the completion of each project.”</p>
+						<p>Solar energy is helping Minnesota to become more energy independent and rely less on outside sources for its energy needs. Martin’s favorite part of his work is teaching others about solar energy and sustainability. “It’s fun, exciting and easy to understand if explained clearly.” Much of Martin’s time is spent working with TruNorth Solar’s team members to keep each of the business engines running. He still looks forward to days spent in the field.</p>
 
 						<a href="#!/economy/5/SteveEvans" class="centerWrap profile-link small" style="background: url(img/steve.jpg) 50% 50%;">
 							<h6>Steve Evans</h6>
@@ -133,9 +133,9 @@
 				<div class="row">
 					<div class="grid-half">
 						<h3 class="no-space-bottom">Steve Evans</h3>
-						<h6 class="no-space-top margin-bottom-large">Operations, Iberdrola</h6>
-						<p>Steve Evans is a member of Iberdrola’s Operations Team and works at the company’s Elm Creek II Wind Project just northeast of Jackson, MN. This is the third project Iberdrola has developed in partnership with a landowner group and includes 62 turbines.</p>
-						<p>Iberdrola Renewables is the second-largest wind operator in the U.S. and is one of the few companies capable of providing structured energy solutions that allowing large industrial and commercial customers to manage risks and uncertainty in the natural gas and power industries.</p><p>Iberdrola Renewables is at the forefront of transforming the way the U.S. produces and uses energy. Strongly positioned to develop, build, and operate the Clean Energy infrastructure of the future, Iberdrola Renewables is already generating power from more than 40 renewable energy projects for its utility-scale customers in the United States and leading both Minnesota and America’s transition to a renewable energy future.</p>
+						<h6 class="no-space-top margin-bottom-large">Senior Operations Technician, <a href="http://iberdrolarenewables.us/">Iberdrola</a>, Wind Energy</h6>
+						<p>Steve Evans is a Senior Operations Technician at Iberdrola Renewables’ Elm Creek II Wind Farm in Alpha, Minnesota. The wind farmer where Steve works is the third project Iberdrola has developed in partnership with a landowner group and includes 62 turbines. Steve started as a warranty technician on the GE wind turbines at the Trimont Wind Farm and later moved to work on the Mitsubishi wind turbines at Elm Creek II, which makes enough electricity to power 40,000 homes in a year.</p>
+						<p>Iberdrola Renewables is the second-largest wind operator in the U.S. and is one of the few companies able to provide Clean Energy solutions that allow large industrial and commercial customers to manage risks and uncertainty in the natural gas and power industries. Steve is happy to work at Iberdrola Renewables because he’s able to put his skills to good use on homeground. He enjoys working in the Clean Energy field because he continues to learn a lot. One day, he hopes to manage his own wind farm.</p>
 
 						<a href="#!/economy/5/ShanelleMontana" class="centerWrap profile-link small" style="background: url(img/shanelle.jpg) 50% 50%;">
 							<h6>Shanelle Montana</h6>
@@ -155,8 +155,9 @@
 				<div class="row">
 					<div class="grid-half">
 						<h3 class="no-space-bottom">Shanelle Montana</h3>
-						<h6 class="no-space-top margin-bottom-large">Project Developer, EDF Renewable Energy</h6>
-						<p>Shanelle is a Project Developer at EDF Renewable Energy where she focuses on the company's development pipeline as well as public policy efforts relating to wind and solar power. She identifies and creates new market and policy opportunities for EDF Renewable Energy.</p><p>EDF Renewable Energy is a U.S. Independent power producer with over 25 years expertise in project development, operations, and maintenance services. EDF has a history of utilizing homegrown talent to implement and develop Clean Energy solutions.</p>
+						<h6 class="no-space-top margin-bottom-large">Project Developer, <a href="http://www.edf-re.com/">EDF Renewable Energy</a>, Energy Efficiency</h6>
+						<p>Shanelle began her career with EDF Renewable Energy by helping the Clean Energy company with community outreach and policy work. Currently, she is a Project Developer and focuses on EDF Renewable’s development pipeline as well as public policy efforts relating to wind and solar power.</p>
+						<p>EDF Renewable Energy is a U.S. Independent power producer with over 25 years expertise in project development, operations, and maintenance services and has a history of utilizing homegrown talent to implement and develop Clean Energy solutions. Because she comes from an agricultural background, one of Shanelle’s favorite aspects about her job is being able to help provide sustainable income to rural communities. She loves that, “EDF Renewable Energy is keeping electricity prices low for the long term,” and knows EDF Renewable Energy is committed to growing Minnesota’s Clean Energy Economy.</p>
 
 						<a href="#!/innovation" class="centerWrap profile-link small" style="background: #B1C0AD;">
 							<h6>Next up &nbsp;<i class="fa fa-chevron-right"></i>&nbsp; Innovation</h6>
