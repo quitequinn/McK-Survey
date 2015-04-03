@@ -66,8 +66,16 @@ label.grid-half{
 	@include pointer;
 	float: left;
 	padding-right: 10px;
+	padding-bottom: 10px;
 	+ span{
 		  line-height: 3em;
 
 	}
+}
+
+#connect-on-energy{
+	.list-unstyled {
+		margin-left: -1.4%;
+	  	margin-right: -1.4%;
+  	}
 }
